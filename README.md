@@ -14,6 +14,14 @@ I'm Yusupjan, a Uyghur with a passion for molecular biology and data analysis.
 - Trajectory Data Analysis
 - Omic data analysis, image analysis
 
+## Publications
+### NAD Metabolism and Proteomic Profile in a Yeast Model Expressing a Neurotoxic polyQ Protein: Effect of Phenolics from Extra-virgin Olive Oil
+- **Authors:** Vincenzetti, S, Rozimemet, Y, etc.
+- **Journal/Conference:** preprints and MaxQuant summer school (the new revised version is being prepared for other journals)
+- **Date:** February 2024
+- **Link:** [Link to publication](https://www.preprints.org/manuscript/202402.1499/v1)
+
+
 ## Languages and Tools
 ![Python](https://img.shields.io/badge/-Python-333333?style=flat&logo=python)
 ![R](https://img.shields.io/badge/-R-333333?style=flat&logo=r)
