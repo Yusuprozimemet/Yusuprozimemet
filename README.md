@@ -1,7 +1,7 @@
 # Hi there! 👋
 
 I'm Yusupjan, a Uyghur with a passion for molecular biology and data analysis.
-
+[Follow me on Twitter](https://x.com/Yusufrozimemet)
 ## About Me
 - 🧬 I hold a degree in Molecular Biology and have extensive experience in yeast genetics and molecular dynamics simulations.
 - 💻 I have a deep interest in data analysis, machine learning, deep learning, and computational biology.
@@ -43,5 +43,7 @@ I'm Yusupjan, a Uyghur with a passion for molecular biology and data analysis.
 - Coding personal projects
 
 ## Feel free to reach out at : yusup.rozimemet@gmail.com
+
+
 
 
