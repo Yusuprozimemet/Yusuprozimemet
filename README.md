@@ -1,20 +1,18 @@
 # Hi there! 👋
 
-I'm Yusupjan, a Data Scientist with a strong background in molecular biology and AI. I enjoy combining my expertise in data analysis with my passion for biological sciences to uncover insights and drive innovation.
+I'm Yusupjan, a Uyghur with a passion for molecular biology and data analysis.
 
 ## About Me
-- 🌱 I’m currently working as a Freelance Data Scientist
-- 🧬 I hold a degree in Molecular Biology and have extensive experience in yeast genetics and molecular dynamics simulations
-- 💻 I have a deep interest in data analysis, machine learning, deep learning and computational biology
+- 🧬 I hold a degree in Molecular Biology and have extensive experience in yeast genetics and molecular dynamics simulations.
+- 💻 I have a deep interest in data analysis, machine learning, deep learning, and computational biology.
 
-## Technical Skills and Interests
-- Molecular Dynamics
-- Trajectory Data Analysis
-- Energy Minimization
+## Experience and Interests
 - Data Wrangling and Analysis
 - Machine Learning
 - Deep Learning
-- Computational Biology
+- Molecular Dynamics
+- Trajectory Data Analysis
+- Omic data analysis, image analysis
 
 ## Languages and Tools
 ![Python](https://img.shields.io/badge/-Python-333333?style=flat&logo=python)
@@ -32,11 +30,11 @@ I'm Yusupjan, a Data Scientist with a strong background in molecular biology and
 
 ## Hobbies and Interests
 - Reading scientific literature
-- Traveling
+- Biking
 - Hiking
 - Cooking
 - Coding personal projects
 
-## My personal email adrees: yusup.rozimemet@gmail.com
+## Feel free to reach out at : yusup.rozimemet@gmail.com
 
 
