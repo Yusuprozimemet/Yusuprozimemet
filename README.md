@@ -39,7 +39,7 @@ I'm Yusupjan, a Uyghur with a passion for molecular biology and data analysis.
 ## Hobbies and Interests
 - Reading scientific literature
 - Biking
-- Traveling (I have traveled Italy, Israel, Poland, the Netherlands, Hungary, Germany, Switzerland, Spain, France...I like Europe!)
+- Traveling (I have traveled Italy, Israel, Poland, the Netherlands, Hungary, Spain, France...many others)
 - Cooking
 - Coding personal projects
 
