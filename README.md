@@ -6,14 +6,6 @@ I'm Yusupjan, a Uyghur with a passion for molecular biology and data analysis.
 - 🧬 I hold a degree in Molecular Biology and have extensive experience in yeast genetics and molecular dynamics simulations.
 - 💻 I have a deep interest in data analysis, machine learning, deep learning, and computational biology.
 
-## Experience and Interests
-- Data Wrangling and Analysis
-- Machine Learning
-- Deep Learning
-- Molecular Dynamics
-- Trajectory Data Analysis
-- Omic data analysis, image analysis
-
 ## Publications
 ### NAD Metabolism and Proteomic Profile in a Yeast Model Expressing a Neurotoxic polyQ Protein: Effect of Phenolics from Extra-virgin Olive Oil
 - **Authors:** Vincenzetti, S, Rozimemet, Y, etc.
@@ -21,6 +13,13 @@ I'm Yusupjan, a Uyghur with a passion for molecular biology and data analysis.
 - **Date:** February 2024
 - **Link:** [Link to publication](https://www.preprints.org/manuscript/202402.1499/v1)
 
+## Experience and Interests
+- Data Wrangling and Analysis
+- Machine Learning
+- Deep Learning
+- Molecular Dynamics
+- Trajectory Data Analysis
+- Omic data analysis, image analysis
 
 ## Languages and Tools
 ![Python](https://img.shields.io/badge/-Python-333333?style=flat&logo=python)
