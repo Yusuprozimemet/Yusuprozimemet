@@ -2,7 +2,7 @@
 I'm working on projects on my github. 
 [Follow me on Twitter](https://x.com/Yusufrozimemet)
 
-## Publications
+## Publication
 ### NAD Metabolism and Proteomic Profile in a Yeast Model Expressing a Neurotoxic polyQ Protein: Effect of Phenolics from Extra-virgin Olive Oil
 - **Authors:** Vincenzetti, S, Rozimemet, Y, etc.
 - **Journal/Conference:** preprints and MaxQuant summer school (the new revised version is being prepared for other journals)
@@ -22,6 +22,8 @@ I'm working on projects on my github.
 ![Scikit-learn](https://img.shields.io/badge/-Scikit--learn-333333?style=flat&logo=scikit-learn)
 ![Pandas](https://img.shields.io/badge/-Pandas-333333?style=flat&logo=pandas)
 ![NumPy](https://img.shields.io/badge/-NumPy-333333?style=flat&logo=numpy)
+![Flask](https://img.shields.io/badge/-Flask-333333?style=flat&logo=flask)
+![Java](https://img.shields.io/badge/-Java-333333?style=flat&logo=java)
 
 
 
