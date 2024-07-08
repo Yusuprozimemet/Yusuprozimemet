@@ -1,10 +1,6 @@
 # Hi there! 👋
-
-I'm Yusupjan, a Uyghur with a passion for molecular biology and data analysis.
+I'm working on projects on my github. 
 [Follow me on Twitter](https://x.com/Yusufrozimemet)
-## About Me
-- 🧬 I hold a degree in Molecular Biology and have extensive experience in yeast genetics and molecular dynamics simulations.
-- 💻 I have a deep interest in data analysis, machine learning, deep learning, and computational biology.
 
 ## Publications
 ### NAD Metabolism and Proteomic Profile in a Yeast Model Expressing a Neurotoxic polyQ Protein: Effect of Phenolics from Extra-virgin Olive Oil
@@ -12,14 +8,6 @@ I'm Yusupjan, a Uyghur with a passion for molecular biology and data analysis.
 - **Journal/Conference:** preprints and MaxQuant summer school (the new revised version is being prepared for other journals)
 - **Date:** February 2024
 - **Link:** [Link to publication](https://www.preprints.org/manuscript/202402.1499/v1)
-
-## Experience and Interests
-- Data Wrangling and Analysis
-- Machine Learning
-- Deep Learning
-- Molecular Dynamics
-- Trajectory Data Analysis
-- Omic data analysis, image analysis
 
 ## Languages and Tools
 ![Python](https://img.shields.io/badge/-Python-333333?style=flat&logo=python)
@@ -35,14 +23,6 @@ I'm Yusupjan, a Uyghur with a passion for molecular biology and data analysis.
 ![Pandas](https://img.shields.io/badge/-Pandas-333333?style=flat&logo=pandas)
 ![NumPy](https://img.shields.io/badge/-NumPy-333333?style=flat&logo=numpy)
 
-## Hobbies and Interests
-- Reading scientific literature
-- Biking
-- Traveling (I have traveled Italy, Israel, Poland, the Netherlands, Hungary, Spain, France...many others)
-- Cooking
-- Coding personal projects
-
-## Feel free to reach out at : yusup.rozimemet@gmail.com
 
 
 
