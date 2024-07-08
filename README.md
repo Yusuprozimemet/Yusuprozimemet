@@ -23,8 +23,6 @@ I'm working on projects on my github.
 ![Pandas](https://img.shields.io/badge/-Pandas-333333?style=flat&logo=pandas)
 ![NumPy](https://img.shields.io/badge/-NumPy-333333?style=flat&logo=numpy)
 ![Flask](https://img.shields.io/badge/-Flask-333333?style=flat&logo=flask)
-![Java](https://img.shields.io/badge/-Java-333333?style=flat&logo=java)
-
 
 
 
