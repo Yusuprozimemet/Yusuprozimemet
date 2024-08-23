@@ -9,7 +9,7 @@ I'm working on projects on my github.
 - **Link:** [Link to publication](https://www.preprints.org/manuscript/202402.1499/v1)
 
 ## Self designed webapp:
-- **Link:** [Link to publication](https://practiceln.onrender.com/)
+- **Link:** [Link to PracticeLN](https://practiceln.onrender.com/)
 
 
 
