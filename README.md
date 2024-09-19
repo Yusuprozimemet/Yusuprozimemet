@@ -9,7 +9,7 @@ I'm working on projects on my github.
 - **Link:** [Link to publication](https://www.preprints.org/manuscript/202402.1499/v1)
 
 ## Self designed webapp:
-- **Link:** [Link to PracticeNotes](http://www.meshiq.run.place/)
+- **Link:** [Link to PracticeNotes](https://www.meshiq.run.place/)
 
 
 
