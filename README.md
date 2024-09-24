@@ -10,7 +10,7 @@ I'm working on projects on my github.
 
 ## Self designed webapp:
 - **Practice:** [Link to PracticeNotes](https://www.meshiq.run.place/)
-- **Myblog:** [Link to PracticeNotes](https://myblog-cctp.onrender.com/)
+- **Myblog:** [Link to Myblog](https://myblog-cctp.onrender.com/)
 
 
 
