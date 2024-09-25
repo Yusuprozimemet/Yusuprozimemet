@@ -1,5 +1,5 @@
-## Self-designed Webapp: (These apps are deployed on Render with a free instance type, so the initial page load may take 50 seconds or more. )
-- **Practice:** [Link to PracticeNotes](practicenl.onrender.com)
+## Self-designed Webapp: (These apps are deployed on Render with a free instance type, so the initial page load may take 50 seconds or more.)
+- **Practice:** [Link to PracticeNotes](https://practicenl.onrender.com)
 - **Myblog:** [Link to Myblog](https://myblog-cctp.onrender.com/)
 
   
@@ -11,7 +11,7 @@
 - **Link:** [Link to publication](https://www.preprints.org/manuscript/202402.1499/v1)
 
 I'm working on projects on my github. 
-[Follow me on Twitter](https://x.com/Yusufrozimemet)
+[Follow me on Twitter](https://twitter.com/Yusufrozimemet)
 
 
 
