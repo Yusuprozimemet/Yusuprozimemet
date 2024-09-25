@@ -1,7 +1,8 @@
 ## Self-designed Webapp: (These apps are deployed on Render with a free instance type, so the initial page load may take 50 seconds or more. )
 - **Practice:** [Link to PracticeNotes](practicenl.onrender.com)
 - **Myblog:** [Link to Myblog](https://myblog-cctp.onrender.com/)
-- 
+
+  
 ## Publication
 ### NAD Metabolism and Proteomic Profile in a Yeast Model Expressing a Neurotoxic polyQ Protein: Effect of Phenolics from Extra-virgin Olive Oil
 - **Authors:** Vincenzetti, S, Rozimemet, Y, etc.
