@@ -8,7 +8,7 @@ I'm working on projects on my github.
 - **Date:** February 2024
 - **Link:** [Link to publication](https://www.preprints.org/manuscript/202402.1499/v1)
 
-## Self designed webapp:
+## Self designed webapp: (These apps are deployed on Render with a free instance type, so the initial page load may take 50 seconds or more. )
 - **Practice:** [Link to PracticeNotes](practicenl.onrender.com)
 - **Myblog:** [Link to Myblog](https://myblog-cctp.onrender.com/)
 
