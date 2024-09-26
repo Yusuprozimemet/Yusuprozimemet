@@ -1,6 +1,6 @@
 ## Self-designed Webapp: (These apps are deployed on Render with a free instance type, so the initial page load may take 50 seconds or more.)
 - **Practice:** [Link to PracticeNotes](https://practicenl.onrender.com)
-- **Myblog:** [Link to Myblog](https://myblog-cctp.onrender.com/)
+- **Myblog:** [Link to Myblog](https://myblog-lax8.onrender.com/)
 
   
 ## Publication
