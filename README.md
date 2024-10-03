@@ -5,7 +5,8 @@
 ![HTML](https://img.shields.io/badge/HTML-8%25-red?style=flat-square&logo=html5&logoColor=white)
 ![LaTeX](https://img.shields.io/badge/LaTeX-3%25-blue?style=flat-square&logo=latex&logoColor=white)
 
-## Self-designed Webapp: (These apps are deployed on Render with a free instance type, so the initial page load may take 50 seconds or more.)
+## Self-designed Webapp: 
+#### These apps are deployed on Render with a free instance type, so the initial page load may take 50 seconds or more.
 - **Practice:** [Link to PracticeNotes](https://practicenl.onrender.com)
 - **Myblog:** [Link to Myblog](https://myblog-lax8.onrender.com/)
 
