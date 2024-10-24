@@ -44,6 +44,10 @@
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black) 
 ![Seaborn](https://img.shields.io/badge/Seaborn-%23150458.svg?style=for-the-badge&logo=python&logoColor=white)
 ![Plotly](https://img.shields.io/badge/Plotly-%233F4F75.svg?style=for-the-badge&logo=plotly&logoColor=white) 
+![OpenMM](https://img.shields.io/badge/OpenMM-%2300A3E0.svg?style=for-the-badge&logo=python&logoColor=white) 
+![MDTraj](https://img.shields.io/badge/MDTraj-%231C1C1E.svg?style=for-the-badge&logo=python&logoColor=white) 
+![PyTraj](https://img.shields.io/badge/PyTraj-%23000000.svg?style=for-the-badge&logo=python&logoColor=white)
+
 
 ### 🗄️ Databases
 ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white) 
