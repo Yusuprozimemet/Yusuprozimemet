@@ -13,7 +13,7 @@
 
 ## 🌐 Web Applications
 #### Deployed on Render (free instance; initial load may take 50+ seconds)
-- **Practice Notes:** [🔗 PracticeNotes](https://practicenl.onrender.com)
+- **Practice Notes (Language Learning App):** [🔗 PracticeNotes](https://practicenl.onrender.com)
 - **My Blog:** [🔗 Myblog](https://myblog-lax8.onrender.com/)
 
 ---
