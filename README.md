@@ -5,6 +5,7 @@
 
 ## 🌍 Web Applications
 - **Practice Notes (Language Learning App):** [🔗 PracticeNotes](https://practicenl.onrender.com)
+- **Algotrade (Trading App):** [🔗 Algotrade](https://algotradingklmy.onrender.com/)
 - **My Blog:** [🔗 Myblog](https://myblog-lax8.onrender.com/)
 
 ## 📜 Publication
