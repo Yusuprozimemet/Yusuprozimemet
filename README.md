@@ -8,7 +8,6 @@
 *All applications are hosted on free instances on Render, so please allow 50 seconds or more for the initial load time.*
 
 - **Practice Notes (Language Learning App):** [🔗 PracticeNotes](https://practicenl.onrender.com)
-- **Algotrade (Trading App in progress):** [🔗 Algotrade](https://algotradingklmy.onrender.com/)
 - **My Blog:** [🔗 Myblog](https://myblog-lax8.onrender.com/)
 
 ## 📜 Publication
