@@ -1,5 +1,5 @@
-# Yusup Rozimemet
 
+# Yusup Rozimemet
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Yusuprozimemet&layout=compact&langs_count=8&size_weight=0.2&count_weight=0.2)
 
@@ -9,6 +9,16 @@
 
 - **Practice Notes (Language Learning App):** [🔗 PracticeNotes](https://practicenl.onrender.com)
 - **My Blog:** [🔗 Myblog](https://myblog-lax8.onrender.com/)
+- **AlgoTradingKLMY (Trading App):** [🔗 AlgoTradingKLMY](https://algotradingklmy.onrender.com) *(Work in progress)*
+
+## 🔍 Chrome Extension
+
+- **DailyWord:** A Chrome extension that helps users build their vocabulary with daily word notifications, a word-saving context menu, and support for multiple languages. Each day, the extension displays a new word with a sample sentence and allows users to save selected words directly from any webpage.
+  - **Features**:
+    - **Daily Notifications** at 9 AM and 6 PM to introduce new words.
+    - **Context Menu** option to save selected words directly from web pages.
+    - **Multi-language Support** for pronunciation.
+  - **Repository:** [🔗 DailyWord Extension](https://github.com/Yusuprozimemet/DailyWord) (Example link - update with actual repo link)
 
 ## 📜 Publication
 - **Title:** NAD Metabolism and Proteomic Profile in a Yeast Model Expressing a Neurotoxic polyQ Protein: Effect of Phenolics from Extra-virgin Olive Oil
