@@ -1,7 +1,7 @@
 # Yusup Rozimemet
 
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Yusuprozimemet&layout=compact&langs_count=8&size_weight=0.01&count_weight=0.01)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Yusuprozimemet&layout=compact&langs_count=8&size_weight=0.2&count_weight=0.2)
 
 ## 🌍 Web Applications
 
