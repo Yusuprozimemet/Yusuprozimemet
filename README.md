@@ -1,4 +1,3 @@
-
 # Yusup Rozimemet
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Yusuprozimemet&layout=compact&langs_count=8&size_weight=0.2&count_weight=0.2)
@@ -19,6 +18,15 @@
     - **Context Menu** option to save selected words directly from web pages.
     - **Multi-language Support** for pronunciation.
   - **Repository:** [🔗 DailyWord Extension](https://github.com/Yusuprozimemet/DailyWord) (Example link - update with actual repo link)
+
+- **Position Size Calculator:** A Chrome extension that helps traders calculate optimal position sizes for their stock trades based on risk management principles. It fetches the current stock price from the Alpha Vantage API and performs calculations based on user inputs.
+  - **Features**:
+    - **Position Size Calculation** based on risk percentage and stop loss.
+    - **Save Default Settings** for risk and stop loss.
+    - **View and Edit Calculation History**.
+    - **Use Preset Risk and Stop Loss Configurations**.
+    - **Fetch Real-Time Stock Prices**.
+  - **Repository:** [🔗 Position Size Calculator Extension](https://github.com/Yusuprozimemet/position-size-calculator) (Update with actual repo link)
 
 ## 📜 Publication
 - **Title:** NAD Metabolism and Proteomic Profile in a Yeast Model Expressing a Neurotoxic polyQ Protein: Effect of Phenolics from Extra-virgin Olive Oil
