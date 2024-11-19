@@ -11,14 +11,11 @@
 - **AlgoTradingKLMY (Trading App):** [🔗 AlgoTradingKLMY](https://algotradingklmy.onrender.com) *(Work in progress)*
 
 ## 🔍 Chrome Extensions  
-- **DailyWord:** Build your vocabulary with daily notifications, word-saving, and multilingual support.  
-  [🔗 Repository](https://github.com/Yusuprozimemet/DailyWord)  
+- **DailyWord:**  [🔗 Repository](https://github.com/Yusuprozimemet/DailyWord)  
 
-- **Position Size Calculator:** Calculate optimal stock trade sizes with risk management principles and live data.  
-  [🔗 Repository](https://github.com/Yusuprozimemet/-position-size-calculator)  
+- **Position Size Calculator:**  [🔗 Repository](https://github.com/Yusuprozimemet/-position-size-calculator)  
 
-- **INTJ Trading Plan Manager:** A tool for analytical traders to track and improve trading performance strategically.  
-  [🔗 Repository](https://github.com/Yusuprozimemet/INTJ-Trading-Plan-Manager)  
+- **INTJ Trading Plan Manager:**  [🔗 Repository](https://github.com/Yusuprozimemet/INTJ-Trading-Plan-Manager)  
 
 Would you like me to create a GitHub repository for this extension as well?
 
