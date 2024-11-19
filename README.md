@@ -26,7 +26,7 @@
     - **View and Edit Calculation History**.
     - **Use Preset Risk and Stop Loss Configurations**.
     - **Fetch Real-Time Stock Prices**.
-  - **Repository:** [🔗 Position Size Calculator Extension](https://github.com/Yusuprozimemet/position-size-calculator) (Update with actual repo link)
+  - **Repository:** [🔗 Position Size Calculator Extension](https://github.com/Yusuprozimemet/-position-size-calculator) (Update with actual repo link)
 
 ## 📜 Publication
 - **Title:** NAD Metabolism and Proteomic Profile in a Yeast Model Expressing a Neurotoxic polyQ Protein: Effect of Phenolics from Extra-virgin Olive Oil
