@@ -10,23 +10,17 @@
 - **My Blog:** [🔗 Myblog](https://myblog-lax8.onrender.com/)
 - **AlgoTradingKLMY (Trading App):** [🔗 AlgoTradingKLMY](https://algotradingklmy.onrender.com) *(Work in progress)*
 
-## 🔍 Chrome Extension
+## 🔍 Chrome Extensions  
+- **DailyWord:** Build your vocabulary with daily notifications, word-saving, and multilingual support.  
+  [🔗 Repository](https://github.com/Yusuprozimemet/DailyWord)  
 
-- **DailyWord:** A Chrome extension that helps users build their vocabulary with daily word notifications, a word-saving context menu, and support for multiple languages. Each day, the extension displays a new word with a sample sentence and allows users to save selected words directly from any webpage.
-  - **Features**:
-    - **Daily Notifications** at 9 AM and 6 PM to introduce new words.
-    - **Context Menu** option to save selected words directly from web pages.
-    - **Multi-language Support** for pronunciation.
-  - **Repository:** [🔗 DailyWord Extension](https://github.com/Yusuprozimemet/DailyWord) (Example link - update with actual repo link)
+- **Position Size Calculator:** Calculate optimal stock trade sizes with risk management principles and live data.  
+  [🔗 Repository](https://github.com/Yusuprozimemet/-position-size-calculator)  
 
-- **Position Size Calculator:** A Chrome extension that helps traders calculate optimal position sizes for their stock trades based on risk management principles. It fetches the current stock price from the Alpha Vantage API and performs calculations based on user inputs.
-  - **Features**:
-    - **Position Size Calculation** based on risk percentage and stop loss.
-    - **Save Default Settings** for risk and stop loss.
-    - **View and Edit Calculation History**.
-    - **Use Preset Risk and Stop Loss Configurations**.
-    - **Fetch Real-Time Stock Prices**.
-  - **Repository:** [🔗 Position Size Calculator Extension](https://github.com/Yusuprozimemet/-position-size-calculator) (Update with actual repo link)
+- **INTJ Trading Plan Manager:** A tool for analytical traders to track and improve trading performance strategically.  
+  [🔗 Repository](https://github.com/Yusuprozimemet/INTJ-Trading-Plan-Manager)  
+
+Would you like me to create a GitHub repository for this extension as well?
 
 ## 📜 Publication
 - **Title:** NAD Metabolism and Proteomic Profile in a Yeast Model Expressing a Neurotoxic polyQ Protein: Effect of Phenolics from Extra-virgin Olive Oil
