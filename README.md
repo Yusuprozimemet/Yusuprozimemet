@@ -17,7 +17,6 @@
 
 - **INTJ Trading Plan Manager:**  [🔗 Repository](https://github.com/Yusuprozimemet/INTJ-Trading-Plan-Manager)  
 
-Would you like me to create a GitHub repository for this extension as well?
 
 ## 📜 Publication
 - **Title:** NAD Metabolism and Proteomic Profile in a Yeast Model Expressing a Neurotoxic polyQ Protein: Effect of Phenolics from Extra-virgin Olive Oil
