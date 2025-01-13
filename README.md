@@ -13,9 +13,6 @@
 ## 🔍 Chrome Extensions  
 - **DailyWord:**  [🔗 Repository](https://github.com/Yusuprozimemet/DailyWord)  
 
-- **Position Size Calculator:**  [🔗 Repository](https://github.com/Yusuprozimemet/-position-size-calculator)  
-
-- **INTJ Trading Plan Manager:**  [🔗 Repository](https://github.com/Yusuprozimemet/INTJ-Trading-Plan-Manager)  
 
 
 ## 📜 Publication
