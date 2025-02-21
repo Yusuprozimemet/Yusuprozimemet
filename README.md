@@ -9,8 +9,6 @@
 
 - **Practice (Language Learning App):** [🔗 PracticeNotes](https://practicenl.onrender.com)
 - **Word app:** [🔗 Wordapp](https://wordsapp-0syf.onrender.com/)
-- **My Blog:** [🔗 Myblog](https://myblog-lax8.onrender.com/)
-- **AlgoTradingKLMY (Trading App):** [🔗 AlgoTradingKLMY](https://algotradingklmy.onrender.com) *(Work in progress)*
 
 ## 🔍 Chrome Extensions  
 - **DailyWord:**  [🔗 Repository](https://github.com/Yusuprozimemet/DailyWord)  
