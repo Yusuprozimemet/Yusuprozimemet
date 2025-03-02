@@ -9,7 +9,6 @@
 
 - **Practice (Language Learning App):** [🔗 PracticeNotes](https://practicenl.onrender.com)
 - **TyporaX:** [🔗 TyporaX](https://typorax.onrender.com)
-- **Word app:** [🔗 Wordapp](https://wordsapp-0syf.onrender.com/)
 
 ## 🔍 Chrome Extensions  
 - **DailyWord:**  [🔗 Repository](https://github.com/Yusuprozimemet/DailyWord)  
