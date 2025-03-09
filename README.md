@@ -10,8 +10,6 @@
 - **Practice (Language Learning App):** [🔗 PracticeNotes](https://practicenl.onrender.com)
 - **TyporaX:** [🔗 TyporaX](https://typorax.onrender.com)
 
-## 🔍 Chrome Extensions  
-- **DailyWord:**  [🔗 Repository](https://github.com/Yusuprozimemet/DailyWord)  
 
 ## Bioinformatic tools
 - **FastYeast:** [🔗 Repository](https://github.com/Yusuprozimemet/FastYeast)
@@ -24,11 +22,5 @@
 - **Journal/Conference:** Preprints & MaxQuant Summer School 
 - **Link:** [🔗 Preprint](https://www.preprints.org/manuscript/202402.1499/v1)
 
-## 🔧 Frequently Used Tools
-- **Programming Languages:** Python, JavaScript, HTML, CSS
-- **Frameworks & Libraries:** Django, Flask, Pandas, NumPy, Matplotlib, Seaborn, Plotly, OpenMM, MDTraj, PyTraj
-- **Databases:** PostgreSQL, SQLite
-- **DevOps & Tools:** Git, GitHub, Docker, Confluence, Jira
-- **Platforms & Environments:** Render, Heroku, Anaconda, Google Colab
-- **AI & Machine Learning:** TensorFlow, Keras, scikit-learn, AutoGen
+
 
