@@ -1,5 +1,5 @@
 
-## 🌍 Web Applications
+## 🌍 Languge learning app.
 
 *All applications are hosted on free instances on Render, so please allow 50 seconds or more for the initial load time.*
 
@@ -7,7 +7,7 @@
 - **TyporaX:** [🔗 TyporaX](https://typorax.onrender.com)
 
 
-## Bioinformatic tools
+##  Tools
 - **FastYeast:** [🔗 Repository](https://github.com/Yusuprozimemet/FastYeast)
 - **TriplexDynamiX:** [🔗 Repository](https://github.com/Yusuprozimemet/TriplexDynamiX)
 - **GPS-Ancestry Migration Map:** [🔗 Repository](https://github.com/Yusuprozimemet/GPS_Ancestry_Migration_Map)
@@ -15,8 +15,7 @@
 ## 📜 Publication
 - **Title:** NAD Metabolism and Proteomic Profile in a Yeast Model Expressing a Neurotoxic polyQ Protein: Effect of Phenolics from Extra-virgin Olive Oil
 - **Authors:** Vincenzetti, S, Rozimemet, Y, et al.
-- **Journal/Conference:** Preprints & MaxQuant Summer School 
-- **Link:** [🔗 Preprint](https://www.preprints.org/manuscript/202402.1499/v1)
+
 
 
 
