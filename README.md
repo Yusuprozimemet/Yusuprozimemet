@@ -3,7 +3,7 @@
 
 *All applications are hosted on free instances on Render, so please allow 50 seconds or more for the initial load time.*
 
-- **Practice (Language Learning App):** [🔗 PracticeNotes](https://practicenl.onrender.com)
+- **Practice:** [🔗 PracticeNotes](https://practicenl.onrender.com)
 - **TyporaX:** [🔗 TyporaX](https://typorax.onrender.com)
 
 
