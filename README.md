@@ -1,8 +1,4 @@
 
-# Yusup Rozimemet
-
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Yusuprozimemet&layout=compact&langs_count=8&size_weight=0.2&count_weight=0.2)
-
 ## 🌍 Web Applications
 
 *All applications are hosted on free instances on Render, so please allow 50 seconds or more for the initial load time.*
