@@ -1,5 +1,5 @@
 
-## 🌍 Languge learning apps
+## 🌍 Apps
 
 *All applications are hosted on free instances on Render, so please allow 50 seconds or more for the initial load time.*
 
