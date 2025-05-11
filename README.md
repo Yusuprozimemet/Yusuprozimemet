@@ -1,11 +1,7 @@
 
-## 🌍 WebApps
-
-*All applications are hosted on free instances on Render, so please allow 50 seconds or more for the initial load time.*
+## 🌍 WebApp
 
 - **TyporaX:** [🔗 TyporaX](https://typorax.onrender.com)
-- **Practice:** [🔗 PracticeNotes](https://practicenl.onrender.com)
-
 
 ##  Tools
 - **FastYeast:** [🔗 Repository](https://github.com/Yusuprozimemet/FastYeast)
