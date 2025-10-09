@@ -3,10 +3,6 @@
 - **TyporaX:** [🔗 TyporaX](https://typorax.onrender.com)  
  
 
-- **Game Demo:** [🔗 Rock-Paper-Scissors (RPS)](https://mellow-nurturing-production-b23c.up.railway.app)  
-
-
-
 ##  Tools
 - **FastYeast:** [🔗 Repository](https://github.com/Yusuprozimemet/FastYeast)
 - **TriplexDynamiX:** [🔗 Repository](https://github.com/Yusuprozimemet/TriplexDynamiX)
