@@ -1,10 +1,10 @@
 ## 🌍 Web Applications
 
 - **TyporaX:** [🔗 TyporaX](https://typorax.onrender.com)  
-  Deployed through GitHub integration on Render.
+ 
 
 - **Game Demo:** [🔗 Rock-Paper-Scissors (RPS)](https://mellow-nurturing-production-b23c.up.railway.app)  
-  Deployed via Docker image on Railway.
+
 
 
 ##  Tools
