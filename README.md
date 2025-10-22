@@ -2,16 +2,10 @@
 
 **Full-Stack Developer | AI/ML Engineer | FinTech Specialist**
 
-![Technical Journey Dashboard](https://yusuprozimemet.github.io/Yusuprozimemet/)
-
----
-
-## 📊 My 5-Year Technical Growth (Interactive)
 **[View Live Dashboard →](https://yusuprozimemet.github.io/Yusuprozimemet/)**
 
 - **20+ Projects** across 5 domains
 - **Production deployments** on Railway/Render/GCP
-
 
 ---
 
