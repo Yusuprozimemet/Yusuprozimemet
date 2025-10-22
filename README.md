@@ -1,5 +1,3 @@
-# Yusup Rozimemet
-
 **Full-Stack Developer | AI/ML Engineer | FinTech Specialist**
 
 **[View Live Dashboard →](https://yusuprozimemet.github.io/Yusuprozimemet/)**
