@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yusup Rozimemet - Technical Journey 2020-2025</title>
+    <title>Yusup Rozimemet - AI + FinTech Engineer</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             box-sizing: border-box;
@@ -31,7 +32,7 @@
         .header {
             text-align: center;
             margin-bottom: 60px;
-            padding: 40px 0;
+            padding: 60px 0;
             position: relative;
         }
 
@@ -43,21 +44,22 @@
             transform: translateX(-50%);
             width: 100vw;
             height: 1px;
-            background: linear-gradient(90deg, transparent, #4caf50, transparent);
+            background: linear-gradient(90deg, transparent, #4caf50, #2196f3, transparent);
         }
 
         .profile-pic {
-            width: 120px;
-            height: 120px;
+            width: 140px;
+            height: 140px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #4caf50, #2196f3);
-            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #4caf50, #2196f3, #ff9800);
+            margin: 0 auto 25px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3em;
-            box-shadow: 0 8px 32px rgba(76, 175, 80, 0.3);
+            font-size: 3.5em;
+            box-shadow: 0 12px 40px rgba(76, 175, 80, 0.4);
             animation: pulse 2s infinite;
+            border: 4px solid rgba(255, 255, 255, 0.1);
         }
 
         @keyframes pulse {
@@ -65,64 +67,98 @@
             0%,
             100% {
                 transform: scale(1);
+                box-shadow: 0 12px 40px rgba(76, 175, 80, 0.4);
             }
 
             50% {
                 transform: scale(1.05);
+                box-shadow: 0 20px 60px rgba(76, 175, 80, 0.6);
             }
         }
 
         h1 {
             color: #ffffff;
-            font-size: 3em;
-            font-weight: 700;
-            margin: 0 0 10px;
-            background: linear-gradient(135deg, #4caf50, #bb86fc);
+            font-size: 3.2em;
+            font-weight: 800;
+            margin: 0 0 15px;
+            background: linear-gradient(135deg, #4caf50, #bb86fc, #2196f3);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
-        h2 {
+        .subtitle {
             color: #bb86fc;
-            font-size: 1.5em;
+            font-size: 1.6em;
             font-weight: 400;
-            margin: 0;
+            margin: 0 0 10px;
             text-transform: uppercase;
             letter-spacing: 2px;
+        }
+
+        .tagline {
+            font-size: 1.1em;
+            color: #888;
+            margin: 0 0 30px;
+            font-weight: 300;
         }
 
         .stats {
             display: flex;
             justify-content: center;
             gap: 40px;
-            margin: 30px 0;
+            margin: 40px 0;
             flex-wrap: wrap;
         }
 
         .stat {
             text-align: center;
-            padding: 20px;
-            background: rgba(30, 30, 30, 0.8);
-            border-radius: 12px;
+            padding: 25px 20px;
+            background: rgba(30, 30, 30, 0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
             border: 1px solid rgba(76, 175, 80, 0.2);
-            transition: all 0.3s ease;
-            min-width: 120px;
+            transition: all 0.4s ease;
+            min-width: 130px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(76, 175, 80, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .stat:hover::before {
+            left: 100%;
         }
 
         .stat:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(76, 175, 80, 0.2);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(76, 175, 80, 0.3);
             border-color: #4caf50;
         }
 
-        .stat-number {
-            font-size: 2.5em;
-            font-weight: 700;
+        .stat-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
             background: linear-gradient(135deg, #4caf50, #2196f3);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
+        }
+
+        .stat-number {
+            font-size: 2.8em;
+            font-weight: 800;
+            background: linear-gradient(135deg, #4caf50, #2196f3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             margin-bottom: 5px;
         }
 
@@ -131,17 +167,17 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
             gap: 30px;
-            margin-bottom: 60px;
+            margin-bottom: 80px;
         }
 
         .chart-container {
-            background: rgba(30, 30, 30, 0.9);
-            backdrop-filter: blur(10px);
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(76, 175, 80, 0.1);
-            transition: all 0.3s ease;
+            background: rgba(30, 30, 30, 0.95);
+            backdrop-filter: blur(15px);
+            padding: 35px;
+            border-radius: 24px;
+            box-shadow: 0 16px 50px rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(76, 175, 80, 0.15);
+            transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
         }
@@ -152,66 +188,68 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #4caf50, #2196f3, #bb86fc);
+            height: 5px;
+            background: linear-gradient(90deg, #4caf50, #2196f3, #ff9800, #bb86fc);
+            border-radius: 24px 24px 0 0;
         }
 
         .chart-container:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 50px rgba(76, 175, 80, 0.2);
-            border-color: rgba(76, 175, 80, 0.3);
+            transform: translateY(-10px);
+            box-shadow: 0 25px 60px rgba(76, 175, 80, 0.25);
+            border-color: rgba(76, 175, 80, 0.4);
         }
 
         .chart-title {
-            color: #bb86fc;
+            color: #ffffff;
             text-align: center;
-            margin-bottom: 25px;
-            font-size: 1.3em;
-            font-weight: 600;
+            margin-bottom: 30px;
+            font-size: 1.4em;
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
+            position: relative;
+        }
+
+        .chart-title i {
+            margin-right: 10px;
+            color: #4caf50;
         }
 
         canvas {
-            max-height: 350px;
-        }
-
-        /* MISSING BUBBLE CHART */
-        .chart-container:nth-child(5) {
-            grid-column: span 2;
+            max-height: 380px;
         }
 
         /* RESPONSIVE */
         @media (max-width: 768px) {
             .charts-grid {
                 grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .chart-container:nth-child(5) {
-                grid-column: span 1;
+                gap: 25px;
             }
 
             .stats {
-                gap: 20px;
+                gap: 25px;
             }
 
             h1 {
-                font-size: 2.2em;
+                font-size: 2.5em;
             }
 
             .profile-pic {
-                font-size: 2em;
-                width: 80px;
-                height: 80px;
+                font-size: 2.8em;
+                width: 110px;
+                height: 110px;
+            }
+
+            .subtitle {
+                font-size: 1.3em;
             }
         }
 
-        /* SCROLL ANIMATIONS */
+        /* ANIMATIONS */
         .fade-in {
             opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
+            transform: translateY(40px);
+            transition: all 0.8s ease;
         }
 
         .fade-in.visible {
@@ -222,10 +260,16 @@
         /* FOOTER */
         .footer {
             text-align: center;
-            padding: 40px 0;
+            padding: 50px 0;
             color: #888;
             border-top: 1px solid rgba(76, 175, 80, 0.1);
-            margin-top: 60px;
+            margin-top: 80px;
+            font-size: 0.95em;
+        }
+
+        .highlight {
+            color: #4caf50;
+            font-weight: 600;
         }
     </style>
 </head>
@@ -236,15 +280,23 @@
         <div class="header fade-in">
             <div class="profile-pic">👨‍💻</div>
             <h1>Yusup Rozimemet</h1>
-            <h2>Technical Journey: 2020 → 2025</h2>
+            <h2 class="subtitle">AI + FinTech Engineer</h2>
+            <p class="tagline">From Web Apps to Multi-Agent AI Systems | 20+ Production Projects</p>
             <div class="stats">
                 <div class="stat">
+                    <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
                     <div class="stat-number">25+</div>Projects
                 </div>
                 <div class="stat">
-                    <div class="stat-number">5</div>Domains
+                    <div class="stat-icon"><i class="fas fa-brain"></i></div>
+                    <div class="stat-number">8</div>AI/ML
                 </div>
                 <div class="stat">
+                    <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="stat-number">6</div>FinTech
+                </div>
+                <div class="stat">
+                    <div class="stat-icon"><i class="fas fa-rocket"></i></div>
                     <div class="stat-number">50+</div>Deployments
                 </div>
             </div>
@@ -253,50 +305,51 @@
         <!-- CHARTS -->
         <div class="charts-grid">
             <div class="chart-container fade-in">
-                <h2 class="chart-title">📈 Career Progression</h2>
+                <h2 class="chart-title"><i class="fas fa-chart-line"></i>Career Progression</h2>
                 <canvas id="timelineChart"></canvas>
             </div>
 
             <div class="chart-container fade-in">
-                <h2 class="chart-title">🎯 Skill Mastery</h2>
+                <h2 class="chart-title"><i class="fas fa-bullseye"></i>Skill Mastery</h2>
                 <canvas id="radarChart"></canvas>
             </div>
 
             <div class="chart-container fade-in">
-                <h2 class="chart-title">📊 Project Distribution</h2>
+                <h2 class="chart-title"><i class="fas fa-chart-pie"></i>Project Distribution</h2>
                 <canvas id="doughnutChart"></canvas>
             </div>
 
             <div class="chart-container fade-in">
-                <h2 class="chart-title">🔧 Tech Adoption</h2>
+                <h2 class="chart-title"><i class="fas fa-cogs"></i>Tech Adoption</h2>
                 <canvas id="stackedBarChart"></canvas>
             </div>
 
             <div class="chart-container fade-in">
-                <h2 class="chart-title">💰 Market Value Growth</h2>
+                <h2 class="chart-title"><i class="fas fa-dollar-sign"></i>Market Value Growth</h2>
                 <canvas id="bubbleChart"></canvas>
             </div>
         </div>
 
         <!-- FOOTER -->
         <div class="footer">
-            <p>Built with ❤️ using Chart.js | 2020-2025 Technical Evolution</p>
+            <p><i class="fas fa-code"></i> Built with Chart.js | <span class="highlight">AI + FinTech +
+                    Full-Stack</span> | 2020-2025</p>
         </div>
     </div>
 
     <script>
-        // INTERSECTION OBSERVER FOR ANIMATIONS
+        // SCROLL ANIMATIONS
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
                 }
             });
-        });
+        }, { threshold: 0.1 });
 
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-        // 1. TIMELINE CHART - ENHANCED
+        // 1. TIMELINE CHART
         new Chart(document.getElementById('timelineChart'), {
             type: 'line',
             data: {
@@ -304,39 +357,40 @@
                 datasets: [
                     {
                         label: 'Projects',
-                        data: [2, 4, 6, 8, 12, 25],
+                        data: [2, 5, 8, 14, 20, 25],
                         borderColor: '#4CAF50',
-                        backgroundColor: 'rgba(76,175,80,0.2)',
+                        backgroundColor: 'rgba(76,175,80,0.15)',
                         fill: true,
                         tension: 0.4,
-                        borderWidth: 3,
+                        borderWidth: 4,
                         pointBackgroundColor: '#4CAF50',
                         pointBorderColor: '#ffffff',
-                        pointRadius: 6
+                        pointRadius: 8,
+                        pointHoverRadius: 10
                     },
                     {
-                        label: 'Deployments',
-                        data: [1, 2, 4, 7, 12, 18],
-                        borderColor: '#2196F3',
-                        backgroundColor: 'rgba(33,150,243,0.2)',
-                        fill: true,
-                        tension: 0.4,
-                        borderWidth: 3,
-                        pointBackgroundColor: '#2196F3',
-                        pointBorderColor: '#ffffff',
-                        pointRadius: 6
-                    },
-                    {
-                        label: 'AI/ML Projects',
+                        label: 'AI Deployments',
                         data: [0, 0, 1, 5, 9, 15],
                         borderColor: '#FF9800',
-                        backgroundColor: 'rgba(255,152,0,0.2)',
+                        backgroundColor: 'rgba(255,152,0,0.15)',
                         fill: true,
                         tension: 0.4,
-                        borderWidth: 3,
+                        borderWidth: 4,
                         pointBackgroundColor: '#FF9800',
                         pointBorderColor: '#ffffff',
-                        pointRadius: 6
+                        pointRadius: 8
+                    },
+                    {
+                        label: 'FinTech',
+                        data: [0, 1, 3, 5, 6, 8],
+                        borderColor: '#2196F3',
+                        backgroundColor: 'rgba(33,150,243,0.15)',
+                        fill: true,
+                        tension: 0.4,
+                        borderWidth: 4,
+                        pointBackgroundColor: '#2196F3',
+                        pointBorderColor: '#ffffff',
+                        pointRadius: 8
                     }
                 ]
             },
@@ -344,48 +398,58 @@
                 responsive: true,
                 maintainAspectRatio: false,
                 plugins: {
-                    legend: { labels: { color: '#e0e0e0', font: { size: 12 } } }
+                    legend: {
+                        labels: {
+                            color: '#e0e0e0',
+                            font: { size: 13, weight: 'bold' },
+                            padding: 20
+                        }
+                    }
                 },
                 scales: {
                     x: {
-                        ticks: { color: '#e0e0e0', font: { size: 11 } },
-                        grid: { color: 'rgba(255,255,255,0.1)' }
+                        ticks: { color: '#e0e0e0', font: { size: 12 } },
+                        grid: { color: 'rgba(255,255,255,0.08)' }
                     },
                     y: {
-                        ticks: { color: '#e0e0e0', font: { size: 11 } },
-                        grid: { color: 'rgba(255,255,255,0.1)' }
+                        ticks: { color: '#e0e0e0', font: { size: 12 } },
+                        grid: { color: 'rgba(255,255,255,0.08)' }
                     }
                 },
-                animation: { duration: 2000, easing: 'easeInOutQuart' }
+                animation: { duration: 2500, easing: 'easeInOutBack' },
+                interaction: { intersect: false }
             }
         });
 
-        // 2. RADAR CHART - ENHANCED
+        // 2. RADAR CHART
         new Chart(document.getElementById('radarChart'), {
             type: 'radar',
             data: {
-                labels: ['Web Dev', 'AI/ML', 'FinTech', 'Bioinformatics', 'Languages', 'DevOps'],
+                labels: ['AI/ML', 'FinTech', 'Web Dev', 'DevOps', 'Bioinformatics', 'EdTech'],
                 datasets: [
                     {
                         label: '2020',
-                        data: [60, 10, 20, 0, 40, 10],
+                        data: [20, 10, 60, 10, 0, 30],
                         borderColor: '#9E9E9E',
-                        backgroundColor: 'rgba(158,158,158,0.2)',
-                        borderWidth: 2
+                        backgroundColor: 'rgba(158,158,158,0.15)',
+                        borderWidth: 2,
+                        pointRadius: 5
                     },
                     {
                         label: '2023',
-                        data: [80, 60, 70, 40, 70, 50],
+                        data: [70, 80, 85, 60, 40, 75],
                         borderColor: '#FF9800',
-                        backgroundColor: 'rgba(255,152,0,0.2)',
-                        borderWidth: 2
+                        backgroundColor: 'rgba(255,152,0,0.15)',
+                        borderWidth: 3,
+                        pointRadius: 6
                     },
                     {
                         label: '2025',
-                        data: [95, 90, 95, 80, 85, 85],
+                        data: [92, 95, 90, 85, 80, 88],
                         borderColor: '#4CAF50',
-                        backgroundColor: 'rgba(76,175,80,0.3)',
-                        borderWidth: 3
+                        backgroundColor: 'rgba(76,175,80,0.25)',
+                        borderWidth: 4,
+                        pointRadius: 8
                     }
                 ]
             },
@@ -396,31 +460,39 @@
                     r: {
                         beginAtZero: true,
                         max: 100,
-                        pointLabels: { color: '#e0e0e0', font: { size: 11 } },
+                        pointLabels: { color: '#e0e0e0', font: { size: 12, weight: 'bold' } },
                         ticks: { color: '#e0e0e0', backdropColor: 'transparent' },
-                        grid: { color: 'rgba(255,255,255,0.1)' }
+                        grid: { color: 'rgba(255,255,255,0.1)' },
+                        angleLines: { color: 'rgba(255,255,255,0.1)' }
                     }
                 },
                 plugins: {
-                    legend: { labels: { color: '#e0e0e0', font: { size: 12 } } }
+                    legend: {
+                        labels: { color: '#e0e0e0', font: { size: 13 } }
+                    }
                 },
-                animation: { duration: 2000 }
+                animation: { duration: 2500 }
             }
         });
 
-        // 3. DOUGHNUT CHART - ENHANCED
+        // 3. DOUGHNUT CHART
         new Chart(document.getElementById('doughnutChart'), {
             type: 'doughnut',
             data: {
-                labels: ['AI/ML', 'FinTech', 'Web Dev', 'Languages', 'Bioinformatics', 'DevOps'],
+                labels: ['AI/ML', 'FinTech', 'Web Dev', 'EdTech', 'Bioinformatics', 'DevOps'],
                 datasets: [{
-                    data: [12, 8, 6, 5, 3, 4],
+                    data: [15, 12, 8, 6, 3, 4],
                     backgroundColor: [
-                        '#FF6384', '#36A2EB', '#FFCE56',
-                        '#4BC0C0', '#9966FF', '#FF9F40'
+                        'rgba(255,99,132,0.8)',
+                        'rgba(54,162,235,0.8)',
+                        'rgba(255,206,86,0.8)',
+                        'rgba(75,192,192,0.8)',
+                        'rgba(153,102,255,0.8)',
+                        'rgba(255,159,64,0.8)'
                     ],
                     borderWidth: 0,
-                    borderRadius: 8
+                    borderRadius: 12,
+                    hoverOffset: 10
                 }]
             },
             options: {
@@ -431,20 +503,22 @@
                         position: 'bottom',
                         labels: {
                             color: '#e0e0e0',
-                            font: { size: 11 },
-                            padding: 20
+                            font: { size: 12, weight: '600' },
+                            padding: 25,
+                            usePointStyle: true
                         }
                     }
                 },
-                cutout: '60%',
+                cutout: '65%',
                 animation: {
                     animateRotate: true,
-                    duration: 2000
+                    duration: 2500,
+                    easing: 'easeInOutQuart'
                 }
             }
         });
 
-        // 4. STACKED BAR CHART - ENHANCED
+        // 4. STACKED BAR
         new Chart(document.getElementById('stackedBarChart'), {
             type: 'bar',
             data: {
@@ -452,18 +526,18 @@
                 datasets: [
                     {
                         label: 'Flask/Django',
-                        data: [2, 3, 4, 5, 6, 7],
-                        backgroundColor: 'rgba(76,175,80,0.8)'
+                        data: [2, 4, 5, 7, 8, 9],
+                        backgroundColor: 'rgba(76,175,80,0.85)'
                     },
                     {
-                        label: 'OpenAI',
-                        data: [0, 0, 0, 4, 7, 9],
-                        backgroundColor: 'rgba(255,87,34,0.8)'
+                        label: 'OpenAI/AutoGen',
+                        data: [0, 0, 1, 6, 9, 12],
+                        backgroundColor: 'rgba(255,152,0,0.85)'
                     },
                     {
-                        label: 'Docker/K8s',
-                        data: [0, 1, 2, 4, 6, 8],
-                        backgroundColor: 'rgba(33,150,243,0.8)'
+                        label: 'Docker/Cloud',
+                        data: [0, 1, 2, 5, 8, 11],
+                        backgroundColor: 'rgba(33,150,243,0.85)'
                     }
                 ]
             },
@@ -473,55 +547,57 @@
                 scales: {
                     x: {
                         stacked: true,
-                        ticks: { color: '#e0e0e0' },
+                        ticks: { color: '#e0e0e0', font: { size: 12 } },
                         grid: { display: false }
                     },
                     y: {
                         stacked: true,
                         beginAtZero: true,
-                        ticks: { color: '#e0e0e0' },
-                        grid: { color: 'rgba(255,255,255,0.1)' }
+                        ticks: { color: '#e0e0e0', font: { size: 12 } },
+                        grid: { color: 'rgba(255,255,255,0.08)' }
                     }
                 },
                 plugins: {
-                    legend: { labels: { color: '#e0e0e0', font: { size: 12 } } }
+                    legend: {
+                        labels: { color: '#e0e0e0', font: { size: 13 } }
+                    }
                 },
-                animation: { duration: 2000 }
+                animation: { duration: 2500 }
             }
         });
 
-        // 5. BUBBLE CHART - NEW!
+        // 5. BUBBLE CHART
         new Chart(document.getElementById('bubbleChart'), {
             type: 'bubble',
             data: {
                 datasets: [
                     {
-                        label: 'Project Value',
+                        label: 'Project Impact',
                         data: [
-                            { x: 2020, y: 2, r: 10 },
-                            { x: 2021, y: 8, r: 15 },
-                            { x: 2022, y: 15, r: 20 },
-                            { x: 2023, y: 35, r: 25 },
-                            { x: 2024, y: 60, r: 30 },
-                            { x: 2025, y: 95, r: 40 }
+                            { x: 2020, y: 15, r: 12 },
+                            { x: 2021, y: 25, r: 18 },
+                            { x: 2022, y: 40, r: 22 },
+                            { x: 2023, y: 65, r: 28 },
+                            { x: 2024, y: 85, r: 35 },
+                            { x: 2025, y: 95, r: 45 }
                         ],
-                        backgroundColor: 'rgba(76,175,80,0.6)',
+                        backgroundColor: 'rgba(76,175,80,0.7)',
                         borderColor: '#4CAF50',
-                        borderWidth: 2
+                        borderWidth: 3
                     },
                     {
-                        label: 'Market Salary ($K)',
+                        label: 'Salary ($K)',
                         data: [
-                            { x: 2020, y: 40, r: 8 },
-                            { x: 2021, y: 55, r: 12 },
-                            { x: 2022, y: 70, r: 16 },
-                            { x: 2023, y: 90, r: 20 },
-                            { x: 2024, y: 120, r: 25 },
-                            { x: 2025, y: 160, r: 30 }
+                            { x: 2020, y: 50, r: 10 },
+                            { x: 2021, y: 65, r: 14 },
+                            { x: 2022, y: 85, r: 18 },
+                            { x: 2023, y: 110, r: 22 },
+                            { x: 2024, y: 140, r: 28 },
+                            { x: 2025, y: 160, r: 35 }
                         ],
-                        backgroundColor: 'rgba(255,152,0,0.6)',
+                        backgroundColor: 'rgba(255,152,0,0.7)',
                         borderColor: '#FF9800',
-                        borderWidth: 2
+                        borderWidth: 3
                     }
                 ]
             },
@@ -532,27 +608,37 @@
                     x: {
                         type: 'linear',
                         position: 'bottom',
-                        title: { display: true, text: 'Year', color: '#e0e0e0' },
+                        title: {
+                            display: true,
+                            text: 'Year',
+                            color: '#e0e0e0',
+                            font: { size: 13, weight: 'bold' }
+                        },
                         ticks: { color: '#e0e0e0' },
-                        grid: { color: 'rgba(255,255,255,0.1)' }
+                        grid: { color: 'rgba(255,255,255,0.08)' }
                     },
                     y: {
-                        title: { display: true, text: 'Value / Salary ($K)', color: '#e0e0e0' },
+                        title: {
+                            display: true,
+                            text: 'Impact / Salary ($K)',
+                            color: '#e0e0e0',
+                            font: { size: 13, weight: 'bold' }
+                        },
                         ticks: { color: '#e0e0e0' },
-                        grid: { color: 'rgba(255,255,255,0.1)' }
+                        grid: { color: 'rgba(255,255,255,0.08)' }
                     }
                 },
                 plugins: {
-                    legend: { labels: { color: '#e0e0e0' } },
+                    legend: { labels: { color: '#e0e0e0', font: { size: 13 } } },
                     tooltip: {
                         callbacks: {
                             label: function (context) {
-                                return `${context.dataset.label}: $${context.parsed.y}K`;
+                                return `${context.dataset.label}: ${context.parsed.y}${context.dataset.label.includes('Salary') ? 'K' : ''}`;
                             }
                         }
                     }
                 },
-                animation: { duration: 2000 }
+                animation: { duration: 2500 }
             }
         });
     </script>
