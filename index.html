@@ -17,90 +17,64 @@
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
         .header {
             text-align: center;
-            margin-bottom: 50px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding-bottom: 20px;
+            margin-bottom: 40px;
         }
 
         h1 {
             color: #00d9ff;
-            font-size: 2.7em;
-            margin-bottom: 5px;
-            text-shadow: 0 0 10px rgba(0, 217, 255, 0.5);
+            font-size: 2.5em;
+            text-shadow: 0 0 12px rgba(0, 217, 255, 0.5);
         }
 
         h2 {
             color: #bdc3c7;
-            text-align: center;
-            margin-bottom: 15px;
-            font-size: 14px;
-            letter-spacing: 1px;
         }
 
         .stats {
             display: flex;
             justify-content: center;
-            gap: 40px;
-            margin-top: 25px;
-        }
-
-        .stat {
-            text-align: center;
+            gap: 50px;
+            margin-top: 20px;
         }
 
         .stat-number {
-            font-size: 2.2em;
+            font-size: 2em;
             font-weight: bold;
             color: #00ffd0;
-            text-shadow: 0 0 10px rgba(0, 255, 208, 0.5);
-            margin-bottom: 8px;
+            text-shadow: 0 0 8px rgba(0, 255, 208, 0.6);
         }
 
-        .charts-row {
-            display: flex;
-            gap: 20px;
-            overflow-x: auto;
-            padding: 30px 0;
-            scrollbar-width: thin;
-            scrollbar-color: #00d9ff transparent;
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            justify-content: center;
+            align-items: stretch;
         }
 
         .chart-container {
             background: rgba(255, 255, 255, 0.05);
             padding: 20px;
             border-radius: 14px;
-            min-width: 320px;
-            flex: 0 0 320px;
             box-shadow: 0 0 10px rgba(0, 217, 255, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            min-height: 320px;
         }
 
         .chart-container:hover {
-            transform: translateY(-6px);
+            transform: translateY(-5px);
             box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
         }
 
         canvas {
-            background: transparent;
-        }
-
-        ::-webkit-scrollbar {
-            height: 6px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: transparent;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background-color: #00d9ff;
-            border-radius: 4px;
+            width: 100%;
+            height: 240px !important;
         }
     </style>
 </head>
@@ -123,25 +97,22 @@
             </div>
         </div>
 
-        <div class="charts-row">
+        <div class="charts-grid">
             <div class="chart-container">
                 <h2>📈 Career Progression</h2>
-                <canvas id="timelineChart" height="200"></canvas>
+                <canvas id="timelineChart"></canvas>
             </div>
-
             <div class="chart-container">
                 <h2>🎯 Skill Mastery</h2>
-                <canvas id="radarChart" height="200"></canvas>
+                <canvas id="radarChart"></canvas>
             </div>
-
             <div class="chart-container">
                 <h2>📊 Project Distribution</h2>
-                <canvas id="doughnutChart" height="200"></canvas>
+                <canvas id="doughnutChart"></canvas>
             </div>
-
             <div class="chart-container">
                 <h2>🔧 Tech Adoption</h2>
-                <canvas id="stackedBarChart" height="200"></canvas>
+                <canvas id="stackedBarChart"></canvas>
             </div>
         </div>
     </div>
@@ -150,7 +121,6 @@
         const textColor = '#ecf0f1';
         const gridColor = 'rgba(255,255,255,0.1)';
 
-        // TIMELINE CHART
         new Chart(document.getElementById('timelineChart'), {
             type: 'line',
             data: {
@@ -161,15 +131,9 @@
                     { label: 'AI/ML', data: [0, 0, 1, 5, 8, 12], borderColor: '#ffb347', backgroundColor: 'rgba(255,179,71,0.2)', fill: true }
                 ]
             },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: { legend: { labels: { color: textColor } } },
-                scales: { x: { ticks: { color: textColor }, grid: { color: gridColor } }, y: { ticks: { color: textColor }, grid: { color: gridColor } } }
-            }
+            options: { plugins: { legend: { labels: { color: textColor } } }, scales: { x: { ticks: { color: textColor }, grid: { color: gridColor } }, y: { ticks: { color: textColor }, grid: { color: gridColor } } } }
         });
 
-        // RADAR CHART
         new Chart(document.getElementById('radarChart'), {
             type: 'radar',
             data: {
@@ -180,29 +144,18 @@
                     { label: '2025', data: [95, 90, 95, 80, 85, 85], borderColor: '#00ffd0', backgroundColor: 'rgba(0,255,208,0.2)' }
                 ]
             },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: { legend: { labels: { color: textColor } } },
-                scales: { r: { grid: { color: gridColor }, pointLabels: { color: textColor }, ticks: { display: false } } }
-            }
+            options: { plugins: { legend: { labels: { color: textColor } } }, scales: { r: { grid: { color: gridColor }, pointLabels: { color: textColor }, ticks: { display: false } } } }
         });
 
-        // DOUGHNUT CHART
         new Chart(document.getElementById('doughnutChart'), {
             type: 'doughnut',
             data: {
                 labels: ['AI/ML', 'FinTech', 'Web', 'Lang', 'Bio', 'ML'],
                 datasets: [{ data: [8, 6, 5, 4, 2, 3], backgroundColor: ['#00ffd0', '#ffb347', '#36a2eb', '#9966ff', '#f06292', '#ff9f40'] }]
             },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: { legend: { labels: { color: textColor } } }
-            }
+            options: { plugins: { legend: { labels: { color: textColor } } } }
         });
 
-        // STACKED BAR CHART
         new Chart(document.getElementById('stackedBarChart'), {
             type: 'bar',
             data: {
@@ -213,15 +166,7 @@
                     { label: 'Docker', data: [0, 1, 2, 4, 6, 8], backgroundColor: '#36a2eb' }
                 ]
             },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: { legend: { labels: { color: textColor } } },
-                scales: {
-                    x: { stacked: true, ticks: { color: textColor }, grid: { color: gridColor } },
-                    y: { stacked: true, ticks: { color: textColor }, grid: { color: gridColor } }
-                }
-            }
+            options: { plugins: { legend: { labels: { color: textColor } } }, scales: { x: { stacked: true, ticks: { color: textColor }, grid: { color: gridColor } }, y: { stacked: true, ticks: { color: textColor }, grid: { color: gridColor } } } }
         });
     </script>
 </body>
