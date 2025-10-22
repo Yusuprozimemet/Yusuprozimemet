@@ -1,6 +1,6 @@
 ## 🌍 Web Applications
 
-- **Typorax:** [🔗 Render](https://typorax.onrender.com)  
+- **Typorax:** [🔗live](https://typorax.onrender.com)  
 - **Repository:** [📘 GitHub – TyporaX Project Overview](https://github.com/Yusuprozimemet/projects/blob/main/README.md)
  
 
