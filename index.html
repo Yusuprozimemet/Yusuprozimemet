@@ -6,182 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yusup Rozimemet - Technical Journey 2020-2025</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Segoe UI', sans-serif;
             margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
-            color: #e2e8f0;
-            min-height: 100vh;
-            overflow-x: auto;
+            padding: 20px;
+            background: #f8f9fa;
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
         }
 
-        /* HEADER - GLASSMORPHISM */
         .header {
             text-align: center;
-            margin-bottom: 50px;
-            padding: 40px 20px;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            color: #2c3e50;
+            margin-bottom: 40px;
+        }
+
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 30px;
+        }
+
+        .chart-container {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         h1 {
-            color: #60a5fa;
-            font-size: 3em;
-            margin: 0 0 10px 0;
-            text-shadow: 0 0 20px rgba(96, 165, 250, 0.5);
-            animation: glow 2s ease-in-out infinite alternate;
-        }
-
-        @keyframes glow {
-            0% {
-                text-shadow: 0 0 20px rgba(96, 165, 250, 0.5);
-            }
-
-            100% {
-                text-shadow: 0 0 30px rgba(96, 165, 250, 0.8);
-            }
+            color: #3498db;
+            font-size: 2.5em;
+            margin-bottom: 10px;
         }
 
         h2 {
-            color: #cbd5e1;
-            font-size: 1.5em;
-            margin: 0;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
         }
 
-        /* STATS - NEON CARDS */
         .stats {
             display: flex;
             justify-content: center;
             gap: 30px;
-            margin: 30px 0;
-            flex-wrap: wrap;
+            margin: 20px 0;
         }
 
         .stat {
             text-align: center;
-            padding: 20px 25px;
-            background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
-            border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-            min-width: 120px;
-        }
-
-        .stat:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(96, 165, 250, 0.2);
         }
 
         .stat-number {
-            font-size: 2.5em;
-            font-weight: 700;
-            background: linear-gradient(45deg, #60a5fa, #a78bfa);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 5px;
-        }
-
-        /* CHARTS ROW - MODERN GRID */
-        .charts-row {
-            display: flex;
-            gap: 20px;
-            padding: 20px 0;
-            scroll-snap-type: x mandatory;
-        }
-
-        .chart-container {
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(15px);
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            flex: 0 0 320px;
-            padding: 25px 20px;
-            transition: all 0.3s ease;
-            scroll-snap-align: start;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .chart-container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.03), transparent);
-            z-index: 0;
-        }
-
-        .chart-container:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-            border-color: rgba(96, 165, 250, 0.3);
-        }
-
-        canvas {
-            position: relative;
-            z-index: 1;
-        }
-
-        h2 {
-            color: #94a3b8;
-            text-align: center;
-            margin: 0 0 15px 0;
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: 1px;
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            .charts-row {
-                gap: 15px;
-            }
-
-            .chart-container {
-                flex: 0 0 280px;
-                min-width: 280px;
-            }
-
-            h1 {
-                font-size: 2em;
-            }
-
-            .stats {
-                gap: 20px;
-            }
-        }
-
-        /* SCROLLBAR */
-        ::-webkit-scrollbar {
-            height: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, 0.05);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: rgba(96, 165, 250, 0.3);
-            border-radius: 4px;
+            font-size: 2em;
+            font-weight: bold;
+            color: #3498db;
         }
     </style>
 </head>
@@ -199,135 +82,93 @@
                     <div class="stat-number">5</div>Domains
                 </div>
                 <div class="stat">
-                    <div class="stat-number">15</div>Deployments
+                    <div class="stat-number">$150K</div>Market Value
                 </div>
             </div>
         </div>
 
-        <div class="charts-row">
+        <div class="charts-grid">
             <div class="chart-container">
                 <h2>📈 Career Progression</h2>
-                <canvas id="timelineChart" height="220"></canvas>
+                <canvas id="timelineChart"></canvas>
             </div>
-
             <div class="chart-container">
                 <h2>🎯 Skill Mastery</h2>
-                <canvas id="radarChart" height="220"></canvas>
+                <canvas id="radarChart"></canvas>
             </div>
-
             <div class="chart-container">
                 <h2>📊 Project Distribution</h2>
-                <canvas id="doughnutChart" height="220"></canvas>
+                <canvas id="doughnutChart"></canvas>
             </div>
-
             <div class="chart-container">
                 <h2>🔧 Tech Adoption</h2>
-                <canvas id="stackedBarChart" height="220"></canvas>
+                <canvas id="stackedBarChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h2>💰 Market Value</h2>
+                <canvas id="bubbleChart"></canvas>
             </div>
         </div>
     </div>
 
     <script>
-        // DARK MODE CHART COLORS
-        const darkColors = {
-            green: '#10b981', blue: '#3b82f6', orange: '#f59e0b',
-            purple: '#8b5cf6', pink: '#ec4899', cyan: '#06b6d4'
-        };
-
         // 1. TIMELINE CHART
         new Chart(document.getElementById('timelineChart'), {
             type: 'line', data: {
                 labels: ['2020', '2021', '2022', '2023', '2024', '2025'],
                 datasets: [
-                    { label: 'Projects', data: [2, 4, 6, 8, 10, 20], borderColor: darkColors.green, backgroundColor: 'rgba(16,185,129,0.1)', fill: true, tension: 0.4, borderWidth: 3 },
-                    { label: 'Deployments', data: [1, 2, 4, 7, 12, 15], borderColor: darkColors.blue, backgroundColor: 'rgba(59,130,246,0.1)', fill: true, borderWidth: 3 },
-                    { label: 'AI/ML', data: [0, 0, 1, 5, 8, 12], borderColor: darkColors.orange, backgroundColor: 'rgba(245,158,11,0.1)', fill: true, borderWidth: 3 }
+                    { label: 'Projects', data: [2, 4, 6, 8, 10, 20], borderColor: '#4CAF50', backgroundColor: 'rgba(76,175,80,0.2)', fill: true, tension: 0.4 },
+                    { label: 'Deployments', data: [1, 2, 4, 7, 12, 15], borderColor: '#2196F3', backgroundColor: 'rgba(33,150,243,0.2)', fill: true },
+                    { label: 'AI/ML', data: [0, 0, 1, 5, 8, 12], borderColor: '#FF9800', backgroundColor: 'rgba(255,152,0,0.2)', fill: true }
                 ]
-            },
-            options: {
-                responsive: true, maintainAspectRatio: false,
-                plugins: { legend: { display: false } },
-                scales: {
-                    x: {
-                        ticks: { color: '#94a3b8', font: { size: 11 } },
-                        grid: { color: 'rgba(255,255,255,0.1)' }
-                    },
-                    y: {
-                        ticks: { color: '#94a3b8' },
-                        grid: { color: 'rgba(255,255,255,0.1)' }
-                    }
-                },
-                elements: { point: { radius: 4, hoverRadius: 6 } }
-            }
+            }, options: { responsive: true, plugins: { title: { display: true, text: 'Projects • Deployments • AI Growth' } } }
         });
 
         // 2. RADAR CHART
         new Chart(document.getElementById('radarChart'), {
             type: 'radar', data: {
-                labels: ['Web', 'AI/ML', 'FinTech', 'Bio', 'Lang', 'DevOps'],
+                labels: ['Web Dev', 'AI/ML', 'FinTech', 'Bioinformatics', 'Language', 'DevOps'],
                 datasets: [
-                    { data: [60, 10, 20, 0, 40, 10], borderColor: '#6b7280', backgroundColor: 'rgba(107,114,128,0.1)', borderWidth: 2 },
-                    { data: [80, 60, 70, 40, 70, 50], borderColor: darkColors.orange, backgroundColor: 'rgba(245,158,11,0.1)', borderWidth: 2 },
-                    { data: [95, 90, 95, 80, 85, 85], borderColor: darkColors.green, backgroundColor: 'rgba(16,185,129,0.2)', borderWidth: 3 }
+                    { label: '2020', data: [60, 10, 20, 0, 40, 10], borderColor: '#9E9E9E', backgroundColor: 'rgba(158,158,158,0.2)' },
+                    { label: '2023', data: [80, 60, 70, 40, 70, 50], borderColor: '#FF9800', backgroundColor: 'rgba(255,152,0,0.2)' },
+                    { label: '2025', data: [95, 90, 95, 80, 85, 85], borderColor: '#4CAF50', backgroundColor: 'rgba(76,175,80,0.2)' }
                 ]
-            },
-            options: {
-                responsive: true, maintainAspectRatio: false,
-                scales: {
-                    r: {
-                        beginAtZero: true, max: 100,
-                        ticks: { color: '#94a3b8', backdropColor: 'transparent' },
-                        grid: { color: 'rgba(255,255,255,0.1)' },
-                        pointLabels: { color: '#cbd5e1', font: { size: 11 } }
-                    }
-                },
-                elements: { line: { borderWidth: 2 } }
-            }
+            }, options: { responsive: true, scales: { r: { beginAtZero: true, max: 100 } } }
         });
 
         // 3. DOUGHNUT CHART
         new Chart(document.getElementById('doughnutChart'), {
             type: 'doughnut', data: {
-                labels: ['AI/ML', 'FinTech', 'Web', 'Lang', 'Bio', 'ML'],
-                datasets: [{
-                    data: [8, 6, 5, 4, 2, 3],
-                    backgroundColor: [
-                        darkColors.pink, darkColors.blue, darkColors.orange,
-                        darkColors.cyan, darkColors.purple, '#f97316'
-                    ],
-                    borderColor: '#1e293b',
-                    borderWidth: 2
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                cutout: '70%',
-                plugins: { legend: { display: false } }
-            }
+                labels: ['AI/ML', 'FinTech', 'Web Dev', 'Language', 'Bioinformatics', 'ML'],
+                datasets: [{ data: [8, 6, 5, 4, 2, 3], backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40'] }]
+            }, options: { responsive: true }
         });
 
         // 4. STACKED BAR
         new Chart(document.getElementById('stackedBarChart'), {
             type: 'bar', data: {
-                labels: ['20', '21', '22', '23', '24', '25'],
+                labels: ['2020', '2021', '2022', '2023', '2024', '2025'],
                 datasets: [
-                    { label: 'Flask', data: [2, 3, 4, 5, 6, 7], backgroundColor: darkColors.green },
-                    { label: 'OpenAI', data: [0, 0, 0, 4, 7, 8], backgroundColor: darkColors.pink },
-                    { label: 'Docker', data: [0, 1, 2, 4, 6, 8], backgroundColor: darkColors.blue }
+                    { label: 'Flask/Django', data: [2, 3, 4, 5, 6, 7], backgroundColor: '#4CAF50' },
+                    { label: 'OpenAI', data: [0, 0, 0, 4, 7, 8], backgroundColor: '#FF5722' },
+                    { label: 'Docker', data: [0, 1, 2, 4, 6, 8], backgroundColor: '#2196F3' }
                 ]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: { legend: { display: false } },
-                scales: {
-                    x: { stacked: true, ticks: { display: false }, grid: { display: false } },
-                    y: { stacked: true, display: false }
-                },
-                barPercentage: 0.8,
-                categoryPercentage: 0.9
-            }
+            }, options: { responsive: true, scales: { x: { stacked: true }, y: { stacked: true, beginAtZero: true } } }
+        });
+
+        // 5. BUBBLE CHART
+        new Chart(document.getElementById('bubbleChart'), {
+            type: 'bubble', data: {
+                datasets: [{
+                    label: 'Salary Growth',
+                    data: [
+                        { x: 2020, y: 60000, r: 10 }, { x: 2021, y: 75000, r: 15 },
+                        { x: 2022, y: 90000, r: 20 }, { x: 2023, y: 110000, r: 25 },
+                        { x: 2024, y: 130000, r: 30 }, { x: 2025, y: 150000, r: 35 }
+                    ],
+                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40']
+                }]
+            }, options: { responsive: true }
         });
     </script>
 </body>
