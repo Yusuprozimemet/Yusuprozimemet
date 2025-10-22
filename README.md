@@ -1,6 +1,7 @@
 ## 🌍 Web Applications
 
-- **TyporaX:** [🔗 TyporaX](https://typorax.onrender.com)  
+- **TyporaX:** [🔗 TyporaX](https://typorax.onrender.com)
+https://github.com/Yusuprozimemet/projects/blob/main/README.md
  
 
 ##  Tools
