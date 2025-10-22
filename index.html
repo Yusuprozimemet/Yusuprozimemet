@@ -2,173 +2,558 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yusup Rozimemet - Technical Journey 2020-2025</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Inter', sans-serif;
             margin: 0;
-            padding: 20px;
-            background: #f8f9fa;
+            padding: 0;
+            background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+            color: #e0e0e0;
+            overflow-x: hidden;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
+            padding: 20px;
         }
 
+        /* HEADER */
         .header {
             text-align: center;
-            color: #2c3e50;
-            margin-bottom: 40px;
+            margin-bottom: 60px;
+            padding: 40px 0;
+            position: relative;
         }
 
-        .charts-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-            gap: 30px;
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100vw;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #4caf50, transparent);
         }
 
-        .chart-container {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #4caf50, #2196f3);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3em;
+            box-shadow: 0 8px 32px rgba(76, 175, 80, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
         }
 
         h1 {
-            color: #3498db;
-            font-size: 2.5em;
-            margin-bottom: 10px;
+            color: #ffffff;
+            font-size: 3em;
+            font-weight: 700;
+            margin: 0 0 10px;
+            background: linear-gradient(135deg, #4caf50, #bb86fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         h2 {
-            color: #2c3e50;
-            text-align: center;
-            margin-bottom: 20px;
+            color: #bb86fc;
+            font-size: 1.5em;
+            font-weight: 400;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
         .stats {
             display: flex;
             justify-content: center;
-            gap: 30px;
-            margin: 20px 0;
+            gap: 40px;
+            margin: 30px 0;
+            flex-wrap: wrap;
         }
 
         .stat {
             text-align: center;
+            padding: 20px;
+            background: rgba(30, 30, 30, 0.8);
+            border-radius: 12px;
+            border: 1px solid rgba(76, 175, 80, 0.2);
+            transition: all 0.3s ease;
+            min-width: 120px;
+        }
+
+        .stat:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(76, 175, 80, 0.2);
+            border-color: #4caf50;
         }
 
         .stat-number {
-            font-size: 2em;
-            font-weight: bold;
-            color: #3498db;
+            font-size: 2.5em;
+            font-weight: 700;
+            background: linear-gradient(135deg, #4caf50, #2196f3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 5px;
+        }
+
+        /* CHARTS GRID */
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .chart-container {
+            background: rgba(30, 30, 30, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(76, 175, 80, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .chart-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #4caf50, #2196f3, #bb86fc);
+        }
+
+        .chart-container:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(76, 175, 80, 0.2);
+            border-color: rgba(76, 175, 80, 0.3);
+        }
+
+        .chart-title {
+            color: #bb86fc;
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 1.3em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        canvas {
+            max-height: 350px;
+        }
+
+        /* MISSING BUBBLE CHART */
+        .chart-container:nth-child(5) {
+            grid-column: span 2;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .charts-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .chart-container:nth-child(5) {
+                grid-column: span 1;
+            }
+
+            .stats {
+                gap: 20px;
+            }
+
+            h1 {
+                font-size: 2.2em;
+            }
+
+            .profile-pic {
+                font-size: 2em;
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        /* SCROLL ANIMATIONS */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* FOOTER */
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #888;
+            border-top: 1px solid rgba(76, 175, 80, 0.1);
+            margin-top: 60px;
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <div class="header">
-            <h1>🎯 Yusup Rozimemet</h1>
+        <!-- HEADER -->
+        <div class="header fade-in">
+            <div class="profile-pic">👨‍💻</div>
+            <h1>Yusup Rozimemet</h1>
             <h2>Technical Journey: 2020 → 2025</h2>
             <div class="stats">
                 <div class="stat">
-                    <div class="stat-number">20+</div>Projects
+                    <div class="stat-number">25+</div>Projects
                 </div>
                 <div class="stat">
                     <div class="stat-number">5</div>Domains
                 </div>
                 <div class="stat">
-                    <div class="stat-number">$150K</div>Market Value
+                    <div class="stat-number">50+</div>Deployments
                 </div>
             </div>
         </div>
 
+        <!-- CHARTS -->
         <div class="charts-grid">
-            <div class="chart-container">
-                <h2>📈 Career Progression</h2>
+            <div class="chart-container fade-in">
+                <h2 class="chart-title">📈 Career Progression</h2>
                 <canvas id="timelineChart"></canvas>
             </div>
-            <div class="chart-container">
-                <h2>🎯 Skill Mastery</h2>
+
+            <div class="chart-container fade-in">
+                <h2 class="chart-title">🎯 Skill Mastery</h2>
                 <canvas id="radarChart"></canvas>
             </div>
-            <div class="chart-container">
-                <h2>📊 Project Distribution</h2>
+
+            <div class="chart-container fade-in">
+                <h2 class="chart-title">📊 Project Distribution</h2>
                 <canvas id="doughnutChart"></canvas>
             </div>
-            <div class="chart-container">
-                <h2>🔧 Tech Adoption</h2>
+
+            <div class="chart-container fade-in">
+                <h2 class="chart-title">🔧 Tech Adoption</h2>
                 <canvas id="stackedBarChart"></canvas>
             </div>
-            <div class="chart-container">
-                <h2>💰 Market Value</h2>
+
+            <div class="chart-container fade-in">
+                <h2 class="chart-title">💰 Market Value Growth</h2>
                 <canvas id="bubbleChart"></canvas>
             </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <p>Built with ❤️ using Chart.js | 2020-2025 Technical Evolution</p>
         </div>
     </div>
 
     <script>
-        // 1. TIMELINE CHART
+        // INTERSECTION OBSERVER FOR ANIMATIONS
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // 1. TIMELINE CHART - ENHANCED
         new Chart(document.getElementById('timelineChart'), {
-            type: 'line', data: {
+            type: 'line',
+            data: {
                 labels: ['2020', '2021', '2022', '2023', '2024', '2025'],
                 datasets: [
-                    { label: 'Projects', data: [2, 4, 6, 8, 10, 20], borderColor: '#4CAF50', backgroundColor: 'rgba(76,175,80,0.2)', fill: true, tension: 0.4 },
-                    { label: 'Deployments', data: [1, 2, 4, 7, 12, 15], borderColor: '#2196F3', backgroundColor: 'rgba(33,150,243,0.2)', fill: true },
-                    { label: 'AI/ML', data: [0, 0, 1, 5, 8, 12], borderColor: '#FF9800', backgroundColor: 'rgba(255,152,0,0.2)', fill: true }
+                    {
+                        label: 'Projects',
+                        data: [2, 4, 6, 8, 12, 25],
+                        borderColor: '#4CAF50',
+                        backgroundColor: 'rgba(76,175,80,0.2)',
+                        fill: true,
+                        tension: 0.4,
+                        borderWidth: 3,
+                        pointBackgroundColor: '#4CAF50',
+                        pointBorderColor: '#ffffff',
+                        pointRadius: 6
+                    },
+                    {
+                        label: 'Deployments',
+                        data: [1, 2, 4, 7, 12, 18],
+                        borderColor: '#2196F3',
+                        backgroundColor: 'rgba(33,150,243,0.2)',
+                        fill: true,
+                        tension: 0.4,
+                        borderWidth: 3,
+                        pointBackgroundColor: '#2196F3',
+                        pointBorderColor: '#ffffff',
+                        pointRadius: 6
+                    },
+                    {
+                        label: 'AI/ML Projects',
+                        data: [0, 0, 1, 5, 9, 15],
+                        borderColor: '#FF9800',
+                        backgroundColor: 'rgba(255,152,0,0.2)',
+                        fill: true,
+                        tension: 0.4,
+                        borderWidth: 3,
+                        pointBackgroundColor: '#FF9800',
+                        pointBorderColor: '#ffffff',
+                        pointRadius: 6
+                    }
                 ]
-            }, options: { responsive: true, plugins: { title: { display: true, text: 'Projects • Deployments • AI Growth' } } }
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { labels: { color: '#e0e0e0', font: { size: 12 } } }
+                },
+                scales: {
+                    x: {
+                        ticks: { color: '#e0e0e0', font: { size: 11 } },
+                        grid: { color: 'rgba(255,255,255,0.1)' }
+                    },
+                    y: {
+                        ticks: { color: '#e0e0e0', font: { size: 11 } },
+                        grid: { color: 'rgba(255,255,255,0.1)' }
+                    }
+                },
+                animation: { duration: 2000, easing: 'easeInOutQuart' }
+            }
         });
 
-        // 2. RADAR CHART
+        // 2. RADAR CHART - ENHANCED
         new Chart(document.getElementById('radarChart'), {
-            type: 'radar', data: {
-                labels: ['Web Dev', 'AI/ML', 'FinTech', 'Bioinformatics', 'Language', 'DevOps'],
+            type: 'radar',
+            data: {
+                labels: ['Web Dev', 'AI/ML', 'FinTech', 'Bioinformatics', 'Languages', 'DevOps'],
                 datasets: [
-                    { label: '2020', data: [60, 10, 20, 0, 40, 10], borderColor: '#9E9E9E', backgroundColor: 'rgba(158,158,158,0.2)' },
-                    { label: '2023', data: [80, 60, 70, 40, 70, 50], borderColor: '#FF9800', backgroundColor: 'rgba(255,152,0,0.2)' },
-                    { label: '2025', data: [95, 90, 95, 80, 85, 85], borderColor: '#4CAF50', backgroundColor: 'rgba(76,175,80,0.2)' }
+                    {
+                        label: '2020',
+                        data: [60, 10, 20, 0, 40, 10],
+                        borderColor: '#9E9E9E',
+                        backgroundColor: 'rgba(158,158,158,0.2)',
+                        borderWidth: 2
+                    },
+                    {
+                        label: '2023',
+                        data: [80, 60, 70, 40, 70, 50],
+                        borderColor: '#FF9800',
+                        backgroundColor: 'rgba(255,152,0,0.2)',
+                        borderWidth: 2
+                    },
+                    {
+                        label: '2025',
+                        data: [95, 90, 95, 80, 85, 85],
+                        borderColor: '#4CAF50',
+                        backgroundColor: 'rgba(76,175,80,0.3)',
+                        borderWidth: 3
+                    }
                 ]
-            }, options: { responsive: true, scales: { r: { beginAtZero: true, max: 100 } } }
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        beginAtZero: true,
+                        max: 100,
+                        pointLabels: { color: '#e0e0e0', font: { size: 11 } },
+                        ticks: { color: '#e0e0e0', backdropColor: 'transparent' },
+                        grid: { color: 'rgba(255,255,255,0.1)' }
+                    }
+                },
+                plugins: {
+                    legend: { labels: { color: '#e0e0e0', font: { size: 12 } } }
+                },
+                animation: { duration: 2000 }
+            }
         });
 
-        // 3. DOUGHNUT CHART
+        // 3. DOUGHNUT CHART - ENHANCED
         new Chart(document.getElementById('doughnutChart'), {
-            type: 'doughnut', data: {
-                labels: ['AI/ML', 'FinTech', 'Web Dev', 'Language', 'Bioinformatics', 'ML'],
-                datasets: [{ data: [8, 6, 5, 4, 2, 3], backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40'] }]
-            }, options: { responsive: true }
+            type: 'doughnut',
+            data: {
+                labels: ['AI/ML', 'FinTech', 'Web Dev', 'Languages', 'Bioinformatics', 'DevOps'],
+                datasets: [{
+                    data: [12, 8, 6, 5, 3, 4],
+                    backgroundColor: [
+                        '#FF6384', '#36A2EB', '#FFCE56',
+                        '#4BC0C0', '#9966FF', '#FF9F40'
+                    ],
+                    borderWidth: 0,
+                    borderRadius: 8
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            color: '#e0e0e0',
+                            font: { size: 11 },
+                            padding: 20
+                        }
+                    }
+                },
+                cutout: '60%',
+                animation: {
+                    animateRotate: true,
+                    duration: 2000
+                }
+            }
         });
 
-        // 4. STACKED BAR
+        // 4. STACKED BAR CHART - ENHANCED
         new Chart(document.getElementById('stackedBarChart'), {
-            type: 'bar', data: {
+            type: 'bar',
+            data: {
                 labels: ['2020', '2021', '2022', '2023', '2024', '2025'],
                 datasets: [
-                    { label: 'Flask/Django', data: [2, 3, 4, 5, 6, 7], backgroundColor: '#4CAF50' },
-                    { label: 'OpenAI', data: [0, 0, 0, 4, 7, 8], backgroundColor: '#FF5722' },
-                    { label: 'Docker', data: [0, 1, 2, 4, 6, 8], backgroundColor: '#2196F3' }
+                    {
+                        label: 'Flask/Django',
+                        data: [2, 3, 4, 5, 6, 7],
+                        backgroundColor: 'rgba(76,175,80,0.8)'
+                    },
+                    {
+                        label: 'OpenAI',
+                        data: [0, 0, 0, 4, 7, 9],
+                        backgroundColor: 'rgba(255,87,34,0.8)'
+                    },
+                    {
+                        label: 'Docker/K8s',
+                        data: [0, 1, 2, 4, 6, 8],
+                        backgroundColor: 'rgba(33,150,243,0.8)'
+                    }
                 ]
-            }, options: { responsive: true, scales: { x: { stacked: true }, y: { stacked: true, beginAtZero: true } } }
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        stacked: true,
+                        ticks: { color: '#e0e0e0' },
+                        grid: { display: false }
+                    },
+                    y: {
+                        stacked: true,
+                        beginAtZero: true,
+                        ticks: { color: '#e0e0e0' },
+                        grid: { color: 'rgba(255,255,255,0.1)' }
+                    }
+                },
+                plugins: {
+                    legend: { labels: { color: '#e0e0e0', font: { size: 12 } } }
+                },
+                animation: { duration: 2000 }
+            }
         });
 
-        // 5. BUBBLE CHART
+        // 5. BUBBLE CHART - NEW!
         new Chart(document.getElementById('bubbleChart'), {
-            type: 'bubble', data: {
-                datasets: [{
-                    label: 'Salary Growth',
-                    data: [
-                        { x: 2020, y: 60000, r: 10 }, { x: 2021, y: 75000, r: 15 },
-                        { x: 2022, y: 90000, r: 20 }, { x: 2023, y: 110000, r: 25 },
-                        { x: 2024, y: 130000, r: 30 }, { x: 2025, y: 150000, r: 35 }
-                    ],
-                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40']
-                }]
-            }, options: { responsive: true }
+            type: 'bubble',
+            data: {
+                datasets: [
+                    {
+                        label: 'Project Value',
+                        data: [
+                            { x: 2020, y: 2, r: 10 },
+                            { x: 2021, y: 8, r: 15 },
+                            { x: 2022, y: 15, r: 20 },
+                            { x: 2023, y: 35, r: 25 },
+                            { x: 2024, y: 60, r: 30 },
+                            { x: 2025, y: 95, r: 40 }
+                        ],
+                        backgroundColor: 'rgba(76,175,80,0.6)',
+                        borderColor: '#4CAF50',
+                        borderWidth: 2
+                    },
+                    {
+                        label: 'Market Salary ($K)',
+                        data: [
+                            { x: 2020, y: 40, r: 8 },
+                            { x: 2021, y: 55, r: 12 },
+                            { x: 2022, y: 70, r: 16 },
+                            { x: 2023, y: 90, r: 20 },
+                            { x: 2024, y: 120, r: 25 },
+                            { x: 2025, y: 160, r: 30 }
+                        ],
+                        backgroundColor: 'rgba(255,152,0,0.6)',
+                        borderColor: '#FF9800',
+                        borderWidth: 2
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        type: 'linear',
+                        position: 'bottom',
+                        title: { display: true, text: 'Year', color: '#e0e0e0' },
+                        ticks: { color: '#e0e0e0' },
+                        grid: { color: 'rgba(255,255,255,0.1)' }
+                    },
+                    y: {
+                        title: { display: true, text: 'Value / Salary ($K)', color: '#e0e0e0' },
+                        ticks: { color: '#e0e0e0' },
+                        grid: { color: 'rgba(255,255,255,0.1)' }
+                    }
+                },
+                plugins: {
+                    legend: { labels: { color: '#e0e0e0' } },
+                    tooltip: {
+                        callbacks: {
+                            label: function (context) {
+                                return `${context.dataset.label}: $${context.parsed.y}K`;
+                            }
+                        }
+                    }
+                },
+                animation: { duration: 2000 }
+            }
         });
     </script>
 </body>
