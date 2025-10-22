@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yusup Rozimemet - Technical Journey 2020-2025</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 40px;
+        }
+
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 30px;
+        }
+
+        .chart-container {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #3498db;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 20px 0;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #3498db;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 Yusup Rozimemet</h1>
+            <h2>Technical Journey: 2020 → 2025</h2>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number">20+</div>Projects
+                </div>
+                <div class="stat">
+                    <div class="stat-number">5</div>Domains
+                </div>
+                <div class="stat">
+                    <div class="stat-number">$150K</div>Market Value
+                </div>
+            </div>
+        </div>
+
+        <div class="charts-grid">
+            <div class="chart-container">
+                <h2>📈 Career Progression</h2>
+                <canvas id="timelineChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h2>🎯 Skill Mastery</h2>
+                <canvas id="radarChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h2>📊 Project Distribution</h2>
+                <canvas id="doughnutChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h2>🔧 Tech Adoption</h2>
+                <canvas id="stackedBarChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h2>💰 Market Value</h2>
+                <canvas id="bubbleChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 1. TIMELINE CHART
+        new Chart(document.getElementById('timelineChart'), {
+            type: 'line', data: {
+                labels: ['2020', '2021', '2022', '2023', '2024', '2025'],
+                datasets: [
+                    { label: 'Projects', data: [2, 4, 6, 8, 10, 20], borderColor: '#4CAF50', backgroundColor: 'rgba(76,175,80,0.2)', fill: true, tension: 0.4 },
+                    { label: 'Deployments', data: [1, 2, 4, 7, 12, 15], borderColor: '#2196F3', backgroundColor: 'rgba(33,150,243,0.2)', fill: true },
+                    { label: 'AI/ML', data: [0, 0, 1, 5, 8, 12], borderColor: '#FF9800', backgroundColor: 'rgba(255,152,0,0.2)', fill: true }
+                ]
+            }, options: { responsive: true, plugins: { title: { display: true, text: 'Projects • Deployments • AI Growth' } } }
+        });
+
+        // 2. RADAR CHART
+        new Chart(document.getElementById('radarChart'), {
+            type: 'radar', data: {
+                labels: ['Web Dev', 'AI/ML', 'FinTech', 'Bioinformatics', 'Language', 'DevOps'],
+                datasets: [
+                    { label: '2020', data: [60, 10, 20, 0, 40, 10], borderColor: '#9E9E9E', backgroundColor: 'rgba(158,158,158,0.2)' },
+                    { label: '2023', data: [80, 60, 70, 40, 70, 50], borderColor: '#FF9800', backgroundColor: 'rgba(255,152,0,0.2)' },
+                    { label: '2025', data: [95, 90, 95, 80, 85, 85], borderColor: '#4CAF50', backgroundColor: 'rgba(76,175,80,0.2)' }
+                ]
+            }, options: { responsive: true, scales: { r: { beginAtZero: true, max: 100 } } }
+        });
+
+        // 3. DOUGHNUT CHART
+        new Chart(document.getElementById('doughnutChart'), {
+            type: 'doughnut', data: {
+                labels: ['AI/ML', 'FinTech', 'Web Dev', 'Language', 'Bioinformatics', 'ML'],
+                datasets: [{ data: [8, 6, 5, 4, 2, 3], backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40'] }]
+            }, options: { responsive: true }
+        });
+
+        // 4. STACKED BAR
+        new Chart(document.getElementById('stackedBarChart'), {
+            type: 'bar', data: {
+                labels: ['2020', '2021', '2022', '2023', '2024', '2025'],
+                datasets: [
+                    { label: 'Flask/Django', data: [2, 3, 4, 5, 6, 7], backgroundColor: '#4CAF50' },
+                    { label: 'OpenAI', data: [0, 0, 0, 4, 7, 8], backgroundColor: '#FF5722' },
+                    { label: 'Docker', data: [0, 1, 2, 4, 6, 8], backgroundColor: '#2196F3' }
+                ]
+            }, options: { responsive: true, scales: { x: { stacked: true }, y: { stacked: true, beginAtZero: true } } }
+        });
+
+        // 5. BUBBLE CHART
+        new Chart(document.getElementById('bubbleChart'), {
+            type: 'bubble', data: {
+                datasets: [{
+                    label: 'Salary Growth',
+                    data: [
+                        { x: 2020, y: 60000, r: 10 }, { x: 2021, y: 75000, r: 15 },
+                        { x: 2022, y: 90000, r: 20 }, { x: 2023, y: 110000, r: 25 },
+                        { x: 2024, y: 130000, r: 30 }, { x: 2025, y: 150000, r: 35 }
+                    ],
+                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40']
+                }]
+            }, options: { responsive: true }
+        });
+    </script>
+</body>
+
+</html>
