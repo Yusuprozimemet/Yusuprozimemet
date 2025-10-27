@@ -1,9 +1,7 @@
-**Full-Stack Developer | AI/ML Engineer | FinTech Specialist**
+
 
 **[View Live Dashboard →](https://yusuprozimemet.github.io/Yusuprozimemet/)**
 
-- **20+ Projects** across 5 domains
-- **Production deployments** on Railway/Render/GCP
 
 ---
 
