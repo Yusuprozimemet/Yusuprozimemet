@@ -195,6 +195,29 @@
             max-height: 380px;
         }
 
+        /* ---------- SKILLS STYLES ---------- */
+        .skills-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .skills-list li {
+            margin-bottom: 20px;
+            font-size: 1em;
+        }
+
+        .skills-category {
+            font-weight: 700;
+            color: #4caf50;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .skills-items {
+            color: #e0e0e0;
+        }
+
         /* ---------- RESPONSIVE ---------- */
         @media (max-width:768px) {
             .charts-grid {
@@ -249,14 +272,10 @@
     <div class="container">
 
         <!-- HEADER -->
-        <!-- HEADER -->
         <div class="header fade-in">
-            <div class="profile-pic">
-                <img src="profile.jpg" alt="Yusup Rozimemet"
-                    style="width:100%; height:100%; border-radius:50%; object-fit:cover;">
-            </div>
+            <div class="profile-pic">👨‍💻</div>
             <h1>Yusup Rozimemet</h1>
-            <p class="tagline">From Molecule to Models </p>
+            <p class="tagline">From Molecules to Code</p>
 
             <div class="stats">
                 <div class="stat">
@@ -287,8 +306,39 @@
             </div>
 
             <div class="chart-container fade-in">
-                <h2 class="chart-title"><i class="fas fa-cogs"></i>Tech Adoption</h2>
-                <canvas id="stackedBarChart"></canvas>
+                <h2 class="chart-title"><i class="fas fa-tools"></i>Skills Overview</h2>
+                <ul class="skills-list">
+                    <li>
+                        <span class="skills-category">Programming Languages:</span>
+                        <span class="skills-items">Python (5 years), R (1 year), Java (1 year), JavaScript</span>
+                    </li>
+                    <li>
+                        <span class="skills-category">Python Libraries:</span>
+                        <span class="skills-items">Pandas, NumPy, SQLAlchemy, Matplotlib, Seaborn, TensorFlow,
+                            scikit-learn etc.</span>
+                    </li>
+                    <li>
+                        <span class="skills-category">Frameworks:</span>
+                        <span class="skills-items">Flask (Blueprint), FastAPI</span>
+                    </li>
+                    <li>
+                        <span class="skills-category">Web Technologies:</span>
+                        <span class="skills-items">HTML5, CSS3, Jinja</span>
+                    </li>
+                    <li>
+                        <span class="skills-category">Tools:</span>
+                        <span class="skills-items">Git, GitHub, Google Colab, VS Code (Copilot), Docker, Kubernetes,
+                            Skaffold</span>
+                    </li>
+                    <li>
+                        <span class="skills-category">Databases:</span>
+                        <span class="skills-items">PostgreSQL</span>
+                    </li>
+                    <li>
+                        <span class="skills-category">Platforms:</span>
+                        <span class="skills-items">Render, Google Cloud, AWS, Heroku, Railway</span>
+                    </li>
+                </ul>
             </div>
 
         </div>
@@ -296,7 +346,7 @@
         <!-- FOOTER -->
         <div class="footer">
             <p><i class="fas fa-code"></i> Built with Chart.js | <span class="highlight">AI + FinTech +
-                    Full-Stack</span> | 2019-2025</p>
+                    Full-Stack</span> | 2020-2025</p>
         </div>
     </div>
 
@@ -338,152 +388,6 @@
                 },
                 cutout: '65%',
                 animation: { animateRotate: true, duration: 2500, easing: 'easeInOutQuart' }
-            }
-        });
-
-        /* ---------- STACKED BAR – CATEGORIZED ---------- */
-        const years = ['2019', '2020', '2021', '2022', '2023', '2024', '2025'];
-
-        // ----- 1. Category definition (order matters for legend) -----
-        const categories = [
-            { name: "Languages", color: "#4caf50" },
-            { name: "Python Libraries", color: "#9c27b0" },
-            { name: "Frameworks", color: "#009688" },
-            { name: "Web", color: "#ff4081" },
-            { name: "Tools", color: "#f44336" },
-            { name: "Databases", color: "#336791" },
-            { name: "Platforms", color: "#ff8f00" },
-            { name: "Modern Stack", color: "#61dafb" }
-        ];
-
-        // ----- 2. Skill → category + data -----
-        const skillMap = {
-            // Languages
-            "Python": { cat: 0, data: [0, 1, 3, 4, 6, 7, 8] },
-            "R": { cat: 0, data: [2, 1, 1, 1, 1, 1, 1] },
-            "Java": { cat: 0, data: [0, 3, 2, 1, 1, 1, 1] },
-            "JavaScript": { cat: 0, data: [0, 0, 0, 1, 2, 3, 3] },
-
-            // Python Libraries
-            "Pandas": { cat: 1, data: [0, 1, 2, 3, 4, 4, 5] },
-            "NumPy": { cat: 1, data: [0, 1, 2, 3, 4, 4, 5] },
-            "SQLAlchemy": { cat: 1, data: [0, 0, 0, 1, 2, 3, 3] },
-            "Matplotlib": { cat: 1, data: [0, 1, 1, 2, 2, 2, 2] },
-            "Seaborn": { cat: 1, data: [0, 0, 1, 1, 2, 2, 2] },
-            "TensorFlow": { cat: 1, data: [0, 0, 2, 3, 4, 5, 6] },
-            "scikit-learn": { cat: 1, data: [0, 0, 2, 3, 4, 4, 5] },
-
-            // Frameworks
-            "Flask": { cat: 2, data: [0, 0, 0, 0, 3, 5, 6] },
-            "FastAPI": { cat: 2, data: [0, 0, 0, 0, 1, 3, 4] },
-
-            // Web
-            "HTML5": { cat: 3, data: [0, 0, 0, 0, 2, 2, 2] },
-            "CSS3": { cat: 3, data: [0, 0, 0, 0, 2, 2, 2] },
-            "Jinja": { cat: 3, data: [0, 0, 0, 0, 1, 1, 1] },
-
-            // Tools
-            "Git": { cat: 4, data: [1, 2, 3, 4, 5, 6, 6] },
-            "GitHub": { cat: 4, data: [1, 2, 3, 4, 5, 6, 6] },
-            "Google Colab": { cat: 4, data: [0, 0, 2, 3, 4, 4, 5] },
-            "VS Code": { cat: 4, data: [0, 1, 2, 3, 4, 5, 5] },
-            "Docker": { cat: 4, data: [0, 0, 0, 1, 3, 5, 6] },
-            "Kubernetes": { cat: 4, data: [0, 0, 0, 0, 1, 2, 3] },
-            "Skaffold": { cat: 4, data: [0, 0, 0, 0, 0, 1, 2] },
-
-            // Databases
-            "PostgreSQL": { cat: 5, data: [0, 0, 0, 1, 2, 3, 4] },
-
-            // Platforms
-            "Render": { cat: 6, data: [0, 0, 0, 0, 1, 2, 3] },
-            "Google Cloud": { cat: 6, data: [0, 0, 1, 1, 2, 2, 3] },
-            "AWS": { cat: 6, data: [0, 0, 0, 1, 1, 2, 3] },
-            "Heroku": { cat: 6, data: [0, 0, 1, 1, 1, 1, 1] },
-            "Railway": { cat: 6, data: [0, 0, 0, 0, 0, 1, 2] },
-
-            // Modern Stack (learning)
-            "Microservices": { cat: 7, data: [0, 0, 0, 0, 1, 1, 2] },
-            "TypeScript": { cat: 7, data: [0, 0, 0, 0, 1, 2, 3] },
-            "React": { cat: 7, data: [0, 0, 0, 0, 1, 3, 4] },
-            "Vite": { cat: 7, data: [0, 0, 0, 0, 1, 1, 2] },
-            "Next.js": { cat: 7, data: [0, 0, 0, 0, 1, 2, 3] },
-            "Node.js": { cat: 7, data: [0, 0, 0, 0, 1, 3, 4] }
-        };
-
-        // ----- 3. Build one dataset per *category* (stacked) -----
-        const datasets = categories.map((cat, catIdx) => {
-            const catSkills = Object.entries(skillMap)
-                .filter(([_, info]) => info.cat === catIdx)
-                .map(([name, info]) => ({ name, data: info.data }));
-
-            // Sum all skills in the category for each year
-            const summedData = years.map((_, yIdx) =>
-                catSkills.reduce((sum, s) => sum + s.data[yIdx], 0)
-            );
-
-            return {
-                label: cat.name,
-                data: summedData,
-                backgroundColor: cat.color + "dd",   // 85 % opacity
-                borderColor: cat.color,
-                borderWidth: 1,
-                // store the skill breakdown for the tooltip
-                _skills: catSkills
-            };
-        });
-
-        // ----- 4. Custom tooltip that shows *individual* skills -----
-        const customTooltip = {
-            callbacks: {
-                title: ctx => `${ctx[0].label}`,
-                label: context => {
-                    const cat = datasets[context.datasetIndex];
-                    const yearIdx = context.dataIndex;
-                    const lines = [];
-
-                    cat._skills.forEach(s => {
-                        const val = s.data[yearIdx];
-                        if (val > 0) lines.push(`  ${s.name}: ${val} project${val > 1 ? 's' : ''}`);
-                    });
-
-                    return lines.length ? lines : ['(no projects)'];
-                }
-            }
-        };
-
-        // ----- 5. Create the chart -----
-        new Chart(document.getElementById('stackedBarChart'), {
-            type: 'bar',
-            data: { labels: years, datasets },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                    x: {
-                        stacked: true,
-                        ticks: { color: '#e0e0e0', font: { size: 13, weight: '600' } },
-                        grid: { display: false }
-                    },
-                    y: {
-                        stacked: true,
-                        beginAtZero: true,
-                        ticks: { color: '#e0e0e0', font: { size: 12 } },
-                        grid: { color: 'rgba(255,255,255,0.06)' }
-                    }
-                },
-                plugins: {
-                    tooltip: customTooltip,
-                    legend: {
-                        position: 'right',
-                        labels: {
-                            color: '#e0e0e0',
-                            font: { size: 12, weight: '600' },
-                            padding: 15,
-                            usePointStyle: true
-                        }
-                    }
-                },
-                animation: { duration: 2600, easing: 'easeOutQuart' }
             }
         });
     </script>
