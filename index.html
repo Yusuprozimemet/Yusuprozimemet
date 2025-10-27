@@ -249,10 +249,14 @@
     <div class="container">
 
         <!-- HEADER -->
+        <!-- HEADER -->
         <div class="header fade-in">
-            <div class="profile-pic">Developer</div>
+            <div class="profile-pic">
+                <img src="profile.jpg" alt="Yusup Rozimemet"
+                    style="width:100%; height:100%; border-radius:50%; object-fit:cover;">
+            </div>
             <h1>Yusup Rozimemet</h1>
-            <p class="tagline">From Web Apps to Multi-Agent AI Systems | 20+ Production Projects</p>
+            <p class="tagline">From Molecule to Models </p>
 
             <div class="stats">
                 <div class="stat">
@@ -292,7 +296,7 @@
         <!-- FOOTER -->
         <div class="footer">
             <p><i class="fas fa-code"></i> Built with Chart.js | <span class="highlight">AI + FinTech +
-                    Full-Stack</span> | 2020-2025</p>
+                    Full-Stack</span> | 2019-2025</p>
         </div>
     </div>
 
@@ -338,7 +342,7 @@
         });
 
         /* ---------- STACKED BAR – CATEGORIZED ---------- */
-        const years = ['2020', '2021', '2022', '2023', '2024', '2025'];
+        const years = ['2019', '2020', '2021', '2022', '2023', '2024', '2025'];
 
         // ----- 1. Category definition (order matters for legend) -----
         const categories = [
@@ -355,55 +359,55 @@
         // ----- 2. Skill → category + data -----
         const skillMap = {
             // Languages
-            "Python": { cat: 0, data: [2, 4, 5, 7, 8, 9] },
-            "R": { cat: 0, data: [0, 0, 1, 1, 1, 1] },
-            "Java": { cat: 0, data: [0, 0, 0, 1, 1, 1] },
-            "JavaScript": { cat: 0, data: [1, 2, 2, 2, 3, 3] },
+            "Python": { cat: 0, data: [0, 1, 3, 4, 6, 7, 8] },
+            "R": { cat: 0, data: [2, 1, 1, 1, 1, 1, 1] },
+            "Java": { cat: 0, data: [0, 3, 2, 1, 1, 1, 1] },
+            "JavaScript": { cat: 0, data: [0, 0, 0, 1, 2, 3, 3] },
 
             // Python Libraries
-            "Pandas": { cat: 1, data: [0, 1, 2, 3, 4, 5] },
-            "NumPy": { cat: 1, data: [0, 1, 2, 3, 4, 5] },
-            "SQLAlchemy": { cat: 1, data: [0, 0, 1, 2, 3, 3] },
-            "Matplotlib": { cat: 1, data: [0, 1, 1, 2, 2, 2] },
-            "Seaborn": { cat: 1, data: [0, 0, 1, 1, 2, 2] },
-            "TensorFlow": { cat: 1, data: [0, 0, 0, 2, 4, 6] },
-            "scikit-learn": { cat: 1, data: [0, 0, 1, 2, 3, 4] },
+            "Pandas": { cat: 1, data: [0, 1, 2, 3, 4, 4, 5] },
+            "NumPy": { cat: 1, data: [0, 1, 2, 3, 4, 4, 5] },
+            "SQLAlchemy": { cat: 1, data: [0, 0, 0, 1, 2, 3, 3] },
+            "Matplotlib": { cat: 1, data: [0, 1, 1, 2, 2, 2, 2] },
+            "Seaborn": { cat: 1, data: [0, 0, 1, 1, 2, 2, 2] },
+            "TensorFlow": { cat: 1, data: [0, 0, 2, 3, 4, 5, 6] },
+            "scikit-learn": { cat: 1, data: [0, 0, 2, 3, 4, 4, 5] },
 
             // Frameworks
-            "Flask": { cat: 2, data: [2, 3, 4, 5, 6, 7] },
-            "FastAPI": { cat: 2, data: [0, 0, 0, 2, 4, 5] },
+            "Flask": { cat: 2, data: [0, 0, 0, 0, 3, 5, 6] },
+            "FastAPI": { cat: 2, data: [0, 0, 0, 0, 1, 3, 4] },
 
             // Web
-            "HTML5": { cat: 3, data: [1, 2, 2, 2, 2, 2] },
-            "CSS3": { cat: 3, data: [1, 2, 2, 2, 2, 2] },
-            "Jinja": { cat: 3, data: [1, 1, 1, 1, 1, 1] },
+            "HTML5": { cat: 3, data: [0, 0, 0, 0, 2, 2, 2] },
+            "CSS3": { cat: 3, data: [0, 0, 0, 0, 2, 2, 2] },
+            "Jinja": { cat: 3, data: [0, 0, 0, 0, 1, 1, 1] },
 
             // Tools
-            "Git": { cat: 4, data: [1, 2, 3, 4, 5, 6] },
-            "GitHub": { cat: 4, data: [1, 2, 3, 4, 5, 6] },
-            "Google Colab": { cat: 4, data: [0, 0, 1, 2, 3, 4] },
-            "VS Code": { cat: 4, data: [0, 1, 2, 3, 4, 5] },
-            "Docker": { cat: 4, data: [0, 0, 1, 3, 5, 7] },
-            "Kubernetes": { cat: 4, data: [0, 0, 0, 1, 2, 3] },
-            "Skaffold": { cat: 4, data: [0, 0, 0, 0, 1, 2] },
+            "Git": { cat: 4, data: [1, 2, 3, 4, 5, 6, 6] },
+            "GitHub": { cat: 4, data: [1, 2, 3, 4, 5, 6, 6] },
+            "Google Colab": { cat: 4, data: [0, 0, 2, 3, 4, 4, 5] },
+            "VS Code": { cat: 4, data: [0, 1, 2, 3, 4, 5, 5] },
+            "Docker": { cat: 4, data: [0, 0, 0, 1, 3, 5, 6] },
+            "Kubernetes": { cat: 4, data: [0, 0, 0, 0, 1, 2, 3] },
+            "Skaffold": { cat: 4, data: [0, 0, 0, 0, 0, 1, 2] },
 
             // Databases
-            "PostgreSQL": { cat: 5, data: [0, 0, 1, 2, 3, 4] },
+            "PostgreSQL": { cat: 5, data: [0, 0, 0, 1, 2, 3, 4] },
 
             // Platforms
-            "Render": { cat: 6, data: [0, 0, 0, 1, 2, 3] },
-            "Google Cloud": { cat: 6, data: [0, 0, 0, 1, 2, 3] },
-            "AWS": { cat: 6, data: [0, 0, 0, 1, 2, 3] },
-            "Heroku": { cat: 6, data: [0, 1, 1, 1, 1, 1] },
-            "Railway": { cat: 6, data: [0, 0, 0, 0, 1, 2] },
+            "Render": { cat: 6, data: [0, 0, 0, 0, 1, 2, 3] },
+            "Google Cloud": { cat: 6, data: [0, 0, 1, 1, 2, 2, 3] },
+            "AWS": { cat: 6, data: [0, 0, 0, 1, 1, 2, 3] },
+            "Heroku": { cat: 6, data: [0, 0, 1, 1, 1, 1, 1] },
+            "Railway": { cat: 6, data: [0, 0, 0, 0, 0, 1, 2] },
 
             // Modern Stack (learning)
-            "Microservices": { cat: 7, data: [0, 0, 0, 0, 1, 2] },
-            "TypeScript": { cat: 7, data: [0, 0, 0, 0, 1, 3] },
-            "React": { cat: 7, data: [0, 0, 0, 0, 2, 4] },
-            "Vite": { cat: 7, data: [0, 0, 0, 0, 1, 2] },
-            "Next.js": { cat: 7, data: [0, 0, 0, 0, 1, 3] },
-            "Node.js": { cat: 7, data: [0, 0, 0, 0, 2, 4] }
+            "Microservices": { cat: 7, data: [0, 0, 0, 0, 1, 1, 2] },
+            "TypeScript": { cat: 7, data: [0, 0, 0, 0, 1, 2, 3] },
+            "React": { cat: 7, data: [0, 0, 0, 0, 1, 3, 4] },
+            "Vite": { cat: 7, data: [0, 0, 0, 0, 1, 1, 2] },
+            "Next.js": { cat: 7, data: [0, 0, 0, 0, 1, 2, 3] },
+            "Node.js": { cat: 7, data: [0, 0, 0, 0, 1, 3, 4] }
         };
 
         // ----- 3. Build one dataset per *category* (stacked) -----
