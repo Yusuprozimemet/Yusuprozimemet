@@ -303,7 +303,7 @@
         }, { threshold: 0.1 });
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-        /* ---------- DOUGHNUT CHART (Project Distribution) ---------- */
+        /* ---------- DOUGHNUT CHART (unchanged) ---------- */
         new Chart(document.getElementById('doughnutChart'), {
             type: 'doughnut',
             data: {
@@ -314,7 +314,7 @@
                         'rgba(255,99,132,0.8)',
                         'rgba(54,162,235,0.8)',
                         'rgba(255,206,86,0.8)',
-                        'rgba(75865,192,192,0.8)',
+                        'rgba(75,192,192,0.8)',
                         'rgba(153,102,255,0.8)',
                         'rgba(255,159,64,0.8)'
                     ],
@@ -337,55 +337,117 @@
             }
         });
 
-        /* ---------- STACKED BAR (Tech Adoption) ---------- */
-        const skillColors = {
-            // ---- Existing ----
-            "Python": "#4caf50", "R": "#2196f3", "Java": "#ff9800", "JavaScript": "#ffeb3b",
-            "Pandas": "#9c27b0", "NumPy": "#e91e63", "SQLAlchemy": "#3f51b5", "Matplotlib": "#00bcd4",
-            "Seaborn": "#cddc39", "TensorFlow": "#ff5722", "scikit-learn": "#795548",
-            "Flask": "#8bc34a", "FastAPI": "#009688",
-            "HTML5": "#ff4081", "CSS3": "#03a9f4", "Jinja": "#607d8b",
-            "Git": "#f44336", "GitHub": "#9e9e9e", "Google Colab": "#ffca28", "VS Code": "#673ab7",
-            "Docker": "#1e88e5", "Kubernetes": "#42a5f5", "Skaffold": "#26c6da",
-            "PostgreSQL": "#336791",
-            "Render": "#4db6ac", "Google Cloud": "#fbc02d", "AWS": "#ff8f00", "Heroku": "#7e57c2", "Railway": "#26a69a",
-
-            // ---- New (learning) ----
-            "Microservices": "#f06292", "TypeScript": "#007acc", "React": "#61dafb",
-            "Vite": "#646cff", "Next.js": "#000000", "Node.js": "#8cc84b"
-        };
-
+        /* ---------- STACKED BAR – CATEGORIZED ---------- */
         const years = ['2020', '2021', '2022', '2023', '2024', '2025'];
 
-        const skillData = {
-            // ---- Existing ----
-            "Python": [2, 4, 5, 7, 8, 9], "R": [0, 0, 1, 1, 1, 1], "Java": [0, 0, 0, 1, 1, 1], "JavaScript": [1, 2, 2, 2, 3, 3],
-            "Pandas": [0, 1, 2, 3, 4, 5], "NumPy": [0, 1, 2, 3, 4, 5], "SQLAlchemy": [0, 0, 1, 2, 3, 3],
-            "Matplotlib": [0, 1, 1, 2, 2, 2], "Seaborn": [0, 0, 1, 1, 2, 2],
-            "TensorFlow": [0, 0, 0, 2, 4, 6], "scikit-learn": [0, 0, 1, 2, 3, 4],
-            "Flask": [2, 3, 4, 5, 6, 7], "FastAPI": [0, 0, 0, 2, 4, 5],
-            "HTML5": [1, 2, 2, 2, 2, 2], "CSS3": [1, 2, 2, 2, 2, 2], "Jinja": [1, 1, 1, 1, 1, 1],
-            "Git": [1, 2, 3, 4, 5, 6], "GitHub": [1, 2, 3, 4, 5, 6],
-            "Google Colab": [0, 0, 1, 2, 3, 4], "VS Code": [0, 1, 2, 3, 4, 5],
-            "Docker": [0, 0, 1, 3, 5, 7], "Kubernetes": [0, 0, 0, 1, 2, 3], "Skaffold": [0, 0, 0, 0, 1, 2],
-            "PostgreSQL": [0, 0, 1, 2, 3, 4],
-            "Render": [0, 0, 0, 1, 2, 3], "Google Cloud": [0, 0, 0, 1, 2, 3], "AWS": [0, 0, 0, 1, 2, 3],
-            "Heroku": [0, 1, 1, 1, 1, 1], "Railway": [0, 0, 0, 0, 1, 2],
+        // ----- 1. Category definition (order matters for legend) -----
+        const categories = [
+            { name: "Languages", color: "#4caf50" },
+            { name: "Python Libraries", color: "#9c27b0" },
+            { name: "Frameworks", color: "#009688" },
+            { name: "Web", color: "#ff4081" },
+            { name: "Tools", color: "#f44336" },
+            { name: "Databases", color: "#336791" },
+            { name: "Platforms", color: "#ff8f00" },
+            { name: "Modern Stack", color: "#61dafb" }
+        ];
 
-            // ---- New ----
-            "Microservices": [0, 0, 0, 0, 1, 2], "TypeScript": [0, 0, 0, 0, 1, 3],
-            "React": [0, 0, 0, 0, 2, 4], "Vite": [0, 0, 0, 0, 1, 2],
-            "Next.js": [0, 0, 0, 0, 1, 3], "Node.js": [0, 0, 0, 0, 2, 4]
+        // ----- 2. Skill → category + data -----
+        const skillMap = {
+            // Languages
+            "Python": { cat: 0, data: [2, 4, 5, 7, 8, 9] },
+            "R": { cat: 0, data: [0, 0, 1, 1, 1, 1] },
+            "Java": { cat: 0, data: [0, 0, 0, 1, 1, 1] },
+            "JavaScript": { cat: 0, data: [1, 2, 2, 2, 3, 3] },
+
+            // Python Libraries
+            "Pandas": { cat: 1, data: [0, 1, 2, 3, 4, 5] },
+            "NumPy": { cat: 1, data: [0, 1, 2, 3, 4, 5] },
+            "SQLAlchemy": { cat: 1, data: [0, 0, 1, 2, 3, 3] },
+            "Matplotlib": { cat: 1, data: [0, 1, 1, 2, 2, 2] },
+            "Seaborn": { cat: 1, data: [0, 0, 1, 1, 2, 2] },
+            "TensorFlow": { cat: 1, data: [0, 0, 0, 2, 4, 6] },
+            "scikit-learn": { cat: 1, data: [0, 0, 1, 2, 3, 4] },
+
+            // Frameworks
+            "Flask": { cat: 2, data: [2, 3, 4, 5, 6, 7] },
+            "FastAPI": { cat: 2, data: [0, 0, 0, 2, 4, 5] },
+
+            // Web
+            "HTML5": { cat: 3, data: [1, 2, 2, 2, 2, 2] },
+            "CSS3": { cat: 3, data: [1, 2, 2, 2, 2, 2] },
+            "Jinja": { cat: 3, data: [1, 1, 1, 1, 1, 1] },
+
+            // Tools
+            "Git": { cat: 4, data: [1, 2, 3, 4, 5, 6] },
+            "GitHub": { cat: 4, data: [1, 2, 3, 4, 5, 6] },
+            "Google Colab": { cat: 4, data: [0, 0, 1, 2, 3, 4] },
+            "VS Code": { cat: 4, data: [0, 1, 2, 3, 4, 5] },
+            "Docker": { cat: 4, data: [0, 0, 1, 3, 5, 7] },
+            "Kubernetes": { cat: 4, data: [0, 0, 0, 1, 2, 3] },
+            "Skaffold": { cat: 4, data: [0, 0, 0, 0, 1, 2] },
+
+            // Databases
+            "PostgreSQL": { cat: 5, data: [0, 0, 1, 2, 3, 4] },
+
+            // Platforms
+            "Render": { cat: 6, data: [0, 0, 0, 1, 2, 3] },
+            "Google Cloud": { cat: 6, data: [0, 0, 0, 1, 2, 3] },
+            "AWS": { cat: 6, data: [0, 0, 0, 1, 2, 3] },
+            "Heroku": { cat: 6, data: [0, 1, 1, 1, 1, 1] },
+            "Railway": { cat: 6, data: [0, 0, 0, 0, 1, 2] },
+
+            // Modern Stack (learning)
+            "Microservices": { cat: 7, data: [0, 0, 0, 0, 1, 2] },
+            "TypeScript": { cat: 7, data: [0, 0, 0, 0, 1, 3] },
+            "React": { cat: 7, data: [0, 0, 0, 0, 2, 4] },
+            "Vite": { cat: 7, data: [0, 0, 0, 0, 1, 2] },
+            "Next.js": { cat: 7, data: [0, 0, 0, 0, 1, 3] },
+            "Node.js": { cat: 7, data: [0, 0, 0, 0, 2, 4] }
         };
 
-        const datasets = Object.keys(skillData).map(skill => ({
-            label: skill,
-            data: skillData[skill],
-            backgroundColor: skillColors[skill] + "dd",
-            borderColor: skillColors[skill],
-            borderWidth: 1
-        }));
+        // ----- 3. Build one dataset per *category* (stacked) -----
+        const datasets = categories.map((cat, catIdx) => {
+            const catSkills = Object.entries(skillMap)
+                .filter(([_, info]) => info.cat === catIdx)
+                .map(([name, info]) => ({ name, data: info.data }));
 
+            // Sum all skills in the category for each year
+            const summedData = years.map((_, yIdx) =>
+                catSkills.reduce((sum, s) => sum + s.data[yIdx], 0)
+            );
+
+            return {
+                label: cat.name,
+                data: summedData,
+                backgroundColor: cat.color + "dd",   // 85 % opacity
+                borderColor: cat.color,
+                borderWidth: 1,
+                // store the skill breakdown for the tooltip
+                _skills: catSkills
+            };
+        });
+
+        // ----- 4. Custom tooltip that shows *individual* skills -----
+        const customTooltip = {
+            callbacks: {
+                title: ctx => `${ctx[0].label}`,
+                label: context => {
+                    const cat = datasets[context.datasetIndex];
+                    const yearIdx = context.dataIndex;
+                    const lines = [];
+
+                    cat._skills.forEach(s => {
+                        const val = s.data[yearIdx];
+                        if (val > 0) lines.push(`  ${s.name}: ${val} project${val > 1 ? 's' : ''}`);
+                    });
+
+                    return lines.length ? lines : ['(no projects)'];
+                }
+            }
+        };
+
+        // ----- 5. Create the chart -----
         new Chart(document.getElementById('stackedBarChart'), {
             type: 'bar',
             data: { labels: years, datasets },
@@ -393,12 +455,29 @@
                 responsive: true,
                 maintainAspectRatio: false,
                 scales: {
-                    x: { stacked: true, ticks: { color: '#e0e0e0', font: { size: 13, weight: '600' } }, grid: { display: false } },
-                    y: { stacked: true, beginAtZero: true, ticks: { color: '#e0e0e0', font: { size: 12 } }, grid: { color: 'rgba(255,255,255,0.06)' } }
+                    x: {
+                        stacked: true,
+                        ticks: { color: '#e0e0e0', font: { size: 13, weight: '600' } },
+                        grid: { display: false }
+                    },
+                    y: {
+                        stacked: true,
+                        beginAtZero: true,
+                        ticks: { color: '#e0e0e0', font: { size: 12 } },
+                        grid: { color: 'rgba(255,255,255,0.06)' }
+                    }
                 },
                 plugins: {
-                    tooltip: { callbacks: { label: ctx => `${ctx.dataset.label}: ${ctx.raw} project${ctx.raw > 1 ? 's' : ''}` } },
-                    legend: { position: 'right', labels: { color: '#e0e0e0', font: { size: 11 }, padding: 12, usePointStyle: true } }
+                    tooltip: customTooltip,
+                    legend: {
+                        position: 'right',
+                        labels: {
+                            color: '#e0e0e0',
+                            font: { size: 12, weight: '600' },
+                            padding: 15,
+                            usePointStyle: true
+                        }
+                    }
                 },
                 animation: { duration: 2600, easing: 'easeOutQuart' }
             }
