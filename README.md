@@ -1,14 +1,8 @@
 
 
-**[View Live Dashboard →](https://yusuprozimemet.github.io/Yusuprozimemet/)**
-
-
----
-
 ## 🌍 Web Applications
 - **Typorax:** [🔗 Live](https://typorax.onrender.com)
 - **AutoGenBlog:**  [🔗 Repo](https://github.com/Yusuprozimemet/autogenblog)
-- **Stock Prediction:** ML trading platform
 
 ## 🛠️ Tools & Research
 - **FastYeast:** [🔗 Repo](https://github.com/Yusuprozimemet/FastYeast)
