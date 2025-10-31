@@ -2,7 +2,7 @@
 
 ## 🌍 Web Applications
 - **Typorax:** [🔗 Live](https://typorax.onrender.com)
-- **AutoGenBlog:**  [🔗 Repo](https://github.com/Yusuprozimemet/autogenblog)
+- **Trading-agent:**  [🔗 Repo](https://github.com/Yusuprozimemet/trading-agent)
 
 ## 🛠️ Tools & Research
 - **FastYeast:** [🔗 Repo](https://github.com/Yusuprozimemet/FastYeast)
