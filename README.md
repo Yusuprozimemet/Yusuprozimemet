@@ -1,8 +1,5 @@
 
 
-## 🌍 Web Applications
-- **Typorax:** [🔗 Live](https://typorax.onrender.com)
-- **Trading-tools:**  [🔗 Live](https://trading-tools-bd3c.onrender.com)
 
 ## 🛠️ Tools & Research
 - **FastYeast:** [🔗 Repo](https://github.com/Yusuprozimemet/FastYeast)
