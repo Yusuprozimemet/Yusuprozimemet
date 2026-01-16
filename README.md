@@ -7,9 +7,9 @@
 - **Interested things:** AI implementations in various domains, Webapp development, Chess 
 - **Technologies that I like:** python, typescript...
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=yusuprozimemet)](https://github.com/yusuprozimemet/github-readme-stats)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=yusuprozimemet&layout=compact&theme=radical)](https://github.com/yusuprozimemet)
 
-[![GitHub Streak](https://streak-stats.demolab.com?user=yusuprozimemet)](https://git.io/streak-stats)
+[![GitHub Streak](https://streak-stats.demolab.com/?user=yusuprozimemet&theme=radical)](https://github.com/yusuprozimemet)
 
 
 
