@@ -2,14 +2,23 @@
 
 
 ## About me:
-- **Introduction:** I was a molecular biologist with a lot of data analysis with machine learning. AI is always fasinating to me. The combinations of AI with different domains will definitely change the world. 
+- **Introduction:** I was a molecular biologist with a lot of data analysis with machine learning. AI is always fascinating to me. The combinations of AI with different domains will definitely change the world. 
 
 - **Interested things:** AI implementations in various domains, Webapp development, Chess 
 - **Technologies that I like:** python, typescript...
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=yusuprozimemet&layout=compact&theme=radical)](https://github.com/yusuprozimemet)
+## GitHub Stats
 
-[![GitHub Streak](https://streak-stats.demolab.com/?user=yusuprozimemet&theme=radical)](https://github.com/yusuprozimemet)
+
+  
+![Yusup's GitHub stats](https://github-readme-stats.vercel.app/api?username=yusuprozimemet&theme=dark&hide_border=true&bg_color=0D1117&show_icons=true)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=yusuprozimemet&layout=compact&theme=dark&hide_border=true&bg_color=0D1117)
+
+
+
+<!-- Activity Graph -->
+[![Yusup's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=yusuprozimemet&theme=github-compact)](https://github.com/yusuprozimemet)
 
 
 
