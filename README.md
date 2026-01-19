@@ -11,9 +11,20 @@
 
 
   
-![Yusup's GitHub stats](https://github-readme-stats.vercel.app/api?username=yusuprozimemet&theme=dark&hide_border=true&bg_color=0D1117&show_icons=true)
+<p align="center">
+  <img
+    src="https://github-readme-stats.vercel.app/api?username=yusuprozimemet&theme=dark&hide_border=true&bg_color=0D1117&show_icons=true"
+    alt="Yusup's GitHub stats"
+  />
+</p>
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=yusuprozimemet&layout=compact&theme=dark&hide_border=true&bg_color=0D1117)
+<p align="center">
+  <img
+    src="https://github-readme-stats.vercel.app/api/top-langs/?username=yusuprozimemet&layout=compact&theme=dark&hide_border=true&bg_color=0D1117"
+    alt="Top Languages"
+  />
+</p>
+
 
 
 
