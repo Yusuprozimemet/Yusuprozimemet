@@ -30,5 +30,6 @@
 ## 📜 Publication
 - **Title:** NAD Metabolism and Proteomic Profile in a Yeast Model Expressing a Neurotoxic polyQ Protein: Effect of Phenolics from Extra-virgin Olive Oil
 - **Authors:** Silvia Vincenzetti, Yusup Rozimemet, et al.
+[🔗 Link](https://www.preprints.org/manuscript/202402.1499)
 
 
