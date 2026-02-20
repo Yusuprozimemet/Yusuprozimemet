@@ -7,24 +7,6 @@
 - **Interested things:** AI implementations in various domains, Webapp development, Chess 
 - **Technologies that I like:** python, typescript...
 
-## GitHub Stats
-
-
-  
-<p align="center">
-  <img
-    src="https://github-readme-stats.vercel.app/api?username=yusuprozimemet&theme=dark&hide_border=true&bg_color=0D1117&show_icons=true"
-    alt="Yusup's GitHub stats"
-  />
-</p>
-
-<p align="center">
-  <img
-    src="https://github-readme-stats.vercel.app/api/top-langs/?username=yusuprozimemet&layout=compact&theme=dark&hide_border=true&bg_color=0D1117"
-    alt="Top Languages"
-  />
-</p>
-
 
 
 
