@@ -12,7 +12,7 @@ Currently building **[Prakly](https://prakly.one)** — a B2B SaaS platform that
 ## `$ cat interests.txt`
 
 - 🧠 **AI implementations** across domains — agents, multi-agent systems, LLM pipelines
-- 🏗️ **Webapp engineering** — FastAPI, Flask, async everything
+- 🏗️ **Webapp engineering** — FastAPI, JavaScript, Node.js, async everything
 - ♟️ **Chess** — developed my own spatial/strategic framework independently of established theory
 - 🧬 **Computational biology** — where it all started
 
@@ -21,9 +21,9 @@ Currently building **[Prakly](https://prakly.one)** — a B2B SaaS platform that
 ## `$ ls -la stack/`
 
 ![Python](https://img.shields.io/badge/Python-1a1a2e?style=flat-square&logo=python&logoColor=e94560)
-![TypeScript](https://img.shields.io/badge/TypeScript-1a1a2e?style=flat-square&logo=typescript&logoColor=e94560)
+![JavaScript](https://img.shields.io/badge/JavaScript-1a1a2e?style=flat-square&logo=javascript&logoColor=e94560)
+![Node.js](https://img.shields.io/badge/Node.js-1a1a2e?style=flat-square&logo=node.js&logoColor=e94560)
 ![FastAPI](https://img.shields.io/badge/FastAPI-1a1a2e?style=flat-square&logo=fastapi&logoColor=e94560)
-![React](https://img.shields.io/badge/React-1a1a2e?style=flat-square&logo=react&logoColor=e94560)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-1a1a2e?style=flat-square&logo=postgresql&logoColor=e94560)
 ![Java](https://img.shields.io/badge/Java-1a1a2e?style=flat-square&logo=openjdk&logoColor=e94560)
 ![Railway](https://img.shields.io/badge/Railway-1a1a2e?style=flat-square&logo=railway&logoColor=e94560)
@@ -31,10 +31,39 @@ Currently building **[Prakly](https://prakly.one)** — a B2B SaaS platform that
 
 ---
 
+## `$ cat methodology.md`
+
+### Signal Coding
+
+I run a **Signal Coding** workflow — every git diff passes through an Advisor Council of AI agents (Security, QA, Senior Dev, CTO, PM) before deployment. Treating AI outputs as experimental results requiring controls, not oracles to trust blindly. From the lab bench to the terminal.
+
+→ Writing about it on [Medium @yusupr](https://medium.com/@yusupr)
+
+### Spec-Driven Development
+
+Before a single line of code is written, the feature lives as a written specification. Each spec defines the exact deliverable, acceptance criteria, files touched, and exit conditions. The agent implements against the spec; a human reviews the diff and merges only when all gates pass.
+
+```
+spec → branch → implement → test → multi-agent review → human merge
+         ↑                                                    ↓
+         └──────────────── never skip steps ─────────────────┘
+```
+
+Hard rules:
+- `NEVER` commit to main directly
+- `NEVER` start the next spec until the current one is merged and green
+- `NEVER` merge — human merges after review
+- `NEVER` skip the gate: unit tests + E2E + lint
+
+Active example: **[LearnX-CLI](https://github.com/Yusuprozimemet/LearnX-CLI)** — a `.md → LLM curriculum → TTS audio → MP4 video` pipeline built entirely spec-by-spec across v0 → v4, with 235 tests and a Docker container sandbox replacing git-branch-only sandboxing.
+
+---
+
 ## `$ ls tools/`
 
 | Repo | About |
 |------|-------|
+| [**LearnX-CLI**](https://github.com/Yusuprozimemet/LearnX-CLI) | Spec-driven CLI: Markdown → audio tutorial + MP4 video |
 | [**FastYeast**](https://github.com/Yusuprozimemet/FastYeast) | Yeast biology data pipeline with fast ML processing |
 | [**TriplexDynamiX**](https://github.com/Yusuprozimemet/TriplexDynamiX) | Nucleic acid triplex dynamics simulation |
 | [**GPS Ancestry Map**](https://github.com/Yusuprozimemet/GPS_Ancestry_Migration_Map) | Genetic ancestry migration visualization |
@@ -51,11 +80,3 @@ Currently building **[Prakly](https://prakly.one)** — a B2B SaaS platform that
 ## `$ git log --stat`
 
 [![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=yusuprozimemet&theme=tokyo-night&hide_border=true&bg_color=1a1a2e&color=e94560&line=e94560&point=ffffff)](https://github.com/yusuprozimemet)
-
----
-
-## `$ echo $METHODOLOGY`
-
-I run a **Signal Coding** workflow — every git diff passes through an Advisor Council of AI agents (Security, QA, Senior Dev, CTO, PM) before deployment. Treating AI outputs as experimental results requiring controls, not oracles to trust blindly. From the lab bench to the terminal.
-
-→ Writing about it on [Medium @yusupr](https://medium.com/@yusupr)
