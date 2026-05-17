@@ -5,7 +5,6 @@
 
 Former molecular biologist (RNA splicing, spliceosome mechanics) turned AI-native engineer. I don't inherit frameworks — I build my own understanding through direct encounter. Applied that same construction-first approach to software.
 
-Currently building **[Prakly](https://prakly.one)** — a B2B SaaS platform that converts internal company documents into structured, gamified lessons (XP, streaks, leaderboards) for corporate L&D teams.
 
 ---
 
