@@ -3,8 +3,7 @@
 
 ## `$ whoami`
 
-Former molecular biologist (RNA splicing, spliceosome mechanics) turned AI-native engineer (I mean I use AI a lot! and I know what I am using.). I don't inherit frameworks — I build my own understanding through direct encounter. Applied that same construction-first approach to software.
-
+Former molecular biologist (RNA splicing, spliceosome mechanics) turned AI-native engineer (I mean, I use AI **a lot** — and I know what I am using). I learn through building; that's why I keep building, whether it's small or big (SaaS).
 
 ---
 
