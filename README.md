@@ -3,7 +3,7 @@
 
 ## `$ whoami`
 
-Former molecular biologist (RNA splicing, spliceosome mechanics) turned AI-native engineer (I mean, I use AI **a lot** — and I know what I am using). I learn through building; that's why I keep building, whether it's small or big (SaaS).
+Former molecular biologist (RNA splicing, spliceosome mechanics) turned AI-native developer. I enjoy thinking about system design, architecture, data flow, and the bigger picture. I learn by building, which is why I keep creating projects, whether small or large (SaaS).
 
 ---
 
