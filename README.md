@@ -73,8 +73,4 @@ Active example: **[LearnX-CLI](https://github.com/Yusuprozimemet/LearnX-CLI)** �
 > **NAD Metabolism and Proteomic Profile in a Yeast Model Expressing a Neurotoxic polyQ Protein: Effect of Phenolics from Extra-virgin Olive Oil**
 > Vincenzetti S, **Rozimemet Y**, et al. — [preprints.org, 2024 →](https://www.preprints.org/manuscript/202402.1499)
 
----
 
-## `$ git log --stat`
-
-[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=yusuprozimemet&theme=tokyo-night&hide_border=true&bg_color=1a1a2e&color=e94560&line=e94560&point=ffffff)](https://github.com/yusuprozimemet)
