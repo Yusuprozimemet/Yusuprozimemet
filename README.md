@@ -31,7 +31,7 @@ Former molecular biologist (RNA splicing, spliceosome mechanics) turned AI-nativ
 
 ## `$ cat methodology.md`
 
-### Signal Coding
+### Signal Coding (Orchestrating multi agents)
 
 I run a **Signal Coding** workflow — every git diff passes through an Advisor Council of AI agents (Security, QA, Senior Dev, CTO, PM) before deployment. Treating AI outputs as experimental results requiring controls, not oracles to trust blindly. From the lab bench to the terminal.
 
