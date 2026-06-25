@@ -57,17 +57,6 @@ Active example: **[LearnX-CLI](https://github.com/Yusuprozimemet/LearnX-CLI)** â
 
 ---
 
-## `$ ls tools/`
-
-| Repo | About |
-|------|-------|
-| [**LearnX-CLI**](https://github.com/Yusuprozimemet/LearnX-CLI) | Spec-driven CLI: Markdown â†’ audio tutorial + MP4 video |
-| [**FastYeast**](https://github.com/Yusuprozimemet/FastYeast) | Yeast biology data pipeline with fast ML processing |
-| [**TriplexDynamiX**](https://github.com/Yusuprozimemet/TriplexDynamiX) | Nucleic acid triplex dynamics simulation |
-| [**GPS Ancestry Map**](https://github.com/Yusuprozimemet/GPS_Ancestry_Migration_Map) | Genetic ancestry migration visualization |
-
----
-
 ## `$ cat publication.bib`
 
 > **NAD Metabolism and Proteomic Profile in a Yeast Model Expressing a Neurotoxic polyQ Protein: Effect of Phenolics from Extra-virgin Olive Oil**
