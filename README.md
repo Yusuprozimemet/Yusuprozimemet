@@ -24,9 +24,17 @@ Former molecular biologist (RNA splicing, spliceosome mechanics) turned AI-nativ
 ![FastAPI](https://img.shields.io/badge/FastAPI-1a1a2e?style=flat-square&logo=fastapi&logoColor=e94560)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-1a1a2e?style=flat-square&logo=postgresql&logoColor=e94560)
 ![Java](https://img.shields.io/badge/Java-1a1a2e?style=flat-square&logo=openjdk&logoColor=e94560)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-1a1a2e?style=flat-square&logo=springboot&logoColor=e94560)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-1a1a2e?style=flat-square&logo=githubactions&logoColor=e94560)
+![Claude Code](https://img.shields.io/badge/Claude_Code-1a1a2e?style=flat-square&logo=claude&logoColor=e94560)
 ![Railway](https://img.shields.io/badge/Railway-1a1a2e?style=flat-square&logo=railway&logoColor=e94560)
 ![Playwright](https://img.shields.io/badge/Playwright-1a1a2e?style=flat-square&logo=playwright&logoColor=e94560)
-
+![Docker](https://img.shields.io/badge/Docker-1a1a2e?style=flat-square&logo=docker&logoColor=e94560)
+![JUnit](https://img.shields.io/badge/JUnit-1a1a2e?style=flat-square&logo=junit5&logoColor=e94560)
+![Maven](https://img.shields.io/badge/Maven-1a1a2e?style=flat-square&logo=apachemaven&logoColor=e94560)
+![Git](https://img.shields.io/badge/Git-1a1a2e?style=flat-square&logo=git&logoColor=e94560)
+![OpenAPI](https://img.shields.io/badge/OpenAPI-1a1a2e?style=flat-square&logo=swagger&logoColor=e94560)
+![Postman](https://img.shields.io/badge/Postman-1a1a2e?style=flat-square&logo=postman&logoColor=e94560)
 ---
 
 ## `$ cat methodology.md`
