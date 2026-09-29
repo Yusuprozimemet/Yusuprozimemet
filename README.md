@@ -31,11 +31,11 @@ Former molecular biologist (RNA splicing, spliceosome mechanics) turned AI-nativ
 
 ## `$ cat methodology.md`
 
-### Signal Coding (Orchestrating multi agents)
+### Multi-Agent Migration (Monolith to Microservices)
 
-I run a **Signal Coding** workflow — every git diff passes through an Advisor Council of AI agents (Security, QA, Senior Dev, CTO, PM) before deployment. Treating AI outputs as experimental results requiring controls, not oracles to trust blindly. From the lab bench to the terminal.
+I'm migrating a Java monolith (**JobMatch**) to microservices one day at a time, with no single agent grading its own homework. An Opus main session writes specs and reviews diffs, two read-only auditors (plan and spec) try to break every claim before work starts, and a Haiku implementer writes code from a precise brief but never commits. Every change deliberately breaks the code to prove the new test can fail, and a human owns the merge button. Clear roles, limited permissions, one PR per track.
 
-→ Writing about it on [Medium @yusupr](https://medium.com/@yusupr)
+→ Repo: [jobmatch-microservices](https://github.com/yusuprozimemet/jobmatch-microservices) · Writing about it on [Medium @yusupr](https://medium.com/@yusupr)
 
 ### Spec-Driven Development
 
