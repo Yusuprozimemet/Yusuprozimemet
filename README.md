@@ -1,5 +1,5 @@
 <!-- Header typing animation -->
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=1000&color=E94560&background=00000000&center=false&vCenter=true&width=600&lines=mol.+biologist+%E2%86%92+AI-native+engineer;building+Prakly+%F0%9F%9A%80;chess+%2F%2F+code+%2F%2F+systems)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=1000&color=E94560&background=00000000&center=false&vCenter=true&width=600&lines=mol.+biologist+%E2%86%92+AI-native+engineer;chess+%2F%2F+code+%2F%2F+systems)](https://git.io/typing-svg)
 
 ## `$ whoami`
 
@@ -35,7 +35,7 @@ Former molecular biologist (RNA splicing, spliceosome mechanics) turned AI-nativ
 
 I'm migrating a Java monolith (**JobMatch**) to microservices one day at a time, with no single agent grading its own homework. An Opus main session writes specs and reviews diffs, two read-only auditors (plan and spec) try to break every claim before work starts, and a Haiku implementer writes code from a precise brief but never commits. Every change deliberately breaks the code to prove the new test can fail, and a human owns the merge button. Clear roles, limited permissions, one PR per track.
 
-→ Repo: [jobmatch-microservices](https://github.com/yusuprozimemet/jobmatch-microservices) · Writing about it on [Medium @yusupr](https://medium.com/@yusupr)
+→ Follow the migration live on the [progress dashboard](https://yusuprozimemet.github.io/jobmatch-microservices/) · Repo: [jobmatch-microservices](https://github.com/yusuprozimemet/jobmatch-microservices) · Writing about it on [Medium @yusupr](https://medium.com/@yusupr)
 
 ### Spec-Driven Development
 
