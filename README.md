@@ -7,8 +7,6 @@ Backend and AI engineer, formerly a molecular biologist (RNA splicing, spliceoso
 
 I learn by building, so there is always a project in progress, from small tools to full SaaS.
 
-Based in the Netherlands 🇳🇱 · Currently completing HackYourFuture's Java & Spring Boot track
-
 ---
 
 ## `$ cat focus.txt`
@@ -46,28 +44,9 @@ Based in the Netherlands 🇳🇱 · Currently completing HackYourFuture's Java 
 
 ### 🔬 JobMatch → Microservices *(in progress)*
 
-Migrating a Java monolith to microservices, one day and one PR at a time, with separated roles and limited permissions:
-
-```
-spec (Opus) → audit (read-only) → implement (Haiku) → break-it test → review (Opus) → human merge
-     ↑                                                                                        ↓
-     └───────────────────────────── next PR, never skip steps ──────────────────────────────┘
-```
-
-- **Opus** writes specs and reviews diffs
-- **Read-only auditors** try to break every claim in the plan and spec before work starts
-- **Haiku** writes code from a precise brief and never commits
-- **Break-it test:** every change deliberately breaks the code first to prove the new test can fail
-- **Human (me)** owns the merge button
+Spec-driven monolith → microservices migration of a real job-matching platform. AI agent implements under strict day specs + acceptance criteria; human owns architecture and reviews every change. Open lab notebook.
 
 → [Progress dashboard](https://yusuprozimemet.github.io/jobmatch-microservices/) · [Repo](https://github.com/yusuprozimemet/jobmatch-microservices) · [Writing on Medium](https://medium.com/@yusupr)
-
-
-### 🎧 LearnX-CLI
-
-A `.md → LLM curriculum → TTS audio → MP4 video` pipeline, built spec by spec from v0 to v4, with 235 tests and a Docker sandbox in place of branch-only isolation.
-
-→ [Repo](https://github.com/Yusuprozimemet/LearnX-CLI)
 
 ---
 
@@ -90,11 +69,11 @@ spec → branch → implement → test → multi-agent review → human merge
 - `NEVER` let an agent merge; a human does that after review
 - `NEVER` skip the gate: unit tests + E2E + lint
 
----
 
-## `$ cat publication.bib`
-
-> **NAD Metabolism and Proteomic Profile in a Yeast Model Expressing a Neurotoxic polyQ Protein: Effect of Phenolics from Extra-virgin Olive Oil**
-> Vincenzetti S, **Rozimemet Y**, et al. [preprints.org, 2024 →](https://www.preprints.org/manuscript/202402.1499)
+Active example: **[LearnX-CLI](https://github.com/Yusuprozimemet/LearnX-CLI)** — a `.md → LLM curriculum → TTS audio → MP4 video` pipeline built entirely spec-by-spec across v0 → v4, with 235 tests and a Docker container sandbox replacing git-branch-only sandboxing.
 
 ---
+
+## `$ cat publication.bib` 
+
+> **NAD Metabolism and Proteomic Profile in a Yeast Model Expressing a Neurotoxic polyQ Protein: Effect of Phenolics from Extra-virgin Olive Oil**> Vincenzetti S, **Rozimemet Y**, et al. — [preprints.org, 2024 →](https://www.preprints.org/manuscript/202402.1499)
