@@ -1,6 +1,3 @@
-<!-- Header typing animation -->
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=1000&color=E94560&background=00000000&center=false&vCenter=true&width=600&lines=mol.+biologist+%E2%86%92+backend+%2B+AI+engineer;spec-driven+//+multi-agent+//+human-merged)](https://git.io/typing-svg)
-
 ## `$ whoami`
 
 Backend and AI engineer, formerly a molecular biologist (RNA splicing, spliceosome mechanics). Biology taught me to reason about complex systems; I now apply that to software architecture, data flow, and building reliable workflows around AI agents.
