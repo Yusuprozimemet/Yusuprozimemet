@@ -1,7 +1,6 @@
 ## `$ whoami`
 
-AI-native Backend engineer (Java / Spring Boot) based in the Netherlands, previously a molecular biologist. Research taught me to design careful experiments and not trust a result until I've checked it; I now bring that to APIs, data models, and testing.
-
+AI-native backend engineer (Java / Spring Boot) based in the Netherlands, previously a molecular biologist. Research taught me to design careful experiments and not trust a result until I've checked it; I now bring that to APIs, data models, and testing.
 
 ---
 
@@ -37,32 +36,36 @@ AI-native Backend engineer (Java / Spring Boot) based in the Netherlands, previo
 ## `$ cat projects.md`
 
 ### 🔬 JobMatch → Microservices *(in progress)*
-Splitting the JobMatch monolith into Spring Boot services behind a gateway with RS256 JWT, traced with OpenTelemetry. Next phase: SQS events with a transactional outbox for GDPR-safe deletion across services. I own the architecture and the day-by-day specs; AI agents implement and I review every PR. Decisions I'm proud of:
+Migrating the JobMatch monolith to Spring Boot services, one day spec at a time. So far: a gateway with RS256 JWT auth, job search and matching extracted into their own containers (job-service on its own PostgreSQL database, matching-service on DynamoDB), service-to-service tokens, and OpenTelemetry traces across every hop. Now in progress: GDPR-safe account deletion, where a transactional outbox publishes `user.deleted` over SNS/SQS and each service deletes its own data. I own the architecture and the specs; AI agents implement and I review every PR. Decisions I'm proud of:
 - A/B-tested the OpenTelemetry Java agent against the running stack and removed it after it suppressed Spring's HTTP instrumentation
 - Fixed flaky CI by moving Maven dependencies into their own cached Docker layer
 
 → [Progress dashboard](https://yusuprozimemet.github.io/jobmatch-microservices/) · [Repo](https://github.com/yusuprozimemet/jobmatch-microservices)
 
-### 🎧 LearnX-CLI + DevLoop
-<!-- VERIFY before publishing: sandbox, review pipeline, and any numbers you add -->
-A CLI that turns Markdown notes into audio and video lessons (Python). The same repo is my testbed for spec-driven, multi-agent development: agents implement inside a Docker sandbox, a separate multi-agent review pipeline checks every change, and nothing merges without passing tests and my review.
+### 🎧 LearnX-CLI
+Turns Markdown notes into an LLM-written curriculum, TTS audio and MP4 video (Python). My first spec-driven project: built spec by spec from v0 to v4, with 235 tests and a Docker sandbox for the agent.
 → [Repo](https://github.com/Yusuprozimemet/LearnX-CLI)
-
 
 ---
 
 ## `$ cat workflow.md`
 
-Every feature starts as a written spec with the deliverable, acceptance criteria and files touched. An agent implements on a branch; tests, lint and an AI review run; then I read the diff and decide whether it merges.
+**No code without a spec. No spec without checkable acceptance criteria.**
 
-<!-- VERIFY: keep only the rules your repos actually enforce -->
-- **No agent grades its own work**: the reviewing agent is never the one that wrote the change
-- **Small PRs**: changes are kept within a size limit so every diff is reviewable
-- **Hard gates**: branch protection on `main`; nothing lands without passing tests, and only a human merges
+Each spec names the goal, what's in and out of scope, the tracks, the acceptance criteria, and a `Verify` command anyone can run. In [jobmatch-microservices](https://github.com/Yusuprozimemet/jobmatch-microservices) the roles are split so no agent grades its own work:
+
+- **Me**: the plan, the specs, review of every diff, and every merge
+- **Auditors** (read-only, fresh context): check each spec against the plan and the code before work starts; fixes land in a spec-change PR first
+- **Main session** (Claude Opus): writes each track's brief, reviews the code, breaks it on purpose to prove the tests can fail, opens the PR
+- **Implementer** (Claude Haiku): writes code from the brief and never commits
+
+Enforced by CI, not good intentions: PRs over 400 changed lines fail, the PR template is required, and tests, lint and build must be green, all required by branch protection on `main`.
 
 ```
-spec → branch → implement → test → AI review → human review & merge
+spec → audit → brief → implement → review & break on purpose → CI gates → human merge
 ```
+
+Wrong specs are corrected in the open, and negative results stay in the record. I also prototyped a driver to run this loop unattended, then removed it before its first run because the setup cost more than the migration needed ([design notes](https://github.com/Yusuprozimemet/devloop)).
 
 ---
 
