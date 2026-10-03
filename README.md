@@ -1,17 +1,15 @@
 ## `$ whoami`
 
-Backend and AI engineer, formerly a molecular biologist (RNA splicing, spliceosome mechanics). Biology taught me to reason about complex systems; I now apply that to software architecture, data flow, and building reliable workflows around AI agents.
+Backend engineer (Java / Spring Boot) based in the Netherlands, previously a molecular biologist. Research taught me to design careful experiments and not trust a result until I've checked it; I now bring that to APIs, data models, and testing.
 
-I learn by building, so there is always a project in progress, from small tools to full SaaS.
 
 ---
 
 ## `$ cat focus.txt`
 
-- 🤖 **Agentic engineering**: multi-agent systems, LLM pipelines, and review setups where no agent grades its own work
-- 🏗️ **Backend development**: Java/Spring Boot, Python/FastAPI, Node.js, PostgreSQL
-- 🧬 **Computational biology**: where it all started
-- ♟️ **Chess**: I enjoy building my own strategic frameworks
+- 🏗️ **Backend**: Java/Spring Boot services, PostgreSQL schema design and migrations, REST APIs, auth
+- 🔭 **Reliability**: testing with real databases (Testcontainers), tracing and metrics (OpenTelemetry, Grafana)
+- 🤖 **Working with AI agents**: I write the specs and acceptance criteria, agents implement, and I review every change before it merges
 
 ---
 
@@ -19,58 +17,57 @@ I learn by building, so there is always a project in progress, from small tools 
 
 ![Java](https://img.shields.io/badge/Java-1a1a2e?style=flat-square&logo=openjdk&logoColor=e94560)
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-1a1a2e?style=flat-square&logo=springboot&logoColor=e94560)
-![Python](https://img.shields.io/badge/Python-1a1a2e?style=flat-square&logo=python&logoColor=e94560)
-![FastAPI](https://img.shields.io/badge/FastAPI-1a1a2e?style=flat-square&logo=fastapi&logoColor=e94560)
-![JavaScript](https://img.shields.io/badge/JavaScript-1a1a2e?style=flat-square&logo=javascript&logoColor=e94560)
-![Node.js](https://img.shields.io/badge/Node.js-1a1a2e?style=flat-square&logo=node.js&logoColor=e94560)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-1a1a2e?style=flat-square&logo=postgresql&logoColor=e94560)
+![Flyway](https://img.shields.io/badge/Flyway-1a1a2e?style=flat-square&logo=flyway&logoColor=e94560)
+![JUnit](https://img.shields.io/badge/JUnit-1a1a2e?style=flat-square&logo=junit5&logoColor=e94560)
+![Testcontainers](https://img.shields.io/badge/Testcontainers-1a1a2e?style=flat-square&logo=docker&logoColor=e94560)
+![Maven](https://img.shields.io/badge/Maven-1a1a2e?style=flat-square&logo=apachemaven&logoColor=e94560)
 ![Docker](https://img.shields.io/badge/Docker-1a1a2e?style=flat-square&logo=docker&logoColor=e94560)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-1a1a2e?style=flat-square&logo=githubactions&logoColor=e94560)
-![Railway](https://img.shields.io/badge/Railway-1a1a2e?style=flat-square&logo=railway&logoColor=e94560)
-![JUnit](https://img.shields.io/badge/JUnit-1a1a2e?style=flat-square&logo=junit5&logoColor=e94560)
-![Playwright](https://img.shields.io/badge/Playwright-1a1a2e?style=flat-square&logo=playwright&logoColor=e94560)
-![Maven](https://img.shields.io/badge/Maven-1a1a2e?style=flat-square&logo=apachemaven&logoColor=e94560)
+![OpenTelemetry](https://img.shields.io/badge/OpenTelemetry-1a1a2e?style=flat-square&logo=opentelemetry&logoColor=e94560)
+![Grafana](https://img.shields.io/badge/Grafana-1a1a2e?style=flat-square&logo=grafana&logoColor=e94560)
+![Python](https://img.shields.io/badge/Python-1a1a2e?style=flat-square&logo=python&logoColor=e94560)
+![FastAPI](https://img.shields.io/badge/FastAPI-1a1a2e?style=flat-square&logo=fastapi&logoColor=e94560)
+![React](https://img.shields.io/badge/React-1a1a2e?style=flat-square&logo=react&logoColor=e94560)
+![TypeScript](https://img.shields.io/badge/TypeScript-1a1a2e?style=flat-square&logo=typescript&logoColor=e94560)
 ![OpenAPI](https://img.shields.io/badge/OpenAPI-1a1a2e?style=flat-square&logo=swagger&logoColor=e94560)
-![Postman](https://img.shields.io/badge/Postman-1a1a2e?style=flat-square&logo=postman&logoColor=e94560)
-![Git](https://img.shields.io/badge/Git-1a1a2e?style=flat-square&logo=git&logoColor=e94560)
-![Claude Code](https://img.shields.io/badge/Claude_Code-1a1a2e?style=flat-square&logo=claude&logoColor=e94560)
 
 ---
 
 ## `$ cat projects.md`
 
+### 👥 JobMatch: team project, HackYourFuture
+Job-matching web app built by six developers plus a data team (Spring Boot, PostgreSQL, Flyway). I built the matching engine, Google sign-in, user management and the profile API, and owned the application schema and its migrations.
+→ [Repo](https://github.com/HackYourFutureProjects/c55-final-project-group-C)
+
 ### 🔬 JobMatch → Microservices *(in progress)*
+Splitting the JobMatch monolith into Spring Boot services behind a gateway with RS256 JWT, traced with OpenTelemetry. Next phase: SQS events with a transactional outbox for GDPR-safe deletion across services. I own the architecture and the specs; AI agents implement and I review every PR. Decisions I'm proud of:
+- A/B-tested the OpenTelemetry Java agent against the running stack and removed it after it suppressed Spring's HTTP instrumentation
+- Fixed flaky CI by moving Maven dependencies into their own cached Docker layer
 
-Spec-driven monolith → microservices migration of a real job-matching platform. AI agent implements under strict day specs + acceptance criteria; human owns architecture and reviews every change. Open lab notebook.
+→ [Progress dashboard](https://yusuprozimemet.github.io/jobmatch-microservices/) · [Repo](https://github.com/yusuprozimemet/jobmatch-microservices)
 
-→ [Progress dashboard](https://yusuprozimemet.github.io/jobmatch-microservices/) · [Repo](https://github.com/yusuprozimemet/jobmatch-microservices) · [Writing on Medium](https://medium.com/@yusupr)
+### 🖼️ image-service
+Image gallery with async AI tagging and keyword search (Spring Boot, React, PostgreSQL). Testcontainers tests; CI deploys to Render.
+→ [Live](https://image-service-latest.onrender.com) · [Repo](https://github.com/Yusuprozimemet/image-service)
+
+### 📚 Prakly
+SaaS that turns company documents into AI-generated lessons, built solo (FastAPI, PostgreSQL, TypeScript). Security hardening: httpOnly cookie auth, IDOR fixes, CSP headers, field-level encryption.
 
 ---
 
 ## `$ cat workflow.md`
 
-### Spec-driven development
-
-Every feature starts as a written spec: the exact deliverable, acceptance criteria, files touched, and exit conditions. The agent implements against the spec, and a human reviews the diff and merges only when every gate passes.
+Every feature starts as a written spec with the deliverable, acceptance criteria and files touched. An agent implements on a branch; tests, lint and an AI review run; then I read the diff and decide whether it merges. Agents never merge, and nothing lands on `main` without passing tests.
 
 ```
-spec → branch → implement → test → multi-agent review → human merge
-         ↑                                                    ↓
-         └──────────────── never skip steps ─────────────────┘
+spec → branch → implement → test → AI review → human review & merge
 ```
-
-
-**Hard rules**
-- `NEVER` commit to main directly
-- `NEVER` start the next spec until the current one is merged and green
-- `NEVER` let an agent merge; a human does that after review
-- `NEVER` skip the gate: unit tests + E2E + lint
-
-
-Active example: **[LearnX-CLI](https://github.com/Yusuprozimemet/LearnX-CLI)** — a `.md → LLM curriculum → TTS audio → MP4 video` pipeline built entirely spec-by-spec across v0 → v4, with 235 tests and a Docker container sandbox replacing git-branch-only sandboxing.
 
 ---
 
-## `$ cat publication.bib` 
+## `$ cat publication.bib`
 
-> **NAD Metabolism and Proteomic Profile in a Yeast Model Expressing a Neurotoxic polyQ Protein: Effect of Phenolics from Extra-virgin Olive Oil**> Vincenzetti S, **Rozimemet Y**, et al. — [preprints.org, 2024 →](https://www.preprints.org/manuscript/202402.1499)
+Vincenzetti S, **Rozimemet Y**, et al. *NAD Metabolism and Proteomic Profile in a Yeast Model Expressing a Neurotoxic polyQ Protein.* [Preprints.org, 2024](https://www.preprints.org/manuscript/202402.1499)
+
+Outside code: chess, and learning Dutch.
