@@ -65,7 +65,6 @@ Enforced by CI, not good intentions: PRs over 400 changed lines fail, the PR tem
 spec → audit → brief → implement → review & break on purpose → CI gates → human merge
 ```
 
-Wrong specs are corrected in the open, and negative results stay in the record. I also prototyped a driver to run this loop unattended, then removed it before its first run because the setup cost more than the migration needed ([design notes](https://github.com/Yusuprozimemet/devloop)).
 
 ---
 
