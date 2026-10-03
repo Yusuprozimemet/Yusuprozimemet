@@ -36,10 +36,6 @@ AI-native Backend engineer (Java / Spring Boot) based in the Netherlands, previo
 
 ## `$ cat projects.md`
 
-### 👥 JobMatch: team project, HackYourFuture
-Job-matching web app built by six developers plus a data team (Spring Boot, PostgreSQL, Flyway). I built the matching engine, Google sign-in, user management and the profile API, and owned the application schema and its migrations.
-→ [Repo](https://github.com/HackYourFutureProjects/c55-final-project-group-C)
-
 ### 🔬 JobMatch → Microservices *(in progress)*
 Splitting the JobMatch monolith into Spring Boot services behind a gateway with RS256 JWT, traced with OpenTelemetry. Next phase: SQS events with a transactional outbox for GDPR-safe deletion across services. I own the architecture and the day-by-day specs; AI agents implement and I review every PR. Decisions I'm proud of:
 - A/B-tested the OpenTelemetry Java agent against the running stack and removed it after it suppressed Spring's HTTP instrumentation
@@ -52,12 +48,6 @@ Splitting the JobMatch monolith into Spring Boot services behind a gateway with 
 A CLI that turns Markdown notes into audio and video lessons (Python). The same repo is my testbed for spec-driven, multi-agent development: agents implement inside a Docker sandbox, a separate multi-agent review pipeline checks every change, and nothing merges without passing tests and my review.
 → [Repo](https://github.com/Yusuprozimemet/LearnX-CLI)
 
-### 🖼️ image-service
-Image gallery with async AI tagging and keyword search (Spring Boot, React, PostgreSQL). Testcontainers tests; CI deploys to Render.
-→ [Live](https://image-service-latest.onrender.com) · [Repo](https://github.com/Yusuprozimemet/image-service)
-
-### 📚 Prakly
-Solo-built SaaS turning company documents into AI-generated lessons (FastAPI, PostgreSQL, TypeScript), hardened with httpOnly cookie auth, IDOR fixes, CSP headers and field-level encryption.
 
 ---
 
