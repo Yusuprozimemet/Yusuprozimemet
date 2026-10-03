@@ -72,4 +72,4 @@ spec → audit → brief → implement → review & break on purpose → CI gate
 
 Vincenzetti S, **Rozimemet Y**, et al. *NAD Metabolism and Proteomic Profile in a Yeast Model Expressing a Neurotoxic polyQ Protein.* [Preprints.org, 2024](https://www.preprints.org/manuscript/202402.1499)
 
-Outside code: chess, and learning Dutch.
+Outside code: chess, cycling and learning Dutch.
