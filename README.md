@@ -9,7 +9,7 @@ Backend engineer (Java / Spring Boot) based in the Netherlands, previously a mol
 
 - 🏗️ **Backend**: Java/Spring Boot services, PostgreSQL schema design and migrations, REST APIs, auth
 - 🔭 **Reliability**: testing with real databases (Testcontainers), tracing and metrics (OpenTelemetry, Grafana)
-- 🤖 **Working with AI agents**: I write the specs and acceptance criteria, agents implement, and I review every change before it merges
+- 🤖 **Spec-driven work with AI agents**: I own the architecture, write the specs and acceptance criteria, and review every change; agents implement inside hard gates and never merge
 
 ---
 
@@ -41,24 +41,34 @@ Job-matching web app built by six developers plus a data team (Spring Boot, Post
 → [Repo](https://github.com/HackYourFutureProjects/c55-final-project-group-C)
 
 ### 🔬 JobMatch → Microservices *(in progress)*
-Splitting the JobMatch monolith into Spring Boot services behind a gateway with RS256 JWT, traced with OpenTelemetry. Next phase: SQS events with a transactional outbox for GDPR-safe deletion across services. I own the architecture and the specs; AI agents implement and I review every PR. Decisions I'm proud of:
+Splitting the JobMatch monolith into Spring Boot services behind a gateway with RS256 JWT, traced with OpenTelemetry. Next phase: SQS events with a transactional outbox for GDPR-safe deletion across services. I own the architecture and the day-by-day specs; AI agents implement and I review every PR. Decisions I'm proud of:
 - A/B-tested the OpenTelemetry Java agent against the running stack and removed it after it suppressed Spring's HTTP instrumentation
 - Fixed flaky CI by moving Maven dependencies into their own cached Docker layer
 
 → [Progress dashboard](https://yusuprozimemet.github.io/jobmatch-microservices/) · [Repo](https://github.com/yusuprozimemet/jobmatch-microservices)
+
+### 🎧 LearnX-CLI + DevLoop
+<!-- VERIFY before publishing: sandbox, review pipeline, and any numbers you add -->
+A CLI that turns Markdown notes into audio and video lessons (Python). The same repo is my testbed for spec-driven, multi-agent development: agents implement inside a Docker sandbox, a separate multi-agent review pipeline checks every change, and nothing merges without passing tests and my review.
+→ [Repo](https://github.com/Yusuprozimemet/LearnX-CLI)
 
 ### 🖼️ image-service
 Image gallery with async AI tagging and keyword search (Spring Boot, React, PostgreSQL). Testcontainers tests; CI deploys to Render.
 → [Live](https://image-service-latest.onrender.com) · [Repo](https://github.com/Yusuprozimemet/image-service)
 
 ### 📚 Prakly
-SaaS that turns company documents into AI-generated lessons, built solo (FastAPI, PostgreSQL, TypeScript). Security hardening: httpOnly cookie auth, IDOR fixes, CSP headers, field-level encryption.
+Solo-built SaaS turning company documents into AI-generated lessons (FastAPI, PostgreSQL, TypeScript), hardened with httpOnly cookie auth, IDOR fixes, CSP headers and field-level encryption.
 
 ---
 
 ## `$ cat workflow.md`
 
-Every feature starts as a written spec with the deliverable, acceptance criteria and files touched. An agent implements on a branch; tests, lint and an AI review run; then I read the diff and decide whether it merges. Agents never merge, and nothing lands on `main` without passing tests.
+Every feature starts as a written spec with the deliverable, acceptance criteria and files touched. An agent implements on a branch; tests, lint and an AI review run; then I read the diff and decide whether it merges.
+
+<!-- VERIFY: keep only the rules your repos actually enforce -->
+- **No agent grades its own work**: the reviewing agent is never the one that wrote the change
+- **Small PRs**: changes are kept within a size limit so every diff is reviewable
+- **Hard gates**: branch protection on `main`; nothing lands without passing tests, and only a human merges
 
 ```
 spec → branch → implement → test → AI review → human review & merge
