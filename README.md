@@ -1,6 +1,6 @@
 ## `$ whoami`
 
-Backend engineer (Java / Spring Boot) based in the Netherlands, previously a molecular biologist. Research taught me to design careful experiments and not trust a result until I've checked it; I now bring that to APIs, data models, and testing.
+AI-native Backend engineer (Java / Spring Boot) based in the Netherlands, previously a molecular biologist. Research taught me to design careful experiments and not trust a result until I've checked it; I now bring that to APIs, data models, and testing.
 
 
 ---
