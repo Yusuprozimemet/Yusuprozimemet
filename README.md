@@ -1,12 +1,13 @@
 ## `$ whoami`
 
-AI-native backend engineer (Java / Spring Boot) based in the Netherlands, previously a molecular biologist. Research taught me to design careful experiments and not trust a result until I've checked it; I now bring that to APIs, data models, and testing.
+AI-native backend engineer (Java / Spring Boot) based in the Netherlands, previously a molecular biologist. Research taught me to design careful experiments and not trust a result until I've checked it; I now bring that to APIs, data models, testing and infrastructure.
 
 ---
 
 ## `$ cat focus.txt`
 
-- 🏗️ **Backend**: Java/Spring Boot services, PostgreSQL schema design and migrations, REST APIs, auth
+- 🏗️ **Backend**: Java/Spring Boot services, PostgreSQL schema design and migrations, REST APIs, auth, event-driven integration
+- ☁️ **Cloud**: AWS (ECS on Fargate, RDS, DynamoDB, SNS/SQS) described in Terraform, checked in CI before any account is touched
 - 🔭 **Reliability**: testing with real databases (Testcontainers), tracing and metrics (OpenTelemetry, Grafana)
 - 🤖 **Spec-driven work with AI agents**: I own the architecture, write the specs and acceptance criteria, and review every change; agents implement inside hard gates and never merge
 
@@ -22,6 +23,9 @@ AI-native backend engineer (Java / Spring Boot) based in the Netherlands, previo
 ![Testcontainers](https://img.shields.io/badge/Testcontainers-1a1a2e?style=flat-square&logo=docker&logoColor=e94560)
 ![Maven](https://img.shields.io/badge/Maven-1a1a2e?style=flat-square&logo=apachemaven&logoColor=e94560)
 ![Docker](https://img.shields.io/badge/Docker-1a1a2e?style=flat-square&logo=docker&logoColor=e94560)
+![AWS](https://img.shields.io/badge/AWS-1a1a2e?style=flat-square&logo=amazonwebservices&logoColor=e94560)
+![Terraform](https://img.shields.io/badge/Terraform-1a1a2e?style=flat-square&logo=terraform&logoColor=e94560)
+![DynamoDB](https://img.shields.io/badge/DynamoDB-1a1a2e?style=flat-square&logo=amazondynamodb&logoColor=e94560)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-1a1a2e?style=flat-square&logo=githubactions&logoColor=e94560)
 ![OpenTelemetry](https://img.shields.io/badge/OpenTelemetry-1a1a2e?style=flat-square&logo=opentelemetry&logoColor=e94560)
 ![Grafana](https://img.shields.io/badge/Grafana-1a1a2e?style=flat-square&logo=grafana&logoColor=e94560)
@@ -35,10 +39,11 @@ AI-native backend engineer (Java / Spring Boot) based in the Netherlands, previo
 
 ## `$ cat projects.md`
 
-### 🔬 JobMatch → Microservices *(in progress)*
-Migrating the JobMatch monolith to Spring Boot services, one day spec at a time. So far: a gateway with RS256 JWT auth, job search and matching extracted into their own containers (job-service on its own PostgreSQL database, matching-service on DynamoDB), service-to-service tokens, and OpenTelemetry traces across every hop. Now in progress: GDPR-safe account deletion, where a transactional outbox publishes `user.deleted` over SNS/SQS and each service deletes its own data. I own the architecture and the specs; AI agents implement and I review every PR. Decisions I'm proud of:
+### 🔬 JobMatch → Microservices *(in progress: deploying to AWS)*
+Migrated the JobMatch Spring Boot monolith to five services, one day spec at a time, and the monolith is gone. Delivered so far: an API gateway with RS256 JWT auth, identity, job, matching and application services each owning its data (job-service on its own PostgreSQL database, matching-service on DynamoDB), service-to-service tokens, OpenTelemetry traces across every hop, and GDPR-safe account deletion: a transactional outbox publishes `user.deleted` over SNS/SQS and each service deletes its own data. Now in progress: the deployment to ECS on Fargate, with every long-lived resource in Terraform (remote, locked state; network, RDS, DynamoDB, the event bus with dead-letter queues) and validated in CI without an AWS account. 340+ merged PRs, each one reviewed by me. Decisions I'm proud of:
 - A/B-tested the OpenTelemetry Java agent against the running stack and removed it after it suppressed Spring's HTTP instrumentation
 - Fixed flaky CI by moving Maven dependencies into their own cached Docker layer
+- Stopped after the extraction to audit the plan against the code, then cut Kubernetes for ECS on Fargate and deferred a phase that only added features
 
 → [Progress dashboard](https://yusuprozimemet.github.io/jobmatch-microservices/) · [Repo](https://github.com/yusuprozimemet/jobmatch-microservices)
 
@@ -59,12 +64,11 @@ Each spec names the goal, what's in and out of scope, the tracks, the acceptance
 - **Main session** (Claude Opus): writes each track's brief, reviews the code, breaks it on purpose to prove the tests can fail, opens the PR
 - **Implementer** (Claude Haiku): writes code from the brief and never commits
 
-Enforced by CI, not good intentions: PRs over 400 changed lines fail, the PR template is required, and tests, lint and build must be green, all required by branch protection on `main`.
+Enforced by CI, not good intentions: PRs over 400 changed lines fail, the PR template is required, and tests, lint and build must be green, all required by branch protection on `main`. Every mistake, mine and the agents', is recorded in a [lab notebook](https://github.com/Yusuprozimemet/jobmatch-microservices/blob/main/docs/lab-notebook.md).
 
 ```
 spec → audit → brief → implement → review & break on purpose → CI gates → human merge
 ```
-
 
 ---
 
@@ -72,4 +76,4 @@ spec → audit → brief → implement → review & break on purpose → CI gate
 
 Vincenzetti S, **Rozimemet Y**, et al. *NAD Metabolism and Proteomic Profile in a Yeast Model Expressing a Neurotoxic polyQ Protein.* [Preprints.org, 2024](https://www.preprints.org/manuscript/202402.1499)
 
-Outside code: chess, cycling and learning Dutch.
+## Outside code: chess, cycling, traveling
