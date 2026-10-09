@@ -1,6 +1,6 @@
 ## `$ whoami`
 
-AI-native software developer in the Netherlands, formerly a molecular biologist. I'm not new to code: during my MSc and PhD I did data analysis, machine learning and deep learning in Python. Since October 2023 I've been building apps, mostly self-taught, learning each tool by shipping something real with it. In February 2026 I joined the HackYourFuture backend track to learn Java and Spring Boot systematically and to professional standards.
+AI-native software developer in the Netherlands, formerly a molecular biologist. I'm not new to code: during my MSc and PhD I did data analysis, machine learning and deep learning in Python. Since 2023 I've been building apps, mostly self-taught, learning each tool by shipping something real with it. In February 2026 I joined the HackYourFuture backend track to learn Java and Spring Boot systematically and to professional standards.
 
 ---
 
