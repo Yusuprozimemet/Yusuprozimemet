@@ -1,15 +1,11 @@
 ## `$ whoami`
 
-AI-native backend engineer (Java / Spring Boot) based in the Netherlands, previously a molecular biologist. Research taught me to design careful experiments and not trust a result until I've checked it; I now bring that to APIs, data models, testing and infrastructure. I am currently learning AWS.
-
+AI-native software developer in the Netherlands, formerly a molecular biologist. I'm not new to code: during my MSc and PhD I did data analysis, machine learning and deep learning in Python. Since October 2023 I've been building apps, mostly self-taught, learning each tool by shipping something real with it. In February 2026 I joined the HackYourFuture backend track to learn Java and Spring Boot systematically and to professional standards.
 ---
 
-## `$ cat focus.txt`
+## `$ git log`
 
-- 🏗️ **Backend**: Java/Spring Boot services, PostgreSQL schema design and migrations, REST APIs, auth, event-driven integration
-- ☁️ **Cloud**: AWS (ECS on Fargate, RDS, DynamoDB, SNS/SQS) described in Terraform, checked in CI before any account is touched
-- 🔭 **Reliability**: testing with real databases (Testcontainers), tracing and metrics (OpenTelemetry, Grafana)
-- 🤖 **Spec-driven work with AI agents**: I own the architecture, write the specs and acceptance criteria, and review every change; agents implement inside hard gates and never merge
+My first app was [TyporaX](https://github.com/Yusuprozimemet/TyporaX), for learning Dutch. Then I built [Prakly](https://github.com/Yusuprozimemet/praklyai) solo, a B2B SaaS that turns company documents into AI lessons, in the Delitelab entrepreneurship programme with intensive mentorship. Alongside the HackYourFuture backend track I've built side projects in Python, FastAPI, React and LLMs: [friendmap](https://github.com/Yusuprozimemet/friendmap), [LearnX-Radar](https://github.com/Yusuprozimemet/LearnX-Radar) and [LearnX-CLI](https://github.com/Yusuprozimemet/LearnX-CLI). Then I built JobMatch with a team of six, and now I'm turning it into microservices with AI agents, as an experiment in agentic development run like a lab study: a spec with checkable criteria for every step, and every mistake recorded and counted. Along the way I'm learning distributed systems and AWS (Terraform, ECS on Fargate).
 
 ---
 
@@ -19,37 +15,38 @@ AI-native backend engineer (Java / Spring Boot) based in the Netherlands, previo
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-1a1a2e?style=flat-square&logo=springboot&logoColor=e94560)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-1a1a2e?style=flat-square&logo=postgresql&logoColor=e94560)
 ![Flyway](https://img.shields.io/badge/Flyway-1a1a2e?style=flat-square&logo=flyway&logoColor=e94560)
+![Maven](https://img.shields.io/badge/Maven-1a1a2e?style=flat-square&logo=apachemaven&logoColor=e94560)
+![OpenAPI](https://img.shields.io/badge/OpenAPI-1a1a2e?style=flat-square&logo=swagger&logoColor=e94560)
 ![JUnit](https://img.shields.io/badge/JUnit-1a1a2e?style=flat-square&logo=junit5&logoColor=e94560)
 ![Testcontainers](https://img.shields.io/badge/Testcontainers-1a1a2e?style=flat-square&logo=docker&logoColor=e94560)
-![Maven](https://img.shields.io/badge/Maven-1a1a2e?style=flat-square&logo=apachemaven&logoColor=e94560)
+![OpenTelemetry](https://img.shields.io/badge/OpenTelemetry-1a1a2e?style=flat-square&logo=opentelemetry&logoColor=e94560)
+![Grafana](https://img.shields.io/badge/Grafana-1a1a2e?style=flat-square&logo=grafana&logoColor=e94560)
 ![Docker](https://img.shields.io/badge/Docker-1a1a2e?style=flat-square&logo=docker&logoColor=e94560)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-1a1a2e?style=flat-square&logo=githubactions&logoColor=e94560)
 ![AWS](https://img.shields.io/badge/AWS-1a1a2e?style=flat-square&logo=amazonwebservices&logoColor=e94560)
 ![Terraform](https://img.shields.io/badge/Terraform-1a1a2e?style=flat-square&logo=terraform&logoColor=e94560)
 ![DynamoDB](https://img.shields.io/badge/DynamoDB-1a1a2e?style=flat-square&logo=amazondynamodb&logoColor=e94560)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-1a1a2e?style=flat-square&logo=githubactions&logoColor=e94560)
-![OpenTelemetry](https://img.shields.io/badge/OpenTelemetry-1a1a2e?style=flat-square&logo=opentelemetry&logoColor=e94560)
-![Grafana](https://img.shields.io/badge/Grafana-1a1a2e?style=flat-square&logo=grafana&logoColor=e94560)
 ![Python](https://img.shields.io/badge/Python-1a1a2e?style=flat-square&logo=python&logoColor=e94560)
 ![FastAPI](https://img.shields.io/badge/FastAPI-1a1a2e?style=flat-square&logo=fastapi&logoColor=e94560)
 ![React](https://img.shields.io/badge/React-1a1a2e?style=flat-square&logo=react&logoColor=e94560)
 ![TypeScript](https://img.shields.io/badge/TypeScript-1a1a2e?style=flat-square&logo=typescript&logoColor=e94560)
-![OpenAPI](https://img.shields.io/badge/OpenAPI-1a1a2e?style=flat-square&logo=swagger&logoColor=e94560)
 
 ---
 
 ## `$ cat projects.md`
 
-### 🔬 JobMatch → Microservices *(in progress: deploying to AWS)*
-Migrated the JobMatch Spring Boot monolith to five services, one day spec at a time, and the monolith is gone. Delivered so far: an API gateway with RS256 JWT auth, identity, job, matching and application services each owning its data (job-service on its own PostgreSQL database, matching-service on DynamoDB), service-to-service tokens, OpenTelemetry traces across every hop, and GDPR-safe account deletion: a transactional outbox publishes `user.deleted` over SNS/SQS and each service deletes its own data. Now in progress: the deployment to ECS on Fargate, with every long-lived resource in Terraform (remote, locked state; network, RDS, DynamoDB, the event bus with dead-letter queues) and validated in CI without an AWS account. 340+ merged PRs, each one reviewed by me. Decisions I'm proud of:
-- A/B-tested the OpenTelemetry Java agent against the running stack and removed it after it suppressed Spring's HTTP instrumentation
-- Fixed flaky CI by moving Maven dependencies into their own cached Docker layer
-- Stopped after the extraction to audit the plan against the code, then cut Kubernetes for ECS on Fargate and deferred a phase that only added features
+### 🧩 JobMatch: HackYourFuture final project
+A job-search platform built by six developers in agile sprints. My part: Google sign-in, account deletion, the profile API and the matching engine.
+→ [Live demo](https://c55c.hyf.dev/) · [Repo](https://github.com/HackYourFutureProjects/c55-final-project-group-C)
 
-→ [Progress dashboard](https://yusuprozimemet.github.io/jobmatch-microservices/) · [Repo](https://github.com/yusuprozimemet/jobmatch-microservices)
+### 🔬 JobMatch → Microservices: an experiment in agentic development *(in progress)*
+I split that monolith into five services with AI agents, one spec at a time. 340+ PRs so far, and every finding is recorded, including the ones that make the method look bad:
+- The agents' mistakes far outnumber the system's: 382 of 401 recorded defects were in the agents' own specs and code, caught by auditor agents, review or tests broken on purpose.
+- A smaller model writes the code from my briefs. Review found a defect in 30 of the 63 tracks it wrote before they merged.
+- The tests written before the split survived it with two approved edits.
 
-### 🎧 LearnX-CLI
-Turns Markdown notes into an LLM-written curriculum, TTS audio and MP4 video (Python). My first spec-driven project: built spec by spec from v0 to v4, with 235 tests and a Docker sandbox for the agent.
-→ [Repo](https://github.com/Yusuprozimemet/LearnX-CLI)
+Next: deploying to AWS with Terraform.
+→ [Dashboard](https://yusuprozimemet.github.io/jobmatch-microservices/) · [Lab notebook](https://github.com/Yusuprozimemet/jobmatch-microservices/blob/main/docs/lab-notebook.md) · [Repo](https://github.com/yusuprozimemet/jobmatch-microservices)
 
 ---
 
@@ -57,18 +54,15 @@ Turns Markdown notes into an LLM-written curriculum, TTS audio and MP4 video (Py
 
 **No code without a spec. No spec without checkable acceptance criteria.**
 
-Each spec names the goal, what's in and out of scope, the tracks, the acceptance criteria, and a `Verify` command anyone can run. In [jobmatch-microservices](https://github.com/Yusuprozimemet/jobmatch-microservices) the roles are split so no agent grades its own work:
-
-- **Me**: the plan, the specs, review of every diff, and every merge
-- **Auditors** (read-only, fresh context): check each spec against the plan and the code before work starts; fixes land in a spec-change PR first
-- **Main session** (Claude Opus): writes each track's brief, reviews the code, breaks it on purpose to prove the tests can fail, opens the PR
-- **Implementer** (Claude Haiku): writes code from the brief and never commits
-
-Enforced by CI, not good intentions: PRs over 400 changed lines fail, the PR template is required, and tests, lint and build must be green, all required by branch protection on `main`. Every mistake, mine and the agents', is recorded in a [lab notebook](https://github.com/Yusuprozimemet/jobmatch-microservices/blob/main/docs/lab-notebook.md).
+- **Me:** the plan, the specs, review of every change, and every merge
+- **AI agents:** audit the specs, write the code, and break it on purpose to prove the tests can catch it; they never merge
+- **CI:** tests, lint and a 400-line PR limit, all required before merging
 
 ```
-spec → audit → brief → implement → review & break on purpose → CI gates → human merge
+spec → audit → implement → review → CI → human merge
 ```
+
+Every mistake, mine and the agents', goes in a [lab notebook](https://github.com/Yusuprozimemet/jobmatch-microservices/blob/main/docs/lab-notebook.md).
 
 ---
 
@@ -76,4 +70,4 @@ spec → audit → brief → implement → review & break on purpose → CI gate
 
 Vincenzetti S, **Rozimemet Y**, et al. *NAD Metabolism and Proteomic Profile in a Yeast Model Expressing a Neurotoxic polyQ Protein.* [Preprints.org, 2024](https://www.preprints.org/manuscript/202402.1499)
 
-## Outside code: chess, cycling, traveling
+**Languages:** Uyghur, Chinese, English, Dutch (learning) · **Outside code:** chess, cycling, traveling
