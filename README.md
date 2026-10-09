@@ -48,11 +48,6 @@ A job-search platform built by six developers. I implemented Google sign-in, acc
 
 An experiment in AI-agent-driven software migration, with explicit specifications, measurable acceptance criteria and a record of failures.
 
-* **340+ PRs** tracked in the experiment.
-* **382 of 401 recorded defects** were attributed to agent-produced specifications and code.
-* Review found defects in **30 of 63 tracks** written by a smaller coding model before merge.
-* Tests written before the migration survived with two approved edits.
-
 Next: AWS deployment using Terraform.
 
 → [Dashboard](https://yusuprozimemet.github.io/jobmatch-microservices/) · [Lab notebook](https://github.com/Yusuprozimemet/jobmatch-microservices/blob/main/docs/lab-notebook.md) · [Repository](https://github.com/yusuprozimemet/jobmatch-microservices)
