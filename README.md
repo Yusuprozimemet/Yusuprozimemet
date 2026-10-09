@@ -1,12 +1,12 @@
 ## `$ whoami`
 
-AI-native software developer in the Netherlands, formerly a molecular biologist. I'm not new to code: during my MSc and PhD I did data analysis, machine learning and deep learning in Python. Since 2023 I've been building apps, mostly self-taught, learning each tool by shipping something real with it. In February 2026 I joined the HackYourFuture backend track to learn Java and Spring Boot systematically and to professional standards.
+AI-native software developer in the Netherlands, formerly a molecular biologist. I'm not new to code: during my MSc and PhD I did data analysis, machine learning and deep learning in Python. Since 2023 I've been building apps, mostly self-taught, learning each tool by shipping something real with it. In February 2026 I joined the HackYourFuture backend track to learn Java and Spring Boot systematically and to professional standards. I've finished the programme, and I keep learning by building.
 
 ---
 
 ## `$ git log`
 
-My first app was TyporaX, for learning Dutch. Then I built Prakly solo, a B2B SaaS that turns company documents into AI lessons, in the Delitelab entrepreneurship programme with intensive mentorship. Alongside the HackYourFuture backend track I've built side projects in Python, FastAPI, React and LLMs: [friendmap](https://github.com/Yusuprozimemet/friendmap), [LearnX-Radar](https://github.com/Yusuprozimemet/LearnX-Radar) and [LearnX-CLI](https://github.com/Yusuprozimemet/LearnX-CLI). Then I built JobMatch with a team of six, and now I'm turning it into microservices with AI agents, as an experiment in agentic development run like a lab study: a spec with checkable criteria for every step, and every mistake recorded and counted. Along the way I'm learning distributed systems and AWS (Terraform, ECS on Fargate).
+My first app was TyporaX, for learning Dutch. Then I built Prakly solo, a B2B SaaS that turns company documents into AI lessons, in the Delitelab entrepreneurship programme with intensive mentorship. Alongside the HackYourFuture backend track I've built side projects in Python, FastAPI, React and LLMs: [friendmap](https://github.com/Yusuprozimemet/friendmap), [LearnX-Radar](https://github.com/Yusuprozimemet/LearnX-Radar) and [LearnX-CLI](https://github.com/Yusuprozimemet/LearnX-CLI). Then I built [JobMatch](https://github.com/HackYourFutureProjects/c55-final-project-group-C) with a team of six, and now I'm turning it into [microservices](https://github.com/yusuprozimemet/jobmatch-microservices) with AI agents, as an experiment in agentic development run like a lab study: a spec with checkable criteria for every step, and every mistake recorded and counted. Along the way I'm learning distributed systems and AWS (Terraform, ECS on Fargate).
 
 ---
 
