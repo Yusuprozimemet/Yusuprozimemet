@@ -46,7 +46,7 @@ A job-search platform built by six developers. I implemented Google sign-in, acc
 
 ### 🔬 JobMatch → Microservices *(in progress)*
 
-An experiment in AI-agent-driven software migration, with explicit specifications, measurable acceptance criteria and a record of failures.
+An experiment in Spec-driven software migration, with explicit specifications, measurable acceptance criteria and a record of failures.
 
 Next: AWS deployment using Terraform.
 
