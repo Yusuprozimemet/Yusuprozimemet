@@ -8,7 +8,8 @@ AI-native software developer in the Netherlands, formerly a molecular biologist.
 
 Started with **TyporaX**, a Dutch-learning app, then built **Prakly**, a B2B SaaS that turns company documents into AI lessons. Other projects include [friendmap](https://github.com/Yusuprozimemet/friendmap), [LearnX-Radar](https://github.com/Yusuprozimemet/LearnX-Radar) and [LearnX-CLI](https://github.com/Yusuprozimemet/LearnX-CLI).
 
-My main focus is [JobMatch](https://github.com/HackYourFutureProjects/c55-final-project-group-C), built with five teammates, and its ongoing migration to [microservices](https://github.com/yusuprozimemet/jobmatch-microservices). I'm using AI agents to run a measurable development experiment while learning distributed systems and AWS.
+My main focus is migrating [JobMatch](https://github.com/HackYourFutureProjects/c55-final-project-group-C), a monolith built with five teammates, to [microservices](https://github.com/yusuprozimemet/jobmatch-microservices). I'm using AI agents to run a measurable development experiment while learning distributed systems and AWS.
+
 
 ---
 
