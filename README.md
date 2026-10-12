@@ -22,7 +22,6 @@ Currently exploring cloud-native development, serverless, databases, DevOps, Inf
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-1a1a2e?style=flat-square\&logo=githubactions\&logoColor=e94560)
 ![AWS](https://img.shields.io/badge/AWS-1a1a2e?style=flat-square\&logo=amazonwebservices\&logoColor=e94560)
 ![Terraform](https://img.shields.io/badge/Terraform-1a1a2e?style=flat-square\&logo=terraform\&logoColor=e94560)
-![DynamoDB](https://img.shields.io/badge/DynamoDB-1a1a2e?style=flat-square\&logo=amazondynamodb\&logoColor=e94560)
 ![Python](https://img.shields.io/badge/Python-1a1a2e?style=flat-square\&logo=python\&logoColor=e94560)
 ![FastAPI](https://img.shields.io/badge/FastAPI-1a1a2e?style=flat-square\&logo=fastapi\&logoColor=e94560)
 ![React](https://img.shields.io/badge/React-1a1a2e?style=flat-square\&logo=react\&logoColor=e94560)
