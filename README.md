@@ -1,8 +1,8 @@
 ## `$ whoami`
 
-AI-native software developer, formerly a molecular biologist. Since 2023, I’ve been learning through YouTube, Udemy, and Coursera while building and shipping real-world applications. As I developed my startup project, I realized the value of a more systematic approach to software engineering, which led me to HackYourFuture. I completed its backend development track in Java and Spring Boot and continue learning through hands-on development.
+AI-native software developer, formerly a molecular biologist, with international work experience across Europe and Israel. Since 2023, I’ve been learning software development through YouTube, Udemy, and Coursera while building and shipping real-world applications. Working on my startup project made me realize the value of a more systematic approach to software engineering, leading me to join HackYourFuture and complete its backend development track in Java and Spring Boot. I continue to grow through hands-on development.
 
-Currently exploring cloud-native development, serverless, databases, DevOps, Infrastructure as Code, testing, and observability.
+Currently exploring cloud-native development, serverless computing, databases, DevOps, Infrastructure as Code, testing, and observability.
 
 ---
 
