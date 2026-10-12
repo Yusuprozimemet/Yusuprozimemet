@@ -6,29 +6,6 @@ Currently exploring cloud-native development, serverless, databases, DevOps, Inf
 
 ---
 
-## `$ ls stack/`
-
-![Java](https://img.shields.io/badge/Java-1a1a2e?style=flat-square\&logo=openjdk\&logoColor=e94560)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-1a1a2e?style=flat-square\&logo=springboot\&logoColor=e94560)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-1a1a2e?style=flat-square\&logo=postgresql\&logoColor=e94560)
-![Flyway](https://img.shields.io/badge/Flyway-1a1a2e?style=flat-square\&logo=flyway\&logoColor=e94560)
-![Maven](https://img.shields.io/badge/Maven-1a1a2e?style=flat-square\&logo=apachemaven\&logoColor=e94560)
-![OpenAPI](https://img.shields.io/badge/OpenAPI-1a1a2e?style=flat-square\&logo=swagger\&logoColor=e94560)
-![JUnit](https://img.shields.io/badge/JUnit-1a1a2e?style=flat-square\&logo=junit5\&logoColor=e94560)
-![Testcontainers](https://img.shields.io/badge/Testcontainers-1a1a2e?style=flat-square\&logo=docker\&logoColor=e94560)
-![OpenTelemetry](https://img.shields.io/badge/OpenTelemetry-1a1a2e?style=flat-square\&logo=opentelemetry\&logoColor=e94560)
-![Grafana](https://img.shields.io/badge/Grafana-1a1a2e?style=flat-square\&logo=grafana\&logoColor=e94560)
-![Docker](https://img.shields.io/badge/Docker-1a1a2e?style=flat-square\&logo=docker\&logoColor=e94560)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-1a1a2e?style=flat-square\&logo=githubactions\&logoColor=e94560)
-![AWS](https://img.shields.io/badge/AWS-1a1a2e?style=flat-square\&logo=amazonwebservices\&logoColor=e94560)
-![Terraform](https://img.shields.io/badge/Terraform-1a1a2e?style=flat-square\&logo=terraform\&logoColor=e94560)
-![Python](https://img.shields.io/badge/Python-1a1a2e?style=flat-square\&logo=python\&logoColor=e94560)
-![FastAPI](https://img.shields.io/badge/FastAPI-1a1a2e?style=flat-square\&logo=fastapi\&logoColor=e94560)
-![React](https://img.shields.io/badge/React-1a1a2e?style=flat-square\&logo=react\&logoColor=e94560)
-![TypeScript](https://img.shields.io/badge/TypeScript-1a1a2e?style=flat-square\&logo=typescript\&logoColor=e94560)
-
----
-
 ## `$ cat projects.md`
 
 ### 🧩 JobMatch
