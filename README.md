@@ -18,7 +18,6 @@ A job-search platform built by six developers. I implemented Google sign-in, acc
 
 An experiment in Spec-driven software migration, with explicit specifications, measurable acceptance criteria and a record of failures.
 
-Next: AWS deployment using Terraform.
 
 → [Dashboard](https://yusuprozimemet.github.io/jobmatch-microservices/) · [Lab notebook](https://github.com/Yusuprozimemet/jobmatch-microservices/blob/main/docs/lab-notebook.md) · [Repository](https://github.com/yusuprozimemet/jobmatch-microservices)
 
