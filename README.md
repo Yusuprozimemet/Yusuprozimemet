@@ -2,7 +2,7 @@
 
 AI-native software developer, formerly a molecular biologist. Since 2023, I've been building apps by shipping real projects. I completed HackYourFuture's backend track in Java and Spring Boot and continue learning through hands-on development.
 
-Currently exploring **AWS, Terraform, microservices architecture, distributed systems, application security, CI/CD, and agentic software development**.
+Currently exploring cloud-native development, serverless, databases, DevOps, Infrastructure as Code, testing, and observability.
 
 ---
 
