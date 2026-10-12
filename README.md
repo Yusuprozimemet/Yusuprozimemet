@@ -53,6 +53,5 @@ Next: AWS deployment using Terraform.
 
 Vincenzetti S, **Rozimemet Y**, et al. *NAD Metabolism and Proteomic Profile in a Yeast Model Expressing a Neurotoxic polyQ Protein.* [Preprints.org, 2024](https://www.preprints.org/manuscript/202402.1499)
 
-**Languages:** Uyghur · Chinese · English · Dutch (learning)
 
 **Outside code:** Chess · Cycling · Travel
