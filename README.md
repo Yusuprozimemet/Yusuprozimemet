@@ -2,14 +2,7 @@
 
 AI-native software developer, formerly a molecular biologist. Since 2023, I've been building apps by shipping real projects. I completed HackYourFuture's backend track in Java and Spring Boot and continue learning through hands-on development.
 
----
-
-## `$ git log`
-
-Started with **TyporaX**, a Dutch-learning app, then built **Prakly**, a B2B SaaS that turns company documents into AI lessons. Other projects include [friendmap](https://github.com/Yusuprozimemet/friendmap), [LearnX-Radar](https://github.com/Yusuprozimemet/LearnX-Radar) and [LearnX-CLI](https://github.com/Yusuprozimemet/LearnX-CLI).
-
-My main focus is migrating [JobMatch](https://github.com/HackYourFutureProjects/c55-final-project-group-C), a monolith built with five teammates, to [microservices](https://github.com/yusuprozimemet/jobmatch-microservices). I'm using AI agents to run a measurable development experiment while learning distributed systems and AWS.
-
+Currently exploring **AWS, Terraform, microservices architecture, distributed systems, application security, CI/CD, and agentic software development**.
 
 ---
 
@@ -55,17 +48,6 @@ Next: AWS deployment using Terraform.
 
 ---
 
-## `$ cat workflow.md`
-
-**No code without a spec. No spec without testable acceptance criteria.**
-
-`spec → audit → implement → review → CI → human merge`
-
-I own the architecture, specifications, reviews and merges. AI agents audit specifications, implement changes and test failure scenarios. CI enforces automated checks and a 400-line PR limit.
-
-Every recorded mistake goes in the [lab notebook](https://github.com/Yusuprozimemet/jobmatch-microservices/blob/main/docs/lab-notebook.md).
-
----
 
 ## `$ cat publication.bib`
 
