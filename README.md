@@ -2,7 +2,7 @@
 
 ## `$ whoami`
 
-AI-native backend developer.
+Backend developer.
 
 Before 2023: molecular biology, splitting my time between lab work and data analysis with ML/deep learning.
 Since 2023: software development, first through self-study and projects, then HackYourFuture's Java & Spring Boot backend track.
