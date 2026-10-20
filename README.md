@@ -1,9 +1,8 @@
 ## `$ whoami`
 
-Backend developer.
+Backend & AI engineer based in the Netherlands. I build backend systems and LLM pipelines, and I experiment with how AI agents can write production code under strict specifications.
 
-Before 2023: molecular biology, splitting my time between lab work and data analysis with ML/deep learning.
-Since 2023: software development, first through self-study and projects, then HackYourFuture's Java & Spring Boot backend track.
+Before software, I was a molecular biologist (MSc, partial PhD). I left research in 2023 to move into engineering, and I bring the same habits with me: hypotheses, measurement, and keeping an honest record of what worked and what didn't. I recently finished HackYourFuture's backend software development track.
 
 **Now:** migrating a monolith to microservices on AWS, with Infrastructure as Code, automated testing, CI/CD, and observability.
 
