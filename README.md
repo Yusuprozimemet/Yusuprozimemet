@@ -1,8 +1,19 @@
 ## `$ whoami`
 
-Software engineer focused on backend systems, microservices, and cloud infrastructure. Formerly a molecular biologist, I transitioned into software development in 2023 through independent study and hands-on projects. I later completed HackYourFuture’s backend development track in Java and Spring Boot.
+## `$ whoami`
 
-Currently working on microservices migration, AWS deployment, Infrastructure as Code, testing, DevOps, and observability.
+AI-native backend developer.
+
+Before 2023: molecular biology, splitting my time between lab work and data analysis with ML/deep learning.
+Since 2023: software development, first through self-study and projects, then HackYourFuture's Java & Spring Boot backend track.
+
+**Now:** migrating a monolith to microservices on AWS, with Infrastructure as Code, automated testing, CI/CD, and observability.
+
+## `$ cat stack.txt`
+
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=java,spring,py,fastapi,aws,terraform,docker,githubactions&perline=8" alt="Java, Spring Boot, Python, FastAPI, AWS, Terraform, Docker, GitHub Actions" />
+</p>
 
 ---
 
