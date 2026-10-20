@@ -1,7 +1,5 @@
 ## `$ whoami`
 
-## `$ whoami`
-
 Backend developer.
 
 Before 2023: molecular biology, splitting my time between lab work and data analysis with ML/deep learning.
