@@ -7,12 +7,6 @@ Since 2023: software development, first through self-study and projects, then Ha
 
 **Now:** migrating a monolith to microservices on AWS, with Infrastructure as Code, automated testing, CI/CD, and observability.
 
-## `$ cat stack.txt`
-
-<p align="left">
-  <img src="https://skillicons.dev/icons?i=java,spring,py,fastapi,aws,terraform,docker,githubactions&perline=8" alt="Java, Spring Boot, Python, FastAPI, AWS, Terraform, Docker, GitHub Actions" />
-</p>
-
 ---
 
 ## `$ cat projects.md`
