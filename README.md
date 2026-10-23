@@ -1,5 +1,5 @@
 
-**Backend & AI engineer**
+
 
 I build backend systems and experiment with how AI agents can do real production work. 
 
