@@ -1,10 +1,13 @@
-## `$ whoami`
+**Backend & AI engineer** based in the Netherlands. 
 
-Backend & AI engineer based in the Netherlands. I build backend systems and LLM pipelines, and I experiment with how AI agents can write production code under strict specifications.
+I build backend systems and experiment with how AI agents can do real production work — under strict specifications, not free-form prompting.
 
-Before software, I was a molecular biologist (MSc, partial PhD). I left research in 2023 to move into engineering, and I bring the same habits with me: hypotheses, measurement, and keeping an honest record of what worked and what didn't. I recently finished HackYourFuture's backend software development track.
+Before software I was a molecular biologist (MSc, partial PhD). I left research in 2023 and brought the same habits with me: form a hypothesis, measure what actually happens, and keep an honest record of both successes and failures.
 
-**Now:** migrating a monolith to microservices on AWS, with Infrastructure as Code, automated testing, CI/CD, and observability.
+I recently completed HackYourFuture’s backend track. Right now I’m focused on two related threads:
+
+- Migrating a real monolith to microservices on AWS (Terraform, ECS, CI/CD, observability)
+- Building the process tooling that makes long-horizon AI engineering reliable (spec-driven, test-first, evidence-backed)
 
 ---
 
