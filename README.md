@@ -5,13 +5,30 @@ I build backend systems and experiment with how AI agents can do real production
 
 Before software I was a molecular biologist (MSc, partial PhD). I left research in 2023 and brought the same habits with me: form a hypothesis, measure what actually happens, and keep an honest record of both successes and failures.
 
-I recently completed HackYourFuture’s backend track. Right now I’m focused on two related threads:
+## Current work: from migration to reusable AI workflow
 
-- Migrating a real monolith to microservices on AWS (Terraform, ECS, CI/CD, observability)  
-  → [Dashboard](https://yusuprozimemet.github.io/jobmatch-microservices/) · [Lab notebook](https://github.com/Yusuprozimemet/jobmatch-microservices/blob/main/docs/lab-notebook.md) · [Repository](https://github.com/Yusuprozimemet/jobmatch-microservices)
+I recently completed HackYourFuture’s backend track. My current work follows one connected engineering story:
 
-- Building the process tooling that makes long-horizon AI engineering reliable (spec-driven, test-first, evidence-backed)  
-  → [Repository](https://github.com/Yusuprozimemet/redline)
+```mermaid
+flowchart LR
+    A["🧱 Monolith<br/>Team-built HackYourFuture project"] -->|"Agentic migration"| B["⚙️ Microservices<br/>AWS · Terraform · ECS · CI/CD"]
+    B -->|"Extract reusable parts"| C["🧩 Workflow kit + dashboard<br/>Specs · agents · evidence · metrics"]
+    C -->|"Pilot on a new app"| D["✅ Wordtally<br/>Small Python application"]
+    D -->|"Findings and audits"| E["🔁 Optimize workflow"]
+    E -->|"Update"| C
+```
+
+### 🧱 1 · Migrate → JobMatch Microservices
+
+→ [Dashboard](https://yusuprozimemet.github.io/jobmatch-microservices/) · [Lab notebook](https://github.com/Yusuprozimemet/jobmatch-microservices/blob/main/docs/lab-notebook.md) · [Repository](https://github.com/Yusuprozimemet/jobmatch-microservices)
+
+### 🧩 2 · Extract → Agentic Workflow Kit
+→ [Repository](https://github.com/Yusuprozimemet/agentic-workflow-kit)
+
+### ✅ 3 · Pilot → Wordtally
+
+→ [Live dashboard](https://yusuprozimemet.github.io/wordtally/) · [Lab notebook](https://github.com/Yusuprozimemet/wordtally/blob/main/docs/lab-notebook.md) · [Repository](https://github.com/Yusuprozimemet/wordtally)
+
 
 ---
 
