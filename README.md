@@ -13,7 +13,7 @@ I recently completed HackYourFuture’s backend track. My current work follows o
 flowchart LR
     A["🧱 Monolith<br/>Team-built HackYourFuture project"] -->|"Agentic migration"| B["⚙️ Microservices<br/>AWS · Terraform · ECS · CI/CD"]
     B -->|"Extract reusable parts"| C["🧩 Workflow kit + dashboard<br/>Specs · agents · evidence · metrics"]
-    C -->|"Pilot on a new app"| D["✅ Wordtally<br/>Small Python application"]
+    C -->|"Pilot on a new app"| D["✅ Bearing<br/>Small Python application"]
     D -->|"Findings and audits"| E["🔁 Optimize workflow"]
     E -->|"Update"| C
 ```
@@ -27,7 +27,7 @@ flowchart LR
 
 ### ✅ 3 · Pilot → Bearing
 
-→ [Repository](https://github.com/Yusuprozimemet/bearing)
+→ [Live dashboard](https://yusuprozimemet.github.io/bearing/) · [Repository](https://github.com/Yusuprozimemet/bearing)
 
 
 ---
