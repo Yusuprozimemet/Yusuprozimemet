@@ -25,9 +25,9 @@ flowchart LR
 ### 🧩 2 · Extract → Agentic Workflow Kit
 → [Repository](https://github.com/Yusuprozimemet/agentic-workflow-kit)
 
-### ✅ 3 · Pilot → Wordtally
+### ✅ 3 · Pilot → Bearing
 
-→ [Live dashboard](https://yusuprozimemet.github.io/wordtally/) · [Lab notebook](https://github.com/Yusuprozimemet/wordtally/blob/main/docs/lab-notebook.md) · [Repository](https://github.com/Yusuprozimemet/wordtally)
+→ [Repository](https://github.com/Yusuprozimemet/bearing)
 
 
 ---
