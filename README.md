@@ -10,7 +10,7 @@ Before software I was a molecular biologist (MSc, partial PhD). I left research 
 I recently completed HackYourFuture’s backend track. My current work follows one connected engineering story:
 
 
-### 🧱 1 · Migrate → JobMatch Microservices
+### 🧱 1 · JobMatch Microservices
 
 → [Dashboard](https://yusuprozimemet.github.io/jobmatch-microservices/) · [Lab notebook](https://github.com/Yusuprozimemet/jobmatch-microservices/blob/main/docs/lab-notebook.md) · [Repository](https://github.com/Yusuprozimemet/jobmatch-microservices)
 
