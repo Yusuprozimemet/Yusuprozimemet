@@ -9,25 +9,13 @@ Before software I was a molecular biologist (MSc, partial PhD). I left research 
 
 I recently completed HackYourFuture’s backend track. My current work follows one connected engineering story:
 
-```mermaid
-flowchart LR
-    A["🧱 Monolith<br/>Team-built HackYourFuture project"] -->|"Agentic migration"| B["⚙️ Microservices<br/>AWS · Terraform · ECS · CI/CD"]
-    B -->|"Extract reusable parts"| C["🧩 Workflow kit + dashboard<br/>Specs · agents · evidence · metrics"]
-    C -->|"Pilot on a new app"| D["✅ Bearing<br/>Small Python application"]
-    D -->|"Findings and audits"| E["🔁 Optimize workflow"]
-    E -->|"Update"| C
-```
 
 ### 🧱 1 · Migrate → JobMatch Microservices
 
 → [Dashboard](https://yusuprozimemet.github.io/jobmatch-microservices/) · [Lab notebook](https://github.com/Yusuprozimemet/jobmatch-microservices/blob/main/docs/lab-notebook.md) · [Repository](https://github.com/Yusuprozimemet/jobmatch-microservices)
 
-### 🧩 2 · Extract → Agentic Workflow Kit
-→ [Repository](https://github.com/Yusuprozimemet/agentic-workflow-kit)
-
-### ✅ 3 · Pilot → Bearing
-
-→ [Live dashboard](https://yusuprozimemet.github.io/bearing/) · [Repository](https://github.com/Yusuprozimemet/bearing)
+### 🧩 2 · Agentic Workflow Driver
+→ [Repository](https://github.com/Yusuprozimemet/agentic-workflow-driver)
 
 
 ---
