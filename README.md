@@ -15,7 +15,7 @@ I recently completed HackYourFuture’s backend track. My current work follows o
 → [Dashboard](https://yusuprozimemet.github.io/jobmatch-microservices/) · [Lab notebook](https://github.com/Yusuprozimemet/jobmatch-microservices/blob/main/docs/lab-notebook.md) · [Repository](https://github.com/Yusuprozimemet/jobmatch-microservices)
 
 ### 🧩 2 · Agentic Workflow Driver
-→ [Repository](https://github.com/Yusuprozimemet/agentic-workflow-driver)
+→ [Dashboard](https://yusuprozimemet.github.io/agentic-workflow-driver/#measurements) · [Repository](https://github.com/Yusuprozimemet/agentic-workflow-driver)
 
 
 ---
