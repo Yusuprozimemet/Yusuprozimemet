@@ -7,7 +7,7 @@ Before software I was a molecular biologist (MSc, partial PhD). I left research 
 
 ## Current work: from migration to reusable AI workflow
 
-I recently completed HackYourFuture’s backend track. My current work follows one connected engineering story:
+I recently completed HackYourFuture’s backend track. My current work:
 
 
 ### 🧱 1 · JobMatch Microservices
